@@ -1,0 +1,86 @@
+// scss/base/_base.scss
+
+// 링크 스타일
+a {
+  
+}
+// -----------------------------
+// Reset strong, em, b, i tags
+// -----------------------------
+strong, b {
+  font-weight: inherit; // 부모 요소의 폰트 굵기를 상속받아 기본 bold 스타일 제거
+}
+
+em, i {
+  font-style: inherit; // 부모 요소의 폰트 스타일을 상속받아 기본 italic 스타일 제거
+}
+
+// 이미지 기본 스타일
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+// 목록 기본 스타일
+ul, ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+// 버튼 기본 스타일 (브라우저 기본값 초기화)
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+html {
+  font-size: 62.5%; // 1rem = 10px
+  scroll-behavior: smooth;
+}
+
+// 공통 유틸리티 클래스
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+
+
+// 기본 flex 박스
+@mixin flex($justify: center, $align: center, $direction: row, $wrap: nowrap) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+  flex-wrap: $wrap;
+}
+
+// flex-center: 자주 쓰는 중앙정렬
+@mixin flex-center {
+  @include flex(center, center);
+}
+
+// flex-column
+@mixin flex-column {
+  @include flex($direction: column);
+}
+
+// flex-between
+@mixin flex-between {
+  @include flex(space-between, center);
+}

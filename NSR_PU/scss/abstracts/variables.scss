@@ -1,0 +1,87 @@
+// scss/abstracts/_variables.scss
+@use 'colors' as *;
+// -----------------------------
+// 1. Spacing (간격 변수)
+//    - 요소 간의 마진, 패딩 등 일관된 간격 시스템을 정의합니다.
+// -----------------------------
+$spacing-xxs: 2px;
+$spacing-xs: 4px;
+$spacing-sm: 8px;
+$spacing-md: 16px;
+$spacing-lg: 24px;
+$spacing-xl: 32px;
+$spacing-xxl: 48px;
+$spacing-xxxl: 64px;
+
+
+// -----------------------------
+// 2. Z-index (겹침 순서 변수)
+//    - 요소의 쌓임 순서를 관리하여 겹침 문제를 방지합니다.
+// -----------------------------
+$z-index-base: 1;
+$z-index-dropdown: 10;
+$z-index-fixed: 100;
+$z-index-overlay: 500;
+$z-index-modal: 1000;
+$z-index-tooltip: 1100;
+
+
+// -----------------------------
+// 3. Breakpoints (반응형 디자인 기준점)
+//    - 미디어 쿼리에서 사용될 화면 너비 기준점을 정의합니다.
+// -----------------------------
+$breakpoint-xs: 480px;
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+$breakpoint-xxl: 1400px;
+
+
+// -----------------------------
+// 4. Border Radius (모서리 둥글기 변수)
+//    - 컴포넌트의 모서리 둥글기를 일관되게 적용합니다.
+// -----------------------------
+$border-radius-none: 0;
+$border-radius-sm: 4px;
+$border-radius-md: 8px;
+$border-radius-lg: 12px;
+$border-radius-xl: 16px;
+$border-radius-circle: 50%;
+
+
+// -----------------------------
+// 5. Shadows (그림자 변수)
+//    - 카드, 모달 등에 사용되는 그림자 효과를 정의합니다.
+// -----------------------------
+$box-shadow-sm: 0 1px 2px rgba($black, 0.05); // $black은 _colors.scss에서 정의
+$box-shadow-md: 0 4px 6px rgba($black, 0.1), 0 1px 3px rgba($black, 0.08);
+$box-shadow-lg: 0 10px 15px rgba($black, 0.1), 0 4px 6px rgba($black, 0.05);
+
+
+// -----------------------------
+// 6. Transitions (전환 효과 변수)
+//    - 요소의 애니메이션 지속 시간 및 타이밍 함수를 정의합니다.
+// -----------------------------
+$transition-duration-fast: 0.15s;
+$transition-duration-normal: 0.3s;
+$transition-duration-slow: 0.5s;
+
+$transition-timing-ease: ease;
+$transition-timing-linear: linear;
+$transition-timing-ease-in: ease-in;
+$transition-timing-ease-out: ease-out;
+$transition-timing-ease-in-out: ease-in-out;
+
+
+// -----------------------------
+// 7. Layout Max-Width (전역 레이아웃 최대 너비)
+//    - .container와 같은 주요 레이아웃 요소의 최대 너비를 정의합니다.
+// -----------------------------
+$layout-max-width-container: 1400px;
+$layout-min-content-width: 320px;
+
+// -----------------------------
+// 8. 기타 공통 변수 (필요시 추가)
+// -----------------------------
+$opacity-disabled: 0.5;

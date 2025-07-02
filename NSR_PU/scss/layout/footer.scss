@@ -1,0 +1,66 @@
+@use '../abstracts/colors';
+@use '../base/base.scss';
+@use '../base/typography.scss';
+
+.footer {
+    padding: 5rem 0;
+    background-color: colors.$black;
+    position: relative;
+    .quick-aside {
+        position: absolute;
+        position: fixed;
+        text-align: center;
+        right: 1.6rem;
+        bottom: 3%;
+        z-index: 100;
+        -webkit-transition: .2s;
+        transition: .2s;
+        width: 16.5rem;
+        font-size: 1.5rem;
+        font-weight: 600;
+        .aside-btn {
+            border-radius: 50px;
+            padding: 1rem 0;
+            cursor: pointer;
+            &.chat-ai {
+                background-color: colors.$brand-blue-primary;
+                color: colors.$white;
+                @include base.flex(center, center);
+                gap: 0.5rem;
+                &:hover {
+                    background-color: colors.$brand-blue-action;
+                }
+            }
+            &.feedback {
+                border: 1.5px solid colors.$brand-blue-primary;
+                margin-top: 0.8rem;
+                color: colors.$brand-blue-primary;
+                &:hover {
+                    background-color: colors.$brand-blue-action;
+                    color: colors.$white;
+                }
+            }
+        }
+    }
+   .container {
+        .footer-wrapper {
+        @include base.flex(space-between, center);
+        }
+        .footer-details {
+            font-size: typography.$font-size-small;
+            color: colors.$neutral-grey-soft;
+        }
+        .footer-organization {
+            display: flex;
+            gap: 2rem;
+            .footer-title {
+                font-weight: 500;
+            }
+        }
+        .footer-copyright {
+            margin-top: 0.5rem;
+            color: colors.$text-color-subtle;                
+        }
+   }
+
+}

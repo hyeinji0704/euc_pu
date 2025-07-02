@@ -1,0 +1,105 @@
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 100;
+  src: local("Pretendard Thin"), url("../../fonts/Pretendard-Thin.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 200;
+  src: local("Pretendard ExtraLight"), url("../../fonts/Pretendard-ExtraLight.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 300;
+  src: local("Pretendard Light"), url("../../fonts/Pretendard-Light.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 400;
+  src: local("Pretendard Regular"), url("../../fonts/Pretendard-Regular.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 500;
+  src: local("Pretendard Medium"), url("../../fonts/Pretendard-Medium.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 600;
+  src: local("Pretendard SemiBold"), url("../../fonts/Pretendard-SemiBold.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 700;
+  src: local("Pretendard Bold"), url("../../fonts/Pretendard-Bold.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 800;
+  src: local("Pretendard ExtraBold"), url("../../fonts/Pretendard-ExtraBold.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 900;
+  src: local("Pretendard Black"), url("../../fonts/Pretendard-Black.woff") format("woff");
+  font-display: swap;
+}
+body {
+  font-family: "Pretendard", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #212121;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Pretendard", sans-serif;
+  line-height: 1.2;
+  color: #000000;
+}
+
+h1 {
+  font-size: 48px;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 36px;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+h5 {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+h6 {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 16px;
+}
+
+/*# sourceMappingURL=typography.css.map */

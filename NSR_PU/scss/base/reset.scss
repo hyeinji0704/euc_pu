@@ -1,0 +1,23 @@
+// scss/base/_reset.scss
+
+/* Minimal Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, figure, blockquote, dl, dd {
+  margin: 0;
+  padding: 0;
+}
+ul, ol {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+/* 기타 필요한 리셋 스타일 추가 */

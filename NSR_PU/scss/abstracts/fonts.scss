@@ -1,0 +1,94 @@
+// _fonts.scss
+
+// -----------------------------
+// Font Family & Weights
+// -----------------------------
+
+// Pretendard 폰트 파일의 로컬 경로를 지정합니다.
+// 이 경로는 실제 프로젝트 구조에 맞게 수정해야 합니다.
+@font-face {
+  font-family: 'Pretendard';
+  font-weight: 100;
+  src: local('Pretendard Thin'),
+       url('../../fonts/Pretendard-Thin.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  font-weight: 200;
+  src: local('Pretendard ExtraLight'),
+       url('../../fonts/Pretendard-ExtraLight.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  font-weight: 300;
+  src: local('Pretendard Light'),
+       url('../../fonts/Pretendard-Light.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  font-weight: 400;
+  src: local('Pretendard Regular'),
+       url('../../fonts/Pretendard-Regular.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  font-weight: 500;
+  src: local('Pretendard Medium'),
+       url('../../fonts/Pretendard-Medium.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  font-weight: 600;
+  src: local('Pretendard SemiBold'),
+       url('../../fonts/Pretendard-SemiBold.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  font-weight: 700;
+  src: local('Pretendard Bold'),
+       url('../../fonts/Pretendard-Bold.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  font-weight: 800;
+  src: local('Pretendard ExtraBold'),
+       url('../../fonts/Pretendard-ExtraBold.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  font-weight: 900;
+  src: local('Pretendard Black'),
+       url('../../fonts/Pretendard-Black.woff') format('woff');
+  font-display: swap;
+}
+
+
+// 기본 폰트 패밀리 변수
+$font-family-primary: 'Pretendard', sans-serif;
+
+// 폰트 두께 변수 (편의를 위해)
+$font-weight-thin: 100;
+$font-weight-extra-light: 200;
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semi-bold: 600;
+$font-weight-bold: 700;
+$font-weight-extra-bold: 800;
+$font-weight-black: 900;

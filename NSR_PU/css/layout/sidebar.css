@@ -1,0 +1,285 @@
+strong, b {
+  font-weight: inherit;
+}
+
+em, i {
+  font-style: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+ul, ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 100;
+  src: local("Pretendard Thin"), url("../../fonts/Pretendard-Thin.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 200;
+  src: local("Pretendard ExtraLight"), url("../../fonts/Pretendard-ExtraLight.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 300;
+  src: local("Pretendard Light"), url("../../fonts/Pretendard-Light.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 400;
+  src: local("Pretendard Regular"), url("../../fonts/Pretendard-Regular.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 500;
+  src: local("Pretendard Medium"), url("../../fonts/Pretendard-Medium.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 600;
+  src: local("Pretendard SemiBold"), url("../../fonts/Pretendard-SemiBold.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 700;
+  src: local("Pretendard Bold"), url("../../fonts/Pretendard-Bold.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 800;
+  src: local("Pretendard ExtraBold"), url("../../fonts/Pretendard-ExtraBold.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 900;
+  src: local("Pretendard Black"), url("../../fonts/Pretendard-Black.woff") format("woff");
+  font-display: swap;
+}
+body {
+  font-family: "Pretendard", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #212121;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Pretendard", sans-serif;
+  line-height: 1.2;
+  color: #000000;
+}
+
+h1 {
+  font-size: 48px;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 36px;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+h5 {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+h6 {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 16px;
+}
+
+.lnb_wrap {
+  position: relative;
+  left: 0;
+  width: 22rem;
+  z-index: 1;
+  top: 50px;
+  display: inline-block;
+}
+.lnb_wrap .lnb_header {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.lnb_wrap .lnb_header h2 {
+  padding: 4.4rem 0 15.3rem 0;
+  background: #162E5D;
+  color: #FFFFFF;
+  font-size: 24px;
+  border-radius: 1rem;
+  text-align: center;
+}
+.lnb_wrap .lnb_header .lnb_depth2 {
+  background: #FFFFFF;
+  position: relative;
+  top: -11rem;
+  width: 100%;
+  border-radius: 1rem;
+  box-shadow: 8px 8px 12px 0px rgba(0, 0, 0, 0.03), 0px 0px 20px 0px rgba(158, 158, 158, 0.08);
+}
+.lnb_wrap .lnb_header .lnb_depth2 > ul {
+  padding: 1.2rem 2rem;
+}
+.lnb_wrap .lnb_header .lnb_depth2 > ul > li {
+  display: block;
+  border-bottom: 1px solid #DEE3E6;
+  min-height: 6.2rem;
+}
+.lnb_wrap .lnb_header .lnb_depth2 > ul > li.on > a {
+  color: #2970FF;
+}
+.lnb_wrap .lnb_header .lnb_depth2 > ul > li:last-child {
+  border-bottom: none;
+}
+.lnb_wrap .lnb_header .lnb_depth2 > ul > li .link_2th {
+  color: #4E5969;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 2.2rem;
+  padding: 2rem 0;
+  position: relative;
+  word-break: keep-all;
+  display: block;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.lnb_wrap .lnb_header .lnb_depth2 > ul > li .link_2th:hover {
+  color: #2970FF;
+}
+.lnb_wrap .lnb_header .lnb_depth2 > ul > li .link_2th.off::before {
+  display: none;
+}
+.lnb_wrap .lnb_header .lnb_depth2 > ul > li .link_2th::before {
+  content: "";
+  width: 1.8rem;
+  height: 1.8rem;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background: url(/img/icon/ic-toggle_arrow.svg) no-repeat center center/contain;
+  transition: transform 0.3s ease;
+}
+.lnb_wrap .lnb_header .lnb_depth2 > ul > li .link_2th.collapsed::before {
+  transform: translateY(-50%) rotate(-90deg);
+}
+.lnb_wrap .lnb_header .lnb_depth2 > ul > li .lm_3th {
+  border-top: 3px solid #4E5969;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.4s ease, opacity 0.3s ease, padding 0.3s ease;
+  padding: 0;
+}
+.lnb_wrap .lnb_header .lnb_depth2 > ul > li .lm_3th.show {
+  max-height: 500px;
+  opacity: 1;
+  padding-top: 1rem;
+}
+.lnb_wrap .lnb_header .lnb_depth2 > ul > li .lm_3th > li {
+  line-height: 1.3;
+  display: block;
+  padding: 1rem 0.6rem;
+}
+.lnb_wrap .lnb_header .lnb_depth2 > ul > li .lm_3th > li a {
+  word-break: keep-all;
+  font-size: 1.5rem;
+  color: #4E5969;
+  font-weight: 500;
+  line-height: 3.2rem;
+  display: block;
+  height: 100%;
+  position: relative;
+  padding-left: 1.4rem;
+  transition: all 0.2s ease;
+}
+.lnb_wrap .lnb_header .lnb_depth2 > ul > li .lm_3th > li a:hover {
+  color: #2970FF;
+  font-weight: 600;
+}
+.lnb_wrap .lnb_header .lnb_depth2 > ul > li .lm_3th > li a:hover::before {
+  background-color: #2970FF;
+}
+.lnb_wrap .lnb_header .lnb_depth2 > ul > li .lm_3th > li a.active {
+  color: #2970FF;
+  font-weight: 600;
+}
+.lnb_wrap .lnb_header .lnb_depth2 > ul > li .lm_3th > li a.active::before {
+  background-color: #2970FF;
+}
+.lnb_wrap .lnb_header .lnb_depth2 > ul > li .lm_3th > li a::before {
+  width: 0.5rem;
+  height: 0.5rem;
+  position: absolute;
+  content: "";
+  border-radius: 100%;
+  background-color: #DDDDDD;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.2s ease;
+}
+
+/*# sourceMappingURL=sidebar.css.map */

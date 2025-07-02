@@ -1,0 +1,109 @@
+// scss/base/_typography.scss
+@use '../abstracts/fonts' as *;    
+@use '../abstracts/colors' as *;  
+@use '../abstracts/variables' as *;
+
+// -----------------------------
+// Font Sizes (Pixel-based Scale)
+// -----------------------------
+$font-size-12: 12px; // 작은 텍스트 (캡션, 보조 정보)
+$font-size-14: 14px; // 본문 텍스트 (작은 화면)
+$font-size-16: 16px; // 기본 본문 텍스트 (데스크톱)
+$font-size-18: 18px; // 강조 텍스트, 부제목
+$font-size-20: 20px;
+$font-size-24: 24px; // 섹션 제목
+$font-size-28: 28px;
+$font-size-32: 32px; // 큰 제목
+$font-size-36: 36px;
+$font-size-48: 48px; // 가장 큰 제목
+
+// -----------------------------
+// Semantic Font Sizes (Usage-based)
+// -----------------------------
+
+// Body & Content
+$font-size-body: $font-size-16; // 기본 본문 폰트 크기
+$font-size-small: $font-size-14; // 작은 본문 텍스트, 설명
+$font-size-caption: $font-size-12; // 캡션, 메타 정보
+
+// Headings
+$font-size-heading-1: $font-size-48; // H1
+$font-size-heading-2: $font-size-36; // H2
+$font-size-heading-3: $font-size-28; // H3
+$font-size-heading-4: $font-size-24; // H4
+$font-size-heading-5: $font-size-20; // H5
+$font-size-heading-6: $font-size-18; // H6
+
+// UI Components
+$font-size-button: $font-size-16; // 버튼 텍스트
+$font-size-input: $font-size-16; // 입력 필드 텍스트
+$font-size-label: $font-size-14; // 라벨 텍스트
+
+// -----------------------------
+// Line Heights (줄 높이도 함께 관리)
+// -----------------------------
+$line-height-tight: 1.2;
+$line-height-normal: 1.5; // 기본 줄 높이
+$line-height-loose: 1.8;
+
+// Semantic Line Heights
+$line-height-body: $line-height-normal;
+$line-height-heading: $line-height-tight;
+
+// -----------------------------
+// Base Typography Styles (HTML 태그에 직접 적용)
+// -----------------------------
+
+body {
+  font-family: $font-family-primary;   // _fonts.scss 에서 임포트 (style.scss에서 최종 임포트)
+  font-weight: $font-weight-regular; // _fonts.scss 에서 임포트
+  font-size: $font-size-body;        // 이 파일 내에서 정의된 변수 사용
+  line-height: $line-height-body;    // 이 파일 내에서 정의된 변수 사용
+  color: $text-color-primary;              // _colors.scss 에서 임포트
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-family-primary;
+  line-height: $line-height-heading;
+  color: $text-color-heading;       // _colors.scss 에서 임포트
+  // margin-top: $spacing-lg;           // _variables.scss 에서 임포트
+  // margin-bottom: $spacing-md;        // _variables.scss 에서 임포트
+}
+
+h1 {
+  font-size: $font-size-heading-1;
+  font-weight: $font-weight-bold; // _fonts.scss 에서 임포트
+}
+
+h2 {
+  font-size: $font-size-heading-2;
+  font-weight: $font-weight-bold;
+}
+
+h3 {
+  font-size: $font-size-heading-3;
+  font-weight: $font-weight-semi-bold;
+}
+
+h4 {
+  font-size: $font-size-heading-4;
+  font-weight: $font-weight-semi-bold;
+}
+
+h5 {
+  font-size: $font-size-heading-5;
+  font-weight: $font-weight-medium;
+}
+
+h6 {
+  font-size: $font-size-heading-6;
+  font-weight: $font-weight-medium;
+}
+
+p {
+  font-size: $font-size-body;
+  line-height: $line-height-body;
+  margin-bottom: $spacing-md; // _variables.scss 에서 임포트
+}
+
+// 필요하다면 기타 텍스트 관련 기본 스타일 추가

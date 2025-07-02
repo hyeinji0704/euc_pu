@@ -1,0 +1,449 @@
+strong, b {
+  font-weight: inherit;
+}
+
+em, i {
+  font-style: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+ul, ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 100;
+  src: local("Pretendard Thin"), url("../../fonts/Pretendard-Thin.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 200;
+  src: local("Pretendard ExtraLight"), url("../../fonts/Pretendard-ExtraLight.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 300;
+  src: local("Pretendard Light"), url("../../fonts/Pretendard-Light.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 400;
+  src: local("Pretendard Regular"), url("../../fonts/Pretendard-Regular.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 500;
+  src: local("Pretendard Medium"), url("../../fonts/Pretendard-Medium.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 600;
+  src: local("Pretendard SemiBold"), url("../../fonts/Pretendard-SemiBold.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 700;
+  src: local("Pretendard Bold"), url("../../fonts/Pretendard-Bold.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 800;
+  src: local("Pretendard ExtraBold"), url("../../fonts/Pretendard-ExtraBold.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 900;
+  src: local("Pretendard Black"), url("../../fonts/Pretendard-Black.woff") format("woff");
+  font-display: swap;
+}
+body {
+  font-family: "Pretendard", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #212121;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Pretendard", sans-serif;
+  line-height: 1.2;
+  color: #000000;
+}
+
+h1 {
+  font-size: 48px;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 36px;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+h5 {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+h6 {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 16px;
+}
+
+.header {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 20;
+  width: 100%;
+  height: 120px;
+  background-color: #fff;
+  color: #212121;
+  -webkit-animation: dropUp 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+  animation: dropUp 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+  border-bottom: 1px solid #E5E6EB;
+}
+.header .gnb_area {
+  height: 100%;
+}
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1400px;
+  height: 100%;
+}
+.header .logo {
+  width: 24.1rem;
+  height: 5.8rem;
+}
+.header .logo a {
+  display: block;
+  height: 100%;
+  background: url(/img/logo.svg) 0 0/auto 5.8rem no-repeat;
+  position: relative;
+  z-index: 1;
+}
+.header .gnb_area .btn_allmenu {
+  display: none;
+  position: absolute;
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  right: 0;
+  top: 50%;
+  z-index: 2;
+}
+.header .gnb_area .btn_allmenu span {
+  font-size: 1.5rem;
+  color: #333333;
+  font-weight: 500;
+  display: inline-block;
+  vertical-align: middle;
+}
+.header .gnb_area .btn_sch_open {
+  display: none;
+}
+.header .pop_title,
+.header .pop_close {
+  display: none;
+}
+.header .nav {
+  position: relative;
+}
+.header .topmenu {
+  display: flex;
+}
+.header .topmenu .depth1 > a {
+  display: block;
+  width: 100%;
+  white-space: nowrap;
+  text-align: center;
+  position: relative;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 12rem;
+  color: #212121;
+}
+.header .topmenu .depth1 > a::before {
+  content: "";
+  position: absolute;
+  left: 0%;
+  bottom: -1px;
+  height: 6px;
+  width: 0;
+  background-color: #2970FF;
+  transition: 0.2s;
+}
+.header .topmenu .depth1 > a.active::before {
+  width: 100%;
+}
+.header .topmenu .depth1.active a::before {
+  width: 100%;
+}
+.header .topmenu .depth1.active .submenu {
+  opacity: 1;
+  visibility: visible;
+  max-height: 100rem;
+  min-height: 20rem;
+  transition-delay: 0.2s;
+}
+.header .topmenu .submenu {
+  transition: 0.35s, max-height 1.35s cubic-bezier(0.13, 0.67, 0.59, 0.98);
+  opacity: 0;
+  visibility: hidden;
+  /*text-align:center; */
+  overflow: hidden;
+  max-height: 0;
+  position: absolute;
+  left: 0;
+  top: 12rem;
+  z-index: 20;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 2rem 2rem rgba(0, 0, 0, 0.12);
+  border-top: 1px solid rgba(149, 160, 183, 0.25);
+}
+.header .topmenu .depth2 {
+  max-width: 1280px;
+  margin: 4rem auto;
+  position: relative;
+  overflow-y: auto;
+  padding-left: 30rem;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.header .topmenu .depth2 > li {
+  position: relative;
+  padding: 0.2rem 0;
+}
+.header .topmenu .depth2 > li > a {
+  display: block;
+  /* border:1px solid #5687c3;text-align:center; */
+  /*   margin-bottom: 1rem; */
+  margin: 0.5rem 0.5rem;
+  padding: 1.3rem;
+  font-size: 1.6rem;
+  color: #222;
+  font-weight: 500;
+  /*&:hover{background-color:$color1;border-color:$color1;color:#fff;transition:.25s}*/
+}
+.header .topmenu .depth2 > li > a:focus {
+  outline: 2px solid #fff;
+  border-radius: 5px;
+}
+.header .topmenu .depth3 {
+  margin: 0 0 1rem 0.3rem;
+}
+.header .topmenu .depth3 > li > a {
+  color: #46464a;
+  display: block;
+  margin: 0 0.5rem 0 0.2rem;
+  padding: 0.5rem 0 0.5rem 1rem;
+  position: relative;
+  font-size: 1.4rem;
+}
+.header .topmenu .depth3 a:hover {
+  color: #99e5ff;
+}
+.header .topmenu.fullmenu .depth1 {
+  height: calc(100% - 12rem + 4rem);
+}
+.header .topmenu.fullmenu .depth1:last-child .submenu {
+  border-right: 1px solid #E5E6EB;
+}
+.header .topmenu.fullmenu .depth1 > a::before {
+  width: 0;
+}
+.header .topmenu.fullmenu .depth1:hover > a, .header .topmenu.fullmenu .depth1.on > a {
+  font-weight: 600;
+  background-color: #fff;
+  color: #2970FF;
+}
+.header .topmenu.fullmenu .depth1:hover > a:before, .header .topmenu.fullmenu .depth1.on > a::before {
+  width: 100%;
+}
+.header .topmenu.fullmenu .depth1:hover > a > span::after, .header .topmenu.fullmenu .depth1.on > a > span::after {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+.header .topmenu.fullmenu .depth1:hover .submenu, .header .topmenu.fullmenu .depth1.on .submenu {
+  background: #1F3FAA;
+  /*url(/resources/imgs/common/gnb_iris_bg.png) no-repeat 50% 100%*/
+  border-color: #1F3FAA;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+.header .topmenu.fullmenu .depth1:hover .submenu .depth3 a, .header .topmenu.fullmenu .depth1.on .submenu .depth3 a {
+  color: #bcc6e6;
+}
+.header .topmenu.fullmenu .depth1.active .submenu {
+  -webkit-transition: padding 0.3s, opacity 0.5s, max-height 1.35s cubic-bezier(0.13, 0.67, 0.59, 0.98);
+  transition: padding 0.3s, opacity 0.5s, max-height 1.35s cubic-bezier(0.13, 0.67, 0.59, 0.98);
+  min-height: inherit;
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.header .topmenu.fullmenu .submenu {
+  -webkit-transition: 0.35s;
+  transition: 0.35s;
+  width: auto;
+  position: static;
+  left: auto;
+  background-color: transparent;
+  /*border-top:0;*/
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.header .topmenu.fullmenu .submenu .depth2 {
+  padding-left: 0;
+  max-width: inherit;
+  display: block;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.header .topmenu.fullmenu .submenu .depth2 > li > a {
+  border: 0;
+}
+.header .topmenu.fullmenu .submenu .depth2 > li > a:focus {
+  outline: 2px solid #fff;
+  border-radius: 5px;
+}
+.header.active {
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}
+.header.active .topmenu .depth1 a.active:before {
+  opacity: 0.3;
+}
+.header.active .topmenu .depth1.active a.active::before {
+  opacity: 1;
+}
+.header .gnb_util {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.header .gnb_util .login-area {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.header .gnb_util .logged-out .btn_login {
+  color: #212121;
+  font-size: 16px;
+  font-weight: 600;
+}
+.header .gnb_util .logged-in {
+  display: none;
+}
+.header .gnb_util .logged-in .user-info {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.header .gnb_util .logged-in .user-info .user-thumb {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: #C9CDD4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+}
+.header .gnb_util .logged-in .user-info .user-name {
+  color: #212121;
+  font-size: 16px;
+}
+.header .gnb_util .logged-in .user-info .user-name strong {
+  font-weight: 600;
+}
+.header .gnb_util .logged-in .btn_logout {
+  padding: 0.5rem 1.6rem;
+  color: #6D747B;
+  border: 1px solid #D9DEE7;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 14px;
+}
+.header .gnb_util .logged-in .btn_logout:hover {
+  background: #D9DEE7;
+  transition: all 0.2s;
+}
+.header .gnb_util .btn-sch {
+  width: 6rem;
+  height: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header .gnb_util .btn-sch span {
+  font-size: 0;
+  line-height: 0;
+}
+
+/*# sourceMappingURL=header.css.map */

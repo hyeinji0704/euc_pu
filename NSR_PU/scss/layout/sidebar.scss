@@ -1,0 +1,166 @@
+@use '../abstracts/colors';
+@use '../base/base.scss';
+@use '../base/typography.scss';
+
+
+.lnb_wrap{
+    position: relative;
+    left: 0;
+    width: 22rem;
+    z-index: 1;
+    top: 50px;
+    display: inline-block;
+    
+    .lnb_header {
+        width: 100%;
+        height: 100%;
+        display: block;
+        
+        h2 {
+            padding: 4.4rem 0 15.3rem 0;
+            background: colors.$brand-blue-contrast;
+            color: colors.$white;
+            font-size: typography.$font-size-24;
+            border-radius: 1rem;
+            text-align: center;
+        }
+        
+        .lnb_depth2 {
+            background: colors.$white;
+            position: relative;
+            top: -11rem;
+            width: 100%;
+            border-radius: 1rem;
+            box-shadow: 8px 8px 12px 0px rgba(0, 0, 0, 0.03), 0px 0px 20px 0px rgba(158, 158, 158, 0.08);
+            
+            > ul {
+                padding: 1.2rem 2rem;
+                
+                > li {
+                    display: block;
+                    border-bottom: 1px solid colors.$background-color-light;
+                    min-height: 6.2rem;
+                    
+                    &.on {
+                        > a {
+                            color: colors.$brand-blue-primary;
+                        }
+                    }
+                    
+                    &:last-child {
+                        border-bottom: none;
+                    }
+                    
+                    .link_2th {
+                        color: colors.$text-color-subtle-dark;
+                        font-size: typography.$font-size-16;
+                        font-weight: 600;
+                        line-height: 2.2rem; 
+                        padding: 2rem 0;
+                        position: relative;
+                        word-break: keep-all;
+                        display: block;
+                        cursor: pointer; // 추가: 클릭 가능한 커서
+                        transition: all 0.3s ease; // 추가: 부드러운 전환 효과
+                        
+                        // 호버 효과 추가
+                        &:hover {
+                            color: colors.$brand-blue-primary;
+                        }
+                        
+                        &.off::before {
+                            display: none; // 수정: off 클래스는 화살표 숨김
+                        }
+                        
+                        // 화살표 기본 상태 (열린 상태)
+                        &::before {
+                            content: '';
+                            width: 1.8rem;
+                            height: 1.8rem;
+                            position: absolute;
+                            right: 0;
+                            top: 50%; // 수정: 수직 중앙 정렬
+                            transform: translateY(-50%); // 추가: 정확한 중앙 정렬
+                            background: url(/img/icon/ic-toggle_arrow.svg) no-repeat center center / contain;
+                            transition: transform 0.3s ease; // 추가: 회전 애니메이션
+                        }
+                        
+                        // 추가: 닫힌 상태 (화살표 회전)
+                        &.collapsed::before {
+                            transform: translateY(-50%) rotate(-90deg);
+                        }
+                    }
+                    
+                    .lm_3th {
+                        border-top: 3px solid colors.$text-color-subtle-dark;
+                        // 추가: 토글 애니메이션을 위한 속성들
+                        max-height: 0;
+                        overflow: hidden;
+                        opacity: 0;
+                        transition: max-height 0.4s ease, opacity 0.3s ease, padding 0.3s ease;
+                        padding: 0; // 기본적으로 패딩 제거
+                        
+                        // 추가: 열린 상태
+                        &.show {
+                            max-height: 500px; // 충분한 높이 설정
+                            opacity: 1;
+                            padding-top: 1rem; // 열렸을 때 패딩 복원
+                        }
+                        
+                        > li {
+                            line-height: 1.3;
+                            display: block;
+                            padding: 1rem 0.6rem;
+                            
+                            a {
+                                word-break: keep-all;
+                                font-size: 1.5rem;
+                                color: colors.$text-color-subtle-dark;
+                                font-weight: 500;
+                                line-height: 3.2rem;
+                                display: block;
+                                height: 100%;
+                                position: relative;
+                                padding-left: 1.4rem;
+                                transition: all 0.2s ease; // 추가: 호버 애니메이션
+                                
+                                // 호버 효과 개선
+                                &:hover {
+                                    color: colors.$brand-blue-primary;
+                                    font-weight: 600;
+                                    
+                                    &::before {
+                                        background-color: colors.$brand-blue-primary;
+                                    }
+                                }
+                                
+                                // 활성 상태 추가
+                                &.active {
+                                    color: colors.$brand-blue-primary;
+                                    font-weight: 600;
+                                    
+                                    &::before {
+                                        background-color: colors.$brand-blue-primary;
+                                    }
+                                }
+                                
+                                &::before {
+                                    width: 0.5rem;
+                                    height: 0.5rem;
+                                    position: absolute;
+                                    content: "";
+                                    border-radius: 100%;
+                                    background-color: colors.$neutral-grey-lighter;
+                                    left: 0;
+                                    top: 50%;
+                                    transform: translateY(-50%);
+                                    transition: all 0.2s ease; // 추가: 점 애니메이션
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
