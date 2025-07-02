@@ -1,0 +1,33 @@
+@use '../abstracts/colors';
+@use '../base/base.scss';
+@use '../base/typography.scss';
+
+.tag {
+  display: inline-block;
+  padding: 1px 4px;
+  border-radius: 2px;
+  font-weight: bold;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  border: 1px solid;
+
+  &.strategy {
+    color: colors.$tag-strategy;
+    border-color: colors.$tag-strategy;
+  }
+
+  &.policy {
+    color: colors.$tag-policy;
+    border-color: colors.$tag-policy;
+  }
+
+  &.law {
+    color: colors.$tag-law;
+    border-color: colors.$tag-law;
+  }
+
+  &.guide {
+    color: colors.$tag-guide;
+    border-color: colors.$tag-guide;
+  }
+}

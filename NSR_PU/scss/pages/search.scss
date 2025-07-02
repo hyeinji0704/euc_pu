@@ -1,0 +1,222 @@
+@use '../abstracts/colors';
+@use '../abstracts/variables';
+@use '../base/base.scss';
+@use '../base/typography.scss';
+
+
+.total-search-bar {
+    position: absolute;
+    top: variables.$header-height; // 헤더 높이 사용
+    left: 0;
+    width: 100%;
+    height: 10rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    
+    .tsb-box {
+        @include base.flex(center, center);
+        position: relative;
+        height: 7rem;
+        border: 3px solid colors.$brand-blue-primary;
+        box-shadow: 8px 8px 12px 0px rgba(0, 0, 0, 0.03);
+        border-radius: 5rem;
+        background-color: colors.$white;
+        overflow: hidden;
+        &::before {
+            position: absolute;
+            top: 2rem;
+            left: 23rem;
+            bottom: 2rem;
+            width: 1px;
+            background-color: colors.$text-color-muted;
+            content: "";
+        }
+        .tsb-select {
+            position: relative;
+            min-width: 160px;
+            height: 6.8rem;
+            margin: 0 2.7rem 0 3.4rem;
+            background: transparent url(/img/icon/ic-select_arrow.svg) no-repeat center right / auto 22px;
+            font-size: 2rem;   
+            font-weight: 500;
+        }
+        .searchForm-input-wr {
+            position: relative;
+            width: 100%;
+        }
+        .tsb-input {
+            position: relative;
+            height: 68px;
+            line-height: 68px;
+            padding: 0 4rem;
+            font-size: 2rem;
+            font-weight: 500;;
+        }
+        input {
+            &::placeholder {
+                color: colors.$text-color-subtle;
+            }
+        }
+        .tsb-btn {
+            position: relative;
+            min-width: 16.5rem;
+            height: 9rem;
+            padding: 0 4rem;
+            margin-left: 1.2rem;
+            background-color: colors.$brand-blue-primary;
+            font-size: 2rem;
+            font-weight: 500;
+            transition: background-color 0.3s;
+            color: colors.$white;
+            @include base.flex(center, center);
+            gap: 1rem;
+            .ic-search {
+                display: inline-block;
+                width: 30px;
+                height: 30px;
+                background: url(/img/icon/ic-total-search.svg) no-repeat center center;
+            }
+            span {
+                line-height: 2.2rem;
+                display: block;
+                word-break: keep-all;
+            }
+            
+
+        }
+    }
+}
+.main-content {
+    padding: 0 3rem;
+    padding-top: calc(variables.$search-bar-height + variables.$header-height); // 검색 바 높이와 헤더 높이 합산
+}
+
+.sub-top-area {
+    position: relative;
+    align-items: flex-start; 
+    .total-search-nav {
+        padding-bottom: 4.6rem;
+    }
+    .twoline {
+        border-bottom: 2px solid colors.$brand-blue-primary;
+        @include base.flex(flex-start, center);
+        li {
+            border-radius: 1rem 1rem 0 0;
+            flex-grow: 1;
+            max-width: max-content;
+            min-width: 15rem;
+            padding: 0 2rem;
+            font-size: 1.8rem;
+            font-weight: 500;
+            &.on, &:hover {
+                background-color: colors.$brand-blue-primary;
+                color: colors.$white;
+                font-weight: 600
+            }
+            a {
+                @include base.flex(center, center);
+                gap: 0.4rem;
+                height: 6.2rem;
+                line-height: 2.2rem;
+                transition: 0.3s;
+                .count {
+                    font-size: 1.5rem;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+}
+
+.search-summary {
+    padding: 2rem 0;
+    background-color: colors.$off-white-3;
+    border-radius: 1rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-align: center;
+    .highlight {
+        color: colors.$brand-blue-primary;
+    }
+}
+.search-layout {
+    @include base.flex(space-between, flex-start);
+    gap: 2.6rem;
+    padding-top: 4.6rem;
+    .search-layout-main {
+        display: flex;
+        flex-direction: column;
+        gap: 6rem;
+        width: 100%;
+        .search-layout-content {
+            .search-header {
+                @include base.flex(space-between, center);
+                padding-bottom: 3rem;
+                border-bottom: 3px solid #000;
+                .search-title {
+                    font-size: 2.2rem;
+                    .search-keyword {
+                        font-weight: 700;
+                    }
+                    .search-count {
+                        color: colors.$brand-blue-primary;
+                        font-weight: 600;
+                    }
+                }
+                .search-more {
+                    display: flex;
+                    align-items: center;
+                    gap: 0.4rem;
+                    color: colors.$text-color-subtle-dark;
+                    font-weight: 500;
+                    font-size: 1.6rem;
+                    line-height: 1;
+                    .ic-more {
+                        width: 1.8rem;
+                        height: 1.8rem;
+                        background: url(/img/icon/ic-more-arrow.svg) no-repeat center center;
+                    }
+                }
+            }
+            .search-item {
+                padding: 3rem;
+                border-top: 1px solid colors.$background-color-lighter;
+                &:hover {
+                    background-color: colors.$off-white-5;
+                }
+                .search-item-title-wrap {
+                    padding: 1.5rem 0 1.9rem 0;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.5rem;
+                    .search-item-title {
+                        font-size: 2rem;
+                        font-weight: 700;
+                    }
+                    .search-item-subtitle {
+                        color: colors.$text-color-placeholder;
+                    }
+                }
+                .search-item-meta {
+                    display: flex;
+                    gap: 4rem;
+                    .search-item-meta-item {
+                        display: flex;
+                        gap: 1rem;
+                        dt {
+                            font-weight: 500;
+                            color: colors.$text-color-tertiary;
+                        }
+                        dd {
+                            color: colors.$text-color-quaternary;
+                        }
+                    }
+
+                }
+            }
+            .search-result-list {
+                border-bottom: 1px solid colors.$neutral-dark-2;
+            }
+        }
+    }
+}

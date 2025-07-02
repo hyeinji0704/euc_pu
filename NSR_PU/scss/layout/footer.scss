@@ -3,7 +3,8 @@
 @use '../base/typography.scss';
 
 .footer {
-    padding: 5rem 0;
+    margin-top: 15rem;
+    padding: 5rem 3rem;
     background-color: colors.$black;
     position: relative;
     .quick-aside {
@@ -11,7 +12,7 @@
         position: fixed;
         text-align: center;
         right: 1.6rem;
-        bottom: 3%;
+        bottom: 20%;
         z-index: 100;
         -webkit-transition: .2s;
         transition: .2s;

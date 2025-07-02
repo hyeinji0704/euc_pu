@@ -3,7 +3,7 @@
 @use '../base/typography.scss';
 
 .header {
-    position: absolute;
+    position: fixed;
     left: 0;
     top: 0;
     z-index: 20;
@@ -23,6 +23,8 @@
         align-items: center;
         max-width: 1400px;
         height: 100%;
+        // padding-left: 3rem; // _variables.scss 변수 사용
+        // padding-right: 3rem;
     }
     .logo {
         width: 24.1rem;

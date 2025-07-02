@@ -11,6 +11,7 @@ $text-color-primary: #212121; // 기본 텍스트 색상
 $text-color-heading: #000000; // 제목, 강조 등 가장 진한 텍스트
 $text-color-secondary: #333333; // 보조 텍스트, 부제목 등
 $text-color-tertiary: #464646; // 덜 중요한 텍스트, 설명 등
+$text-color-quaternary: #666666; // 4차 텍스트, 보조 설명 등
 $text-color-placeholder: #767676; // 플레이스홀더, 비활성 텍스트
 $text-color-muted: #999999; // 약한 텍스트, 저작권, 주석 등
 $text-color-subtle: #7E7F86; // 미묘한 텍스트, 추가 정보
@@ -64,6 +65,12 @@ $off-white-5: #F9F9F9; // 가장 흔한 오프 화이트 배경
 // -----------------------------
 $status-error: #FF0000; // 에러 메시지, 경고
 $accent-red: #FF4D4F; // 강조용 빨강, 할인 배지
+
+// Tag Colors (정책수준 태그 색상)
+$tag-strategy: #557FDB;
+$tag-policy: #49AB6D;
+$tag-law: #DD6789;
+$tag-guide: #8468C5;
 
 // -----------------------------
 // Opacity Values (투명도 - 필요한 경우)

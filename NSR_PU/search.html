@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../js/plugin/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../js/component.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <title>통합검색</title>
+</head>
+<body>
+    <header class="header active">
+        <div class="gnb_area">
+            <div class="container">
+                <h1 class="logo">
+                    <a href="/main.do" alt="NSR">
+                        <span class="hidden">NSR사이버안보정책데이터베이스</span>
+                    </a>
+                </h1>
+                <button type="button" class="btn_allmenu">
+                    <span>전체 메뉴</span>
+                    <i class="icon-menu"></i>
+                </button>
+                <button type="button" class="btn_sch_open">
+                    <span >통합검색열기</span>
+                    <i class="icon-menu"></i>
+                </button>
+                <nav class="nav" id="gnb">
+                    <h2 class="pop_title">전체메뉴</h2>
+                    <ul id="head_menu" class="topmenu fullmenu">
+                        <li class="depth1 ">
+                            <a href="" class=""><span>정책정보</span></a>
+                            <div class="submenu">
+                                <ul class="depth2 sub01">
+                                    <li ><a href="">국가,국제기구 정보</a></li>
+                                    <li ><a href="">조직 정보</a></li>
+                                    <li ><a href="">정책 정보</a></li>
+                                </ul>
+                            </div> 
+                        </li>
+                        <li class="depth1 ">
+                            <a href=""><span>정책발간현황</span></a>
+                            <div class="submenu">
+                                <ul class="depth2 sub01">
+                                    <li ><a href="">정책발간현황 조회</a></li>
+                                    <li class="is-depth3">
+                                        <a href="">정책발간현황 분류별</a>
+                                        <ul class="depth3">
+                                            <li><a href="">전략 문건</a></li>
+                                            <li><a href="">법 문건</a></li>
+                                            <li><a href="">지침 문건</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="is-depth3">
+                                        <a href="">정책발간현황 수집처별</a>
+                                        <ul class="depth3">
+                                            <li><a href="">전략 문건</a></li>
+                                            <li><a href="">법 문건</a></li>
+                                            <li><a href="">지침 문건</a></li>
+                                        </ul>
+                                    </li> 
+                                </ul>
+                            </div> 
+                        </li>
+                        <li class="depth1"> 
+                            <a href=""><span>분석</span></a>
+                            <div class="submenu">
+                                <ul class="depth2 sub01">
+                                    <li ><a href="">국가정책 비교</a></li>
+                                    <li ><a href="">타임라인 분석</a></li>
+                                    <li ><a href="">네트워크 분석</a></li>
+                                    <li ><a href="">워드 클라우드 분석</a></li>
+                                    <li ><a href="">네트워크맵 분석</a></li>
+                                    <li ><a href="">토픽 분석</a></li>
+                                    <li ><a href="">보고서</a></li>
+                                </ul>
+                            </div> 
+                        </li>
+                        <li class="depth1">
+                            <a href=""><span>마이페이지</span></a>
+                            <div class="submenu">
+                                <ul class="depth2 sub01">
+                                    <li ><a href="">정보수정</a></li>
+                                </ul>
+                            </div> 
+                        </li>
+                    </ul>
+                    <button class="pop_close">
+                        <i></i>
+                        <span class="hidden">전체메뉴 레이어 닫기</span>
+                    </button>
+                </nav>
+                <div class="gnb_util">
+                    <div class="group_btn">
+                        <!-- 로그인 전 -->
+                        <div class="logged-out login-area">
+                            <span class="member-link">
+                            <a href="#" class="btn_login">로그인</a>
+                            </span>
+                        </div>
+                        <!-- 로그인 후 -->
+                        <div class="logged-in login-area">
+                            <div class="user-info">
+                                <span class="user-thumb"><img src="/img/icon/ic-user.svg" alt="프로필 이미지"  /></span>
+                                <span class="user-name"><strong>홍길동</strong>님</span>
+                            </div>
+                            <span class="member-link">
+                            <a href="#" class="btn_logout">로그아웃</a>
+                            </span>
+                        </div>
+                    </div>
+                    <button id="btn_sch" class="btn-sch">
+                        <img src="/img/icon/ic-search.svg" alt="검색 아이콘" />
+                        <span>검색</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header> 
+    <div class="total-search-bar">
+        <div class="respon">
+            <form id="searchForm">
+                <div class="tsb-box">
+                    <select class="tsb-select" title="통합검색 검색조건">
+                        <option value="all">전체</option>
+                        <option value="country">국가</option>
+                        <option value="policy">정책</option>
+                        <option value="organization">조직</option>
+                    </select>
+                    <div class="searchForm-input-wr">
+                        <input type="text" id="searchInput" class="tsb-input" placeholder="검색어를 입력하세요." />
+                    </div>
+                    <button type="submit" class="tsb-btn">
+                        <span class="ic-search"></span>
+                        <span>검색</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="main-content">
+        <div class="container">
+            <aside class="sub-top-area">
+                <div class="total-search-nav">
+                    <ul class="twoline">
+                        <li class="on tabActive">
+                            <a href="#">
+                                <em>전체</em>
+                                <span class="count">(76,762)</span>
+                            </a>
+                        </li>
+                        <li class="country">
+                            <a href="#">
+                                <em>국가</em>
+                                <span class="count">(12,345)</span>
+                            </a>
+                        </li>
+                        <li class="policy">
+                            <a href="#">
+                                <em>정책</em>
+                                <span class="count">(34,567)</span>
+                            </a>
+                        </li>
+                        <li class="organization">
+                            <a href="#">
+                                <em>조직</em>
+                                <span class="count">(29,850)</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+            <div class="search-summary">
+                "<span class="highlight">우주 전략</span>"(으로) 검색한 결과, 총 76,762건의 검색결과가 있습니다.
+            </div>
+            <div class="search-layout">
+                <div class="search-layout-main">
+                    <!-- 탭 하나당 검색 결과는 최대 3개까지 노출됩니다. (개발 참고) -->
+                    <div class="search-layout-content">
+                        <div class="search-header">
+                            <div class="search-title">
+                                <strong class="search-keyword">국가</strong>
+                                <span class="search-count">(12,345)</span>
+                            </div>
+                            
+                            <button class="search-more">
+                                <span>더보기</span>
+                                <span class="ic-more"></span>
+                            </button>
+                        </div>
+                        <div class="search-result-list">
+                            <div class="search-item">
+                                <div class="tag strategy">전략</div>
+
+                                <div class="search-item-title-wrap">
+                                    <span class="search-item-title">유럽 우주 전략</span>
+                                    <span class="search-item-subtitle">space strategy for Europe</span>
+                                </div>
+
+                                <dl class="search-item-meta">
+                                    <div class="search-item-meta-item">
+                                        <dt class="search-item-meta-label">제정일</dt>
+                                        <dd class="search-item-meta-value">2024-10-24</dd>
+                                    </div>
+                                    <div class="search-item-meta-item">
+                                        <dt class="search-item-meta-label">정책구분</dt>
+                                        <dd class="search-item-meta-value">기타</dd>
+                                    </div>
+                                    <div class="search-item-meta-item">
+                                        <dt class="search-item-meta-label">발행국</dt>
+                                        <dd class="search-item-meta-value">유럽연합</dd>
+                                    </div>
+                                    <div class="search-item-meta-item">
+                                        <dt class="search-item-meta-label">키워드</dt>
+                                        <dd class="search-item-meta-value">space, 우주안보, space, 우주</dd>
+                                    </div>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="search-layout-content">
+                        <div class="search-header">
+                            <div class="search-title">
+                                <strong class="search-keyword">정책</strong>
+                                <span class="search-count">(34,567)</span>
+                            </div>
+                            
+                            <button class="search-more">
+                                <span>더보기</span>
+                                <span class="ic-more"></span>
+                            </button>
+                        </div>
+                        <div class="search-result-list">
+                            <div class="search-item">
+                                <div class="tag strategy">전략</div>
+
+                                <div class="search-item-title-wrap">
+                                    <span class="search-item-title">유럽 우주 전략</span>
+                                    <span class="search-item-subtitle">space strategy for Europe</span>
+                                </div>
+
+                                <dl class="search-item-meta">
+                                    <div class="search-item-meta-item">
+                                    <dt class="search-item-meta-label">제정일</dt>
+                                    <dd class="search-item-meta-value">2024-10-24</dd>
+                                    </div>
+                                    <div class="search-item-meta-item">
+                                    <dt class="search-item-meta-label">정책구분</dt>
+                                    <dd class="search-item-meta-value">기타</dd>
+                                    </div>
+                                    <div class="search-item-meta-item">
+                                    <dt class="search-item-meta-label">발행국</dt>
+                                    <dd class="search-item-meta-value">유럽연합</dd>
+                                    </div>
+                                    <div class="search-item-meta-item">
+                                    <dt class="search-item-meta-label">키워드</dt>
+                                    <dd class="search-item-meta-value">space, 우주안보, space, 우주</dd>
+                                    </div>
+                                </dl>
+                            </div>
+                            <div class="search-item">
+                                <div class="tag strategy">전략</div>
+
+                                <div class="search-item-title-wrap">
+                                    <span class="search-item-title">유럽 우주 전략</span>
+                                    <span class="search-item-subtitle">space strategy for Europe</span>
+                                </div>
+
+                                <dl class="search-item-meta">
+                                    <div class="search-item-meta-item">
+                                    <dt class="search-item-meta-label">제정일</dt>
+                                    <dd class="search-item-meta-value">2024-10-24</dd>
+                                    </div>
+                                    <div class="search-item-meta-item">
+                                    <dt class="search-item-meta-label">정책구분</dt>
+                                    <dd class="search-item-meta-value">기타</dd>
+                                    </div>
+                                    <div class="search-item-meta-item">
+                                    <dt class="search-item-meta-label">발행국</dt>
+                                    <dd class="search-item-meta-value">유럽연합</dd>
+                                    </div>
+                                    <div class="search-item-meta-item">
+                                    <dt class="search-item-meta-label">키워드</dt>
+                                    <dd class="search-item-meta-value">space, 우주안보, space, 우주</dd>
+                                    </div>
+                                </dl>
+                            </div>
+                            <div class="search-item">
+                                <div class="tag strategy">전략</div>
+
+                                <div class="search-item-title-wrap">
+                                    <span class="search-item-title">유럽 우주 전략</span>
+                                    <span class="search-item-subtitle">space strategy for Europe</span>
+                                </div>
+
+                                <dl class="search-item-meta">
+                                    <div class="search-item-meta-item">
+                                    <dt class="search-item-meta-label">제정일</dt>
+                                    <dd class="search-item-meta-value">2024-10-24</dd>
+                                    </div>
+                                    <div class="search-item-meta-item">
+                                    <dt class="search-item-meta-label">정책구분</dt>
+                                    <dd class="search-item-meta-value">기타</dd>
+                                    </div>
+                                    <div class="search-item-meta-item">
+                                    <dt class="search-item-meta-label">발행국</dt>
+                                    <dd class="search-item-meta-value">유럽연합</dd>
+                                    </div>
+                                    <div class="search-item-meta-item">
+                                    <dt class="search-item-meta-label">키워드</dt>
+                                    <dd class="search-item-meta-value">space, 우주안보, space, 우주</dd>
+                                    </div>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+
+                <aside class="compare-box">
+                    <div class="compare-header">
+                        <h2 class="compare-title">정책 비교</h2>
+                        <span class="compare-count">2/3</span>
+                    </div>
+
+                    <div class="compare-body">
+                        <div class="compare-label-wrap">
+                        <span class="label">비교할 정책 정보</span>
+                        <button type="button" class="add-btn" aria-label="정책 추가">+</button>
+                        </div>
+
+                        <ul class="compare-list">
+                        <li class="compare-item">
+                            <span class="tag strategy">전략</span>
+                            <span class="name">유럽 우주 전략</span>
+                            <button type="button" class="remove-btn" aria-label="정책 삭제">×</button>
+                        </li>
+                        <li class="compare-item">
+                            <span class="tag strategy">전략</span>
+                            <span class="name">유럽 우주 전략</span>
+                            <button type="button" class="remove-btn" aria-label="정책 삭제">×</button>
+                        </li>
+                        </ul>
+                    </div>
+
+                    <div class="compare-footer">
+                        <button type="button" class="submit-btn">정책정보 비교</button>
+                        <p class="note">※ 정책 비교는 최대 3개까지 가능합니다.</p>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-wrapper">
+                <div class="footer-details">
+                    <div class="footer-organization">
+                        <div class="footer-title">국가보안기술연구소</div>
+                        <div class="footer-location">[30147] 대전광역시 유성구 유성대로 1559 (전민동)</div>
+                    </div>
+                    <div class="footer-copyright">© NSR.All Rights Reserved</div>
+                </div>
+                <div class="footer-logo">
+                    <a href="/">
+                        <img src="/img/logo.svg" alt="로고" />
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="quick-aside">
+            <div class="chat-ai aside-btn">
+                <img src="/img/icon/ic-ai.svg" alt="채팅 아이콘" />
+                <span>Chat AI</span>
+            </div>
+            <div class="feedback aside-btn">사이버안보 역량평가</div>
+        </div>
+    </footer>
+</body>
+</html>
