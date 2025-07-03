@@ -1,0 +1,95 @@
+@use '../abstracts/colors';
+@use '../abstracts/variables';
+@use '../base/base.scss';
+@use '../base/typography.scss';
+
+.download-btn {
+    display: flex;
+    padding: 0.4rem 0.6rem 0.4rem 1.2rem;
+    align-items: center;
+    gap: 0.4rem;
+    border-radius: 0.4rem;
+    border: 1px solid colors.$text-color-placeholder;
+    background: colors.$white;
+    span {
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 2.4rem; /* 160% */
+        padding-right: 2.6rem;
+        position: relative;
+        &::after {
+            position: absolute;
+            width: 1.8rem;
+            height: 1.8rem;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 0.3rem;
+            background: url(/img/icon/ic-download.svg) no-repeat center center;
+            content: "";
+        }
+    }
+}
+
+.btn-wrap {
+    @include base.flex(space-between, center);
+    margin-top: 0.5rem;
+    padding: 4rem 0;
+}
+.btn {
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 2.2rem;
+  padding: 1.2rem 3rem;
+  border-radius: 0.4rem;
+  transition: all 0.2s ease;
+  cursor: pointer;
+
+  &:disabled {
+    background-color: #F5F5F5;
+    border: 1px solid #F5F5F5;
+    color: #999;
+    cursor: not-allowed;
+  }
+}
+
+// Filled type
+.btn-primary {
+  background-color: colors.$brand-blue-primary;
+  color: white;
+  border: none;
+
+  &:hover,
+  &:focus {
+    background-color: colors.$brand-blue-hover;
+  }
+
+  &:active {
+    background-color: colors.$brand-blue-active;
+  }
+
+  &.is-animating {
+    box-shadow: 0 0 0 4px colors.$brand-blue-light;
+  }
+}
+
+// Outlined type
+.btn-secondary {
+  background-color: white;
+  border: 1px solid #767676;
+  color: colors.$text-color-primary;
+
+  &:hover,
+  &:focus {
+    border-color: colors.$brand-blue-hover;
+    color: colors.$brand-blue-hover;
+  }
+
+  &:active {
+    border-color: colors.$brand-blue-active;
+    color: colors.$brand-blue-active;
+  }
+
+  &.is-animating {
+    box-shadow: 0 0 0 4px colors.$brand-blue-light;
+  }
+}

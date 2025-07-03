@@ -77,3 +77,29 @@ $tag-guide: #8468C5;
 // -----------------------------
 // 변수 자체에 투명도를 넣기보다, 사용하는 곳에서 RGBA 또는 opacity를 활용하는 것을 권장.
 // 예: background-color: rgba($color-black, 0.3);
+
+
+
+
+
+//버튼
+
+// --------------------------------
+// Brand Blue
+// --------------------------------
+$brand-blue-hover:   #4D8EF5;
+$brand-blue-active:  #66A3FF;
+$brand-blue-light:   #E3F2FD;
+$brand-blue-border:  #90CAF9;
+
+// --------------------------------
+// Gray & 기타
+// --------------------------------
+$gray-disabled-bg: #F5F5F5;
+$gray-disabled-text: #999999;
+$gray-border: #CCCCCC;
+
+// --------------------------------
+// Text Colors
+// --------------------------------
+$text-color-disabled: $gray-disabled-text;

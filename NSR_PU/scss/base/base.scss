@@ -1,9 +1,6 @@
 // scss/base/_base.scss
+@use '../abstracts/variables' as variables;
 
-// 링크 스타일
-a {
-  
-}
 // -----------------------------
 // Reset strong, em, b, i tags
 // -----------------------------
@@ -82,7 +79,7 @@ html {
 
 // 반응형 레이아웃을 위한 최대 너비 설정
 .respon {
-    max-width: 1400px;
+    max-width: variables.$layout-max-width-container;
     width: 100%;
     margin: 0 auto;
 }

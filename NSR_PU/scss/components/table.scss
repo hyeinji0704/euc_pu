@@ -1,0 +1,83 @@
+@use '../abstracts/colors';
+@use '../abstracts/variables';
+@use '../base/base.scss';
+@use '../base/typography.scss';
+
+.sd-tit {
+    font-size: 2.2rem;
+    font-weight: 600;
+}
+.meta-table { 
+    width: 100%;
+    margin-top: 1.8rem;
+    border-collapse: collapse;
+    table-layout: fixed;
+    border-top: 2px solid colors.$text-color-primary;
+    
+    th, td {
+        border-bottom: 1px solid colors.$neutral-grey-lighter;
+        padding: 2.4rem 2rem;
+        vertical-align: middle;
+        text-align: left;
+        word-break: keep-all;
+        font-size: 1.6rem;
+    }
+
+    th {
+        background-color: colors.$off-white-4;
+        width: 12%;
+        font-weight: 700;
+    }
+
+    td {
+        background-color: #fff;
+        width: 38%;
+    }
+}
+
+//파일 업로드 리스트
+.meta-files-list {
+    width: 100%;
+    margin-top: 1.8rem;
+    border-top: 2px solid colors.$text-color-primary;
+    a { 
+       @include base.flex(space-between, center);
+       padding: 2.4rem 3rem;
+       background-color: colors.$off-white-5;
+       border-bottom: 1px solid  colors.$background-color-lighter;
+       &:hover {
+        // background-color: colors.$fill-color-card-bg;
+        // .download-btn {
+        //     background-color: colors.$fill-color-card-bg;
+        // }
+        .mf-info  {
+            .mf-link {
+                text-decoration: underline;
+            }
+        }
+       }
+       .mf-info {
+        display: flex;
+        gap: 2.4rem;
+        .mf-tit {
+            font-weight: 600;
+        }
+        .mf-link {
+            color: colors.$text-color-secondary;
+            position: relative;
+            padding-left: 2.6rem;
+            &::before {
+                position: absolute;
+                content: "";
+                top: 50%;
+                transform: translateY(-50%);
+                left: 0;
+                width: 1.8rem;
+                height: 1.8rem;
+                background: url(/img/icon/ic-file.svg) no-repeat center center;
+            }
+        }
+       }
+       
+    }
+} 
