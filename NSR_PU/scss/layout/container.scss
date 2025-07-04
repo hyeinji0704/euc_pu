@@ -5,5 +5,9 @@
   max-width: $layout-max-width-container; // _variables.scss 변수 사용
   margin: 0 auto;
   position: relative;
-  
+  &.sub-wrapper {
+    display: flex;
+    gap: 6rem;
+    padding-top: 5rem;
+  }
 }

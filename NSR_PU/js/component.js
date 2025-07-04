@@ -101,3 +101,34 @@
                 });
             });
         }
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const menuButtons = document.querySelectorAll(".menu-btn");
+
+    menuButtons.forEach((btn) => {
+        btn.addEventListener("click", function (e) {
+            e.stopPropagation(); // 다른 클릭 무시
+
+            const dropdown = btn.nextElementSibling;
+            const isOpen = dropdown.classList.contains("show");
+
+            // 모든 드롭다운 닫고 버튼 active 해제
+            document.querySelectorAll(".dropdown-menu").forEach(menu => menu.classList.remove("show"));
+            document.querySelectorAll(".menu-btn").forEach(b => b.classList.remove("active"));
+
+            // 현재 메뉴 다시 열기
+            if (!isOpen) {
+                dropdown.classList.add("show");
+                btn.classList.add("active");
+            }
+        });
+    });
+
+    // 바깥쪽 클릭 시 모두 닫기
+    document.addEventListener("click", function () {
+        document.querySelectorAll(".dropdown-menu").forEach(menu => menu.classList.remove("show"));
+        document.querySelectorAll(".menu-btn").forEach(b => b.classList.remove("active"));
+    });
+});

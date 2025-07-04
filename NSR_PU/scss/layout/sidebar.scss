@@ -1,14 +1,15 @@
 @use '../abstracts/colors';
 @use '../base/base.scss';
 @use '../base/typography.scss';
+@use '../abstracts/variables' as *;
 
 
 .lnb_wrap{
     position: relative;
     left: 0;
-    width: 22rem;
+    width: $layout-min-lnb-width;
     z-index: 1;
-    top: 50px;
+    top: 0;
     display: inline-block;
     
     .lnb_header {

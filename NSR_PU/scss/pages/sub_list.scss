@@ -1,0 +1,81 @@
+@use '../abstracts/colors' as *;
+@use '../base/base.scss' as *;
+@use '../base/typography.scss' as *;
+@use '../abstracts/variables' as *;
+
+.content-area {
+    width: calc($layout-max-width-container - $layout-min-lnb-width - 6rem);
+}
+.page-header {
+    @include flex(space-between, center);
+    margin-bottom: 2.7rem;
+    .page-title {
+        font-size: 3rem;
+        font-weight: 700;
+    }
+    .breadcrumb  {
+        display: flex;
+        align-items: center;
+        line-height: 1.8rem;
+        color: $brand-blue-contrast;
+        font-weight: 600 ;
+        a:not(.home) {
+            padding: 0 1rem;
+        }
+        .home {
+            width: 3.4rem;
+            height: 3.4rem;
+            background: url(/img/icon/ic-home.svg) no-repeat center center;
+            span {
+                font-size: 0;
+                line-height: 0;
+            }
+        }
+        .arrow-icon {
+            width: 1.8rem;
+            height: 1.8rem;
+            background: url(/img/icon/ic-breadcrumb.svg) no-repeat center center;
+        }
+    }
+}
+ 
+.content-search-section {
+    width: 100%;
+    padding: 2.5rem 4rem 2.5rem 8.4rem;
+    background-color: $off-white-2;
+    position: relative;
+    display: flex;
+    gap: 0.8rem;
+        &::before {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 4rem;
+            font-size: 1.6rem;
+            content: "검색";
+            font-weight: 700;
+        }
+    .search-input {
+        padding: 1rem 1.6rem;
+        height: 4rem;
+        background-color: $white;
+        border-radius: .4rem;
+        width: calc(100% - 6.8rem);
+        &::placeholder {
+            color: $neutral-grey-subtle;
+        }
+    }
+}
+
+.content-actions {
+    @include flex(space-between, flex-end);
+    padding: 4rem 0 1.2rem 0;
+    .total-count  {
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 24px;
+        .count {
+            color: $brand-blue-primary;
+        }
+    }
+}

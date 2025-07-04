@@ -81,3 +81,169 @@
        
     }
 } 
+
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    th {
+        background-color: colors.$background-color-lightest;
+        padding: 11px 20px;
+        text-align: center;
+        font-weight: 700;
+        color: #333;
+        border-bottom: 1px solid #ddd;
+        &:nth-child(1) { width: 5%; };
+        &:nth-child(2) { width: 30%; };
+        &:nth-child(3) { width: 30%; };
+        &:nth-child(4) { width: 10%; };
+        &:nth-child(5) { width: 15%; };
+        &:nth-child(6) { width: 10%; };
+        border-top: 2px solid colors.$black;
+        
+    }
+    tr {
+        &:hover {
+            background-color: colors.$off-white-5;
+            cursor: pointer;
+            .click-title {
+                color: colors.$brand-blue-primary;
+                text-decoration: underline;
+                font-weight: 600;
+            }
+        }
+
+    }
+
+    td {
+        color: colors.$text-color-secondary;
+        padding: 8px 20px;
+        text-align: center;
+        border-bottom: 1px solid colors.$background-color-lighter;
+        
+    }
+}
+
+
+//드롭다운 메뉴
+.action-menu {
+    position: relative;
+    display: inline-block;
+    .menu-btn {
+        span {
+            display: block;
+            width: 1.8rem;
+            height: 1.8rem;
+            background: url(/img/icon/ic-more-dot.svg) no-repeat center center;
+        }
+        cursor: pointer;
+        padding: 6px;
+        border-radius: 4px;
+    }
+    &:hover, &:focus {
+        background-color: colors.$border-color-light;
+        border-radius: 0.3rem;
+    }
+    .dropdown-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: colors.$white;
+        border-radius: 2px;
+        box-shadow: 0px 3px 6px -4px rgba(0, 0, 0, 0.12), 0px 6px 16px 0px rgba(0, 0, 0, 0.08), 0px 9px 28px 8px rgba(0, 0, 0, 0.05);
+        min-width: 100px;
+        z-index: 1000;
+        display: none;
+        &.show {
+            display: block; 
+        }
+        .dropdown-item {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            padding: 8px 12px;
+            color: #333;
+            text-decoration: none;
+            font-size: 1.5rem;
+            border-bottom: 1px solid #f0f0f0;
+            text-align: left;
+            &:last-child {
+                border-bottom: none;
+            }
+            &:hover {
+                background-color: colors.$fill-color-card-bg;
+            }
+            &.delete {
+                color: colors.$accent-red;
+            }
+            span {
+                width: 16px;
+                height: 16px;
+                &.edit-icon {
+                    background: url(/img/icon/ic-edit.svg) no-repeat center ;
+                }
+                &.delete-icon {
+                    background: url(/img/icon/ic-delete.svg) no-repeat center ;
+                }
+             }
+        }
+    }
+}
+
+// 페이지네이션
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 30px;
+
+    .page-link {
+        width: 36px;
+        height: 36px;
+        @include base.flex(center, center);
+        color: colors.$text-color-secondary;
+        border-radius: 4px;
+        font-size: 15px;
+
+        &:hover {
+            background-color: #f8f9fa;
+            color: colors.$brand-blue-primary;
+        }
+
+        &.active {
+            color: colors.$brand-blue-primary;
+            font-weight: 700;
+        }
+        span {
+            width: 15px;
+            height: 15px;
+            display: block;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        &.page-prev {
+            span {
+                background: url(/img/icon/ic-pg-left.svg);
+            }
+        }
+        &.page-next {
+            span {
+                background: url(/img/icon/ic-pg-left.svg);
+            }
+            span {
+                transform: rotate(180deg);
+            }
+        }
+        &.disabled {
+            span {
+                background: url(/img/icon/ic-pg-left-disabled.svg);
+            }
+        }
+    }
+
+    .page-dots {
+        padding: 8px 4px;
+        color: #666;
+    }
+}
