@@ -44,6 +44,7 @@ input, textarea {
   font-size: inherit; // 부모 요소의 폰트 사이즈 상속
   color: inherit; // 부모 요소의 텍스트 색상 상속
 }
+
 select {
   appearance: none;
   -webkit-appearance: none; // Safari 및 Chrome에서 기본 스타일 제거

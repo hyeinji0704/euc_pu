@@ -345,7 +345,8 @@
             color: colors.$text-color-placeholder;
         }
     }
-    .search-detail-wrapper {
+}
+.search-detail-wrapper {
         padding-top: 4.8rem;
         display: flex;
         flex-direction: column;
@@ -365,5 +366,3 @@
             }
         }
     }
-    
-}

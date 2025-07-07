@@ -132,3 +132,35 @@ document.addEventListener("DOMContentLoaded", function () {
         document.querySelectorAll(".menu-btn").forEach(b => b.classList.remove("active"));
     });
 });
+
+
+// Select Search 기능 구현
+document.addEventListener('DOMContentLoaded', function() {
+  const label = document.querySelector('.select-search__label');
+  const options = document.querySelectorAll('.select-search__item');
+
+  // 옵션 클릭 시
+  options.forEach(function(option) {
+    option.addEventListener('click', function() {
+      label.innerHTML = option.textContent;
+      label.parentNode.classList.remove('active');
+    });
+  });
+
+
+  label.addEventListener("click", function () {
+  const parent = this.closest(".select-search");
+  if (parent.classList.contains("view-mode")) return; // 읽기 모드일 땐 동작 X
+  parent.classList.toggle("active");
+});
+});
+
+
+// Date Picker 기능 구현
+document.addEventListener('DOMContentLoaded', function () {
+  flatpickr(".date-picker", {
+    locale: "ko",
+    dateFormat: "Y-m-d",
+    disableMobile: true,
+  });
+});

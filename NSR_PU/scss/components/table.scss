@@ -3,6 +3,11 @@
 @use '../base/base.scss';
 @use '../base/typography.scss';
 
+.sd-header { 
+    @include base.flex(space-between, flex-end);       
+
+}
+
 .sd-tit {
     font-size: 2.2rem;
     font-weight: 600;
@@ -16,7 +21,7 @@
     
     th, td {
         border-bottom: 1px solid colors.$neutral-grey-lighter;
-        padding: 2.4rem 2rem;
+        padding: 1.4rem ;
         vertical-align: middle;
         text-align: left;
         word-break: keep-all;
@@ -25,7 +30,8 @@
 
     th {
         background-color: colors.$off-white-4;
-        width: 12%;
+        width: 18%;
+        max-width: 147px;
         font-weight: 700;
     }
 
@@ -209,6 +215,7 @@
         &:hover {
             background-color: #f8f9fa;
             color: colors.$brand-blue-primary;
+            font-weight: 700;
         }
 
         &.active {
@@ -247,3 +254,7 @@
         color: #666;
     }
 }
+
+
+
+

@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../js/plugin/jquery/jquery-3.6.0.min.js"></script>
+    <!-- date-range -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ko.js"></script>
+    <script src="../js/component.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <title>정책정보_국가,국제기구 정보(input_list)</title>
+</head>
+
+<body>
+    <header class="header active">
+        <div class="gnb_area">
+            <div class="container">
+                <h1 class="logo">
+                    <a href="/main.do" alt="NSR">
+                        <span class="hidden">NSR사이버안보정책데이터베이스</span>
+                    </a>
+                </h1>
+                <button type="button" class="btn_allmenu">
+                    <span>전체 메뉴</span>
+                    <i class="icon-menu"></i>
+                </button>
+                <button type="button" class="btn_sch_open">
+                    <span >통합검색열기</span>
+                    <i class="icon-menu"></i>
+                </button>
+                <nav class="nav" id="gnb">
+                    <h2 class="pop_title">전체메뉴</h2>
+                    <ul id="head_menu" class="topmenu fullmenu">
+                        <li class="depth1 on ">
+                            <a href="" class=""><span>정책정보</span></a>
+                            <div class="submenu">
+                                <ul class="depth2 sub01">
+                                    <li ><a href="">국가,국제기구 정보</a></li>
+                                    <li ><a href="">조직 정보</a></li>
+                                    <li ><a href="">정책 정보</a></li>
+                                </ul>
+                            </div> 
+                        </li>
+                        <li class="depth1 ">
+                            <a href=""><span>정책발간현황</span></a>
+                            <div class="submenu">
+                                <ul class="depth2 sub01">
+                                    <li ><a href="">정책발간현황 조회</a></li>
+                                    <li class="is-depth3">
+                                        <a href="">정책발간현황 분류별</a>
+                                        <ul class="depth3">
+                                            <li><a href="">전략 문건</a></li>
+                                            <li><a href="">법 문건</a></li>
+                                            <li><a href="">지침 문건</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="is-depth3">
+                                        <a href="">정책발간현황 수집처별</a>
+                                        <ul class="depth3">
+                                            <li><a href="">전략 문건</a></li>
+                                            <li><a href="">법 문건</a></li>
+                                            <li><a href="">지침 문건</a></li>
+                                        </ul>
+                                    </li> 
+                                </ul>
+                            </div> 
+                        </li>
+                        <li class="depth1"> 
+                            <a href=""><span>분석</span></a>
+                            <div class="submenu">
+                                <ul class="depth2 sub01">
+                                    <li ><a href="">국가정책 비교</a></li>
+                                    <li ><a href="">타임라인 분석</a></li>
+                                    <li ><a href="">네트워크 분석</a></li>
+                                    <li ><a href="">워드 클라우드 분석</a></li>
+                                    <li ><a href="">네트워크맵 분석</a></li>
+                                    <li ><a href="">토픽 분석</a></li>
+                                    <li ><a href="">보고서</a></li>
+                                </ul>
+                            </div> 
+                        </li>
+                        <li class="depth1">
+                            <a href=""><span>마이페이지</span></a>
+                            <div class="submenu">
+                                <ul class="depth2 sub01">
+                                    <li ><a href="">정보수정</a></li>
+                                </ul>
+                            </div> 
+                        </li>
+                    </ul>
+                    <button class="pop_close">
+                        <i></i>
+                        <span class="hidden">전체메뉴 레이어 닫기</span>
+                    </button>
+                </nav>
+                <div class="gnb_util">
+                    <div class="group_btn">
+                        <!-- 로그인 전 -->
+                        <div class="logged-out login-area">
+                            <span class="member-link">
+                            <a href="#" class="btn_login">로그인</a>
+                            </span>
+                        </div>
+                        <!-- 로그인 후 -->
+                        <div class="logged-in login-area">
+                            <div class="user-info">
+                                <span class="user-thumb"><img src="/img/icon/ic-user.svg" alt="프로필 이미지"  /></span>
+                                <span class="user-name"><strong>홍길동</strong>님</span>
+                            </div>
+                            <span class="member-link">
+                            <a href="#" class="btn_logout">로그아웃</a>
+                            </span>
+                        </div>
+                    </div>
+                    <button id="btn_sch" class="btn-sch">
+                        <img src="/img/icon/ic-search.svg" alt="검색 아이콘" />
+                        <span>검색</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header> 
+    <div class="main-content">
+        <div class="container sub-wrapper">
+            <aside id="lnb_layout" class="lnb_wrap">
+                <div id="remote" class="lnb_header">
+                    <h2>정책정보</h2>
+                    <div id="lnb" class="lnb_depth2">
+                        <ul class="depth2_ul lnb_depth2__list">
+                            <li class="on">
+                                <a href="#" class="link_2th off">국가, 국제기구 정보</a>
+                            </li>
+                            <li>
+                                <a href="#" class="link_2th">조직 정보</a>
+                            </li>
+                            <li>
+                                <a href="#" class="link_2th">정책 정보</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </aside>
+            <div class="content-area">
+                <!-- 페이지 헤더 -->
+                <div class="page-header">
+                    <h1 class="page-title">보고서</h1>
+                    <!-- 브레드크럼 -->
+                    <nav class="breadcrumb">
+                        <a href="#" class="home"><span>홈</span></a>
+                        <span class="arrow-icon"></span>
+                        <a href="#">정책정보</a>
+                        <span class="arrow-icon"></span>
+                        <a class="current">국가,국제기구 정보</a>
+                    </nav>
+                </div>
+                <!-- input 테이블 -->
+                <div class="search-detail-wrapper">
+                    <div class="search-detail-box">
+                        <div class="sd-header">
+                            <h3 class="sd-tit">소속다자지구</h3>
+                            <button class="btn-search">정책문건 조회</button>
+                        </div>
+                        <table class="meta-table input-table">
+                            <tbody>
+                                <tr>
+                                    <th><label>국가,국제기구</label></th>
+                                    <td>
+                                        <div class="input-group">
+                                            <input type="text" class="form-input search-input view-mode"  value="유럽연합" readonly/>
+                                        </div>
+                                    </td>
+                                    <th><label>영문명 <span class="required">*</span></label></th>
+                                    <td>
+                                        <input type="text" class="form-input view-mode"  placeholder="영문명" value="European Union Agency for Cybersec"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><label>한글명</label></th>
+                                    <td>
+                                        <input type="text" class="form-input-narrow view-mode" placeholder="KR" value="EU 사이버보안청" readonly/>
+                                    </td>
+                                    <th><label>조직분야</label></th>
+                                    <td>
+                                        <div class="input-group ">
+                                            <div class="select-search view-mode">
+                                                <button class="select-search__label">전체</button>
+                                                <ul class="select-search__list">
+                                                    <li class="select-search__item">국정제도</li>
+                                                    <li class="select-search__item">정책 제도</li>
+                                                    <li class="select-search__item">법 제도</li>
+                                                    <li class="select-search__item">지침 제도</li>
+                                                    <li class="select-search__item">기타</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><label>연계조직(상위)</label></th>
+                                    <td> 
+                                        <ul class="add_list">
+                                            <li class="add_list_item">국정제도</li>
+                                            <li class="add_list_item">정책 제도</li>
+                                            <li class="add_list_item">법 제도</li>
+                                            <li class="add_list_item">지침 제도</li>
+                                            <li class="add_list_item">기타</li>
+                                        </ul>
+                                        <div class="action-buttons">
+                                            <button class="btn btn-third sm"><span class="btn-icon plus"></span>추가</button>
+                                            <button class="btn btn-fourth sm"></span>삭제</button>
+                                        </div>
+                                    </td>
+                                    <th><label>연계조직(상위)</label></th>
+                                    <td>
+                                        <ul class="add_list">
+                                            <li class="add_list_item"></li>
+                                        </ul>
+                                        <div class="action-buttons">
+                                            <button class="btn btn-third sm"><span class="btn-icon plus"></span>추가</button>
+                                            <button class="btn btn-fourth sm"></span>삭제</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><label>한글명</label></th>
+                                    <td>
+                                        <input type="text" class="form-input-narrow view-mode" placeholder="KR" value="EU 사이버보안청" readonly/>
+                                    </td>
+                                    <th><label>조직분야</label></th>
+                                    <td>
+                                        <div class="input-group ">
+                                            <div class="select-search view-mode">
+                                                <button class="select-search__label">전체</button>
+                                                <ul class="select-search__list">
+                                                    <li class="select-search__item">국정제도</li>
+                                                    <li class="select-search__item">정책 제도</li>
+                                                    <li class="select-search__item">법 제도</li>
+                                                    <li class="select-search__item">지침 제도</li>
+                                                    <li class="select-search__item">기타</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><label>컨트롤 타워</label></th>
+                                    <td colspan="3">
+                                        <textarea class="textarea-large" placeholder="내용을 입력하세요"></textarea>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><label>조식 주요 활용</label></th>
+                                    <td colspan="3">
+                                        <div class="checkbox-wrap">
+                                            <label class="custom-checkbox">
+                                                <input type="checkbox" name="useType" value="보안업무절차" />
+                                                <span class="checkbox-mark"></span>
+                                                보안업무절차
+                                            </label>
+                                            <label class="custom-checkbox">
+                                                <input type="checkbox" name="useType" value="IT자원보안" />
+                                                <span class="checkbox-mark"></span>
+                                                IT자원보안
+                                            </label>
+                                            <label class="custom-checkbox">
+                                                <input type="checkbox" name="useType" value="조달보안" />
+                                                <span class="checkbox-mark"></span>
+                                                조달보안
+                                            </label>
+                                            <label class="custom-checkbox">
+                                                <input type="checkbox" name="useType" value="위험탐지/대응" />
+                                                <span class="checkbox-mark"></span>
+                                                위험탐지/대응
+                                            </label>
+                                            <label class="custom-checkbox">
+                                                <input type="checkbox" name="useType" value="대외협력" />
+                                                <span class="checkbox-mark"></span>
+                                                대외협력
+                                            </label>
+
+                                            <label class="custom-checkbox">
+                                                <input type="checkbox" name="useType" value="기타" />
+                                                <span class="checkbox-mark"></span>
+                                                기타
+                                                <input type="text" class="input-etc" placeholder="훈련 프로그램" />
+                                            </label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><label>정책 문서</label></th>
+                                    <td colspan="3">
+                                        <div class="file-input" >
+                                            <span class="file-input-text" id="fileInputText">정책 문서 파일.pdf</span>
+                                            <input class="file-input-hidden" type="file" id="fileInput" multiple accept=".pdf,.doc,.docx,.txt,.jpg,.png">
+                                        </div>
+                                        <div class="file-input" >
+                                            <span class="file-input-text" id="fileInputText">정책 문서 파일.pdf</span>
+                                            <input class="file-input-hidden" type="file" id="fileInput" multiple accept=".pdf,.doc,.docx,.txt,.jpg,.png">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="table_vertical_3">
+                                    <th colspan="1" style="text-align: center; background-color: #f8f9fa;">
+                                        국가사이버보안<br>/안보전략
+                                    </th>
+                                    <th colspan="1" style="text-align: center; background-color: #f8f9fa;">
+                                        국가사이버보안<br>/안보전략
+                                    </th>
+                                    <th colspan="1" style="text-align: center; background-color: #f8f9fa;">
+                                        국가사이버보안<br>/안보전략
+                                    </th>
+                                </tr>
+                                <tr class="table_vertical_3">
+                                    <td colspan="1">
+                                        <textarea class="textarea-large" placeholder="내용을 입력하세요"></textarea>
+                                    </td>
+                                    <td colspan="1">
+                                        <textarea class="textarea-large" placeholder="내용을 입력하세요"></textarea>
+                                    </td>
+                                    <td colspan="1">
+                                        <textarea class="textarea-large" placeholder="내용을 입력하세요"></textarea>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="btn-wrap">
+                    <button class="btn btn-secondary">목록</button>
+                    <button class="btn btn-primary">수장</button>
+                </div>
+            </div>
+        </div>
+    </div>
+     <footer class="footer">
+        <div class="container">
+            <div class="footer-wrapper">
+                <div class="footer-details">
+                    <div class="footer-organization">
+                        <div class="footer-title">국가보안기술연구소</div>
+                        <div class="footer-location">[30147] 대전광역시 유성구 유성대로 1559 (전민동)</div>
+                    </div>
+                    <div class="footer-copyright">© NSR.All Rights Reserved</div>
+                </div>
+                <div class="footer-logo">
+                    <a href="/">
+                        <img src="/img/logo.svg" alt="로고" />
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="quick-aside">
+            <div class="chat-ai aside-btn">
+                <img src="/img/icon/ic-ai.svg" alt="채팅 아이콘" />
+                <span>Chat AI</span>
+            </div>
+            <div class="feedback aside-btn">사이버안보 역량평가</div>
+        </div>
+    </footer>
+</body>
+</html>
