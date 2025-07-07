@@ -292,36 +292,47 @@
                                 <tr>
                                     <th><label>정책 문서</label></th>
                                     <td colspan="3">
-                                        <div class="file-input" >
-                                            <span class="file-input-text" id="fileInputText">정책 문서 파일.pdf</span>
-                                            <input class="file-input-hidden" type="file" id="fileInput" multiple accept=".pdf,.doc,.docx,.txt,.jpg,.png">
+                                       <div class="file-input-wrapper">
+                                            <input type="text" class="file-display" value="정책 문서 파일.pdf" readonly>
+                                            <input type="file" id="real-file-input" class="file-hidden">
+                                            <button class="btn btn-third sm">파일첨부</button>
                                         </div>
-                                        <div class="file-input" >
-                                            <span class="file-input-text" id="fileInputText">정책 문서 파일.pdf</span>
-                                            <input class="file-input-hidden" type="file" id="fileInput" multiple accept=".pdf,.doc,.docx,.txt,.jpg,.png">
+
+                                        <div class="file-input-wrapper">
+                                            <input type="text" class="file-display" value="정책 문서 파일.pdf" readonly>
+                                            <input type="file" id="real-file-input-2" class="file-hidden">
+                                            <button class="btn btn-third sm">파일첨부</button>
                                         </div>
                                     </td>
                                 </tr>
-                                <tr class="table_vertical_3">
-                                    <th colspan="1" style="text-align: center; background-color: #f8f9fa;">
-                                        국가사이버보안<br>/안보전략
-                                    </th>
-                                    <th colspan="1" style="text-align: center; background-color: #f8f9fa;">
-                                        국가사이버보안<br>/안보전략
-                                    </th>
-                                    <th colspan="1" style="text-align: center; background-color: #f8f9fa;">
-                                        국가사이버보안<br>/안보전략
-                                    </th>
-                                </tr>
-                                <tr class="table_vertical_3">
-                                    <td colspan="1">
-                                        <textarea class="textarea-large" placeholder="내용을 입력하세요"></textarea>
-                                    </td>
-                                    <td colspan="1">
-                                        <textarea class="textarea-large" placeholder="내용을 입력하세요"></textarea>
-                                    </td>
-                                    <td colspan="1">
-                                        <textarea class="textarea-large" placeholder="내용을 입력하세요"></textarea>
+                                <tr>
+                                    <td colspan="4">
+                                        <table style="width: 100%; border-collapse: collapse;">
+                                            <tbody>
+                                                <tr class="table_vertical_3">
+                                                    <th style="text-align: center; background-color: #f8f9fa; width: 33.33%; border: 1px solid #dee2e6; padding: 8px;">
+                                                        국가사이버보안<br>/안보전략
+                                                    </th>
+                                                    <th style="text-align: center; background-color: #f8f9fa; width: 33.33%; border: 1px solid #dee2e6; padding: 8px;">
+                                                        국가사이버보안<br>/안보전략
+                                                    </th>
+                                                    <th style="text-align: center; background-color: #f8f9fa; width: 33.33%; border: 1px solid #dee2e6; padding: 8px;">
+                                                        국가사이버보안<br>/안보전략
+                                                    </th>
+                                                </tr>
+                                                <tr class="table_vertical_3">
+                                                    <td style="width: 33.33%; vertical-align: top; border: 1px solid #dee2e6;">
+                                                        <textarea class="textarea-large" placeholder="내용을 입력하세요" style="height: 150px; border: none;"></textarea>
+                                                    </td>
+                                                    <td style="width: 33.33%; vertical-align: top; border: 1px solid #dee2e6;">
+                                                        <textarea class="textarea-large" placeholder="내용을 입력하세요" style="height: 150px; border: none;"></textarea>
+                                                    </td>
+                                                    <td style="width: 33.33%; vertical-align: top; border: 1px solid #dee2e6;">
+                                                        <textarea class="textarea-large" placeholder="내용을 입력하세요" style="height: 150px; border: none;"></textarea>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
                                     </td>
                                 </tr>
                             </tbody>
