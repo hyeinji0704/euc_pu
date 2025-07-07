@@ -116,8 +116,28 @@
             }
         }
     }
+    .table_vertical_3 {
+      th, td {
+        width: 33.3%;
+      }
+      th {
+        background-color: #F8F8F8;
+        border-right: 1px solid #DDDDDD;
+        &:last-child {
+            border-right: none;
+        }
+      }
+      td {
+        border-right: 1px solid #DDDDDD;
+        &:last-child {
+            border-right: none;
+        }
+        textarea {
+          border: 1px solid colors.$text-color-placeholder;
+        }
+      }
+    }
 }
-
 
 
 // 수정 불-가 상태

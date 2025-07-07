@@ -1029,6 +1029,25 @@ html {
 .input-table td .file-input-wrapper .file-hidden {
   display: none;
 }
+.input-table .table_vertical_3 th, .input-table .table_vertical_3 td {
+  width: 33.3%;
+}
+.input-table .table_vertical_3 th {
+  background-color: #F8F8F8;
+  border-right: 1px solid #DDDDDD;
+}
+.input-table .table_vertical_3 th:last-child {
+  border-right: none;
+}
+.input-table .table_vertical_3 td {
+  border-right: 1px solid #DDDDDD;
+}
+.input-table .table_vertical_3 td:last-child {
+  border-right: none;
+}
+.input-table .table_vertical_3 td textarea {
+  border: 1px solid #767676;
+}
 
 .view-mode {
   background-color: #EEE !important;
