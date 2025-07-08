@@ -8,7 +8,6 @@
 }
 .page-header {
     @include flex(space-between, center);
-    margin-bottom: 2.7rem;
     .page-title {
         font-size: 3rem;
         font-weight: 700;
@@ -40,6 +39,8 @@
 }
  
 .content-search-section {
+    margin-top: 2.7rem;
+    margin-bottom: 2rem;
     width: 100%;
     padding: 2.5rem 4rem 2.5rem 8.4rem;
     background-color: $off-white-2;
@@ -69,7 +70,7 @@
 
 .content-actions {
     @include flex(space-between, flex-end);
-    padding: 4rem 0 1.2rem 0;
+    padding: 1.5rem 0 1.2rem 0;
     .total-count  {
         font-size: 1.5rem;
         font-weight: 500;
@@ -78,5 +79,8 @@
             color: $brand-blue-primary;
         }
     }
+    &.flex_end {
+    justify-content: flex-end;
+  }
 }
 

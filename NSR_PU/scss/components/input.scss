@@ -71,8 +71,9 @@
             overflow-y: auto;
             .add_list_item {
                 padding: 0.6rem 1.2rem;
-                &:hover {
-                    background-color: rgba(0, 0, 0, 0.05);
+                &:hover,
+                &.active  {
+                  background-color: rgba(0, 0, 0, 0.05);
                 }
             }
         }

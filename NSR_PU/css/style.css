@@ -522,7 +522,7 @@ html {
   position: fixed;
   text-align: center;
   right: 1.6rem;
-  bottom: 20%;
+  bottom: calc(158px + 3rem);
   z-index: 100;
   -webkit-transition: 0.2s;
   transition: 0.2s;
@@ -930,6 +930,14 @@ html {
   margin-top: 1rem;
 }
 
+.btn-trash {
+  width: 1.6rem;
+  height: 1.6rem;
+  background: url(/img/icon/ic-trash.svg) no-repeat center center;
+  display: inline-block;
+  cursor: pointer;
+}
+
 .input-table .required {
   color: #FF0000;
 }
@@ -991,7 +999,7 @@ html {
 .input-table td .add_list .add_list_item {
   padding: 0.6rem 1.2rem;
 }
-.input-table td .add_list .add_list_item:hover {
+.input-table td .add_list .add_list_item:hover, .input-table td .add_list .add_list_item.active {
   background-color: rgba(0, 0, 0, 0.05);
 }
 .input-table td .file-wrapper .file-input {
@@ -1335,6 +1343,10 @@ html {
   background: url(/img/icon/ic-file.svg) no-repeat center center;
 }
 
+.table-container.policy-list {
+  margin-top: 5rem;
+}
+
 .data-table {
   width: 100%;
   border-collapse: collapse;
@@ -1380,6 +1392,94 @@ html {
   padding: 8px 20px;
   text-align: center;
   border-bottom: 1px solid #E3E8EE;
+}
+.data-table td.empty-data {
+  text-align: center;
+  color: #767676;
+  font-size: 1.5rem;
+  padding: 1.2rem 1.8rem;
+}
+.data-table td.policy-add {
+  text-align: center;
+  font-size: 1.8rem;
+  padding: 4.5rem 5rem;
+}
+.data-table td.policy-add .policy-add-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+}
+.data-table td.policy-add .policy-add-inner .state-add {
+  width: 9rem;
+  height: 9rem;
+  background: url(/img/state-images/state-add.svg) no-repeat center center;
+}
+.data-table td.policy-add .policy-add-inner .text {
+  font-weight: 500;
+  margin-bottom: 1.8rem;
+  letter-spacing: 0.02em;
+}
+.data-table .policy-add:hover,
+.data-table tr.hover-disabled:hover {
+  background: none !important;
+  cursor: default !important;
+}
+
+.policy-compare-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+.policy-compare-table tr:hover {
+  background-color: #FFFFFF;
+  cursor: auto;
+}
+.policy-compare-table th {
+  font-weight: 700;
+  text-align: left !important;
+}
+.policy-compare-table th .compare-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.6rem;
+}
+.policy-compare-table td:first-child {
+  font-weight: 500;
+}
+.policy-compare-table th, .policy-compare-table td:first-child {
+  font-size: 1.5rem;
+}
+.policy-compare-table th, .policy-compare-table td {
+  padding: 1.1rem 1.6rem;
+  text-align: center;
+  border-right: 1px solid #E2E2E2;
+  word-break: break-all;
+  white-space: normal;
+  overflow: visible;
+  text-overflow: unset;
+}
+.policy-compare-table th:last-child, .policy-compare-table td:last-child {
+  border-right: none;
+}
+.policy-compare-table th.col-title,
+.policy-compare-table td:first-child {
+  width: 156px;
+  background: #F4F5F7;
+  font-weight: 500;
+  text-align: left;
+}
+.policy-compare-table th:not(.col-title),
+.policy-compare-table td:not(:first-child) {
+  width: calc((100% - 180px) / 3);
+}
+
+.table-caption {
+  margin-top: 1.4rem;
+  font-size: 1.4rem;
+  text-align: left;
 }
 
 .action-menu {
@@ -1589,6 +1689,7 @@ html {
 .main-content {
   padding: 0 3rem;
   padding-top: calc(120px + 3.2rem);
+  min-height: calc(100vh - 120px - 158px);
 }
 .main-content.total-search-wrap {
   padding-top: 292px;
@@ -1864,7 +1965,7 @@ html {
 }
 
 .search-detail-wrapper {
-  padding-top: 4.8rem;
+  padding-top: 4rem;
   display: flex;
   flex-direction: column;
   gap: 7rem;
@@ -1894,7 +1995,6 @@ html {
   align-items: center;
   flex-direction: row;
   flex-wrap: nowrap;
-  margin-bottom: 2.7rem;
 }
 .page-header .page-title {
   font-size: 3rem;
@@ -1926,6 +2026,8 @@ html {
 }
 
 .content-search-section {
+  margin-top: 2.7rem;
+  margin-bottom: 2rem;
   width: 100%;
   padding: 2.5rem 4rem 2.5rem 8.4rem;
   background-color: #F2F3F5;
@@ -1959,7 +2061,7 @@ html {
   align-items: flex-end;
   flex-direction: row;
   flex-wrap: nowrap;
-  padding: 4rem 0 1.2rem 0;
+  padding: 1.5rem 0 1.2rem 0;
 }
 .content-actions .total-count {
   font-size: 1.5rem;
@@ -1968,6 +2070,9 @@ html {
 }
 .content-actions .total-count .count {
   color: #2970FF;
+}
+.content-actions.flex_end {
+  justify-content: flex-end;
 }
 
 /*# sourceMappingURL=style.css.map */

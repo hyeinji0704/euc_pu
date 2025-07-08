@@ -88,7 +88,11 @@
     }
 } 
 
-
+.table-container {
+    &.policy-list {
+        margin-top: 5rem;
+    }
+}
 .data-table {
     width: 100%;
     border-collapse: collapse;
@@ -126,8 +130,102 @@
         padding: 8px 20px;
         text-align: center;
         border-bottom: 1px solid colors.$background-color-lighter;
+        &.empty-data {
+            text-align: center;
+            color: colors.$text-color-placeholder;
+            font-size: 1.5rem;
+            padding: 1.2rem 1.8rem;
+        }
+        &.policy-add {
+            text-align: center;
+            font-size: 1.8rem;
+            padding: 4.5rem 5rem;
+            .policy-add-inner {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 0.4rem;
+                .state-add {
+                    width: 9rem;
+                    height: 9rem;
+                    background: url(/img/state-images/state-add.svg) no-repeat center center;
+                }
+                .text {
+                    font-weight: 500;
+                    margin-bottom: 1.8rem;
+                    letter-spacing: 0.02em;
+
+                }
+            }
+        }
+    }
+    .policy-add,
+    tr.hover-disabled {
+        &:hover {
+            background: none !important;
+            cursor: default !important;
+        }
+    }
+}
+
+//policy table
+.policy-compare-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    tr {
+        &:hover {
+            background-color: colors.$white;
+            cursor: auto;
+        }
+    }
+    th {
+        font-weight: 700;
+        text-align: left! important;
+        .compare-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0.6rem;
+        }
         
     }
+    td:first-child {
+        font-weight: 500;
+    }
+    th, td:first-child {
+        font-size: 1.5rem;
+    }
+    th, td {
+        padding: 1.1rem 1.6rem ;
+        text-align: center;
+        border-right: 1px solid colors.$fill-color-input-bg;
+        word-break: break-all; // 또는 word-break: keep-all; (한글/영문에 따라 선택)
+        white-space: normal;      
+        overflow: visible;        
+        text-overflow: unset;
+        &:last-child {
+            border-right: none;
+        }
+    }
+    th.col-title,
+    td:first-child {
+        width: 156px; // 구분 열만 고정
+        background: colors.$background-color-lightest;
+        font-weight: 500;
+        text-align: left;
+    }
+
+    th:not(.col-title),
+    td:not(:first-child) {
+        width: calc((100% - 180px) / 3); // 나머지 3개 열 동일 비율
+    }
+}
+.table-caption {
+    margin-top: 1.4rem;
+    font-size: 1.4rem;
+    text-align: left;
 }
 
 

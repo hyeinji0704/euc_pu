@@ -92,6 +92,7 @@
 .main-content {
     padding: 0 3rem;
     padding-top: calc(variables.$header-height + 3.2rem) ;
+    min-height: calc(100vh - variables.$header-height - variables.$footer-height); // 헤더, 풋터 높이만큼 제외
     &.total-search-wrap {
         padding-top: calc(variables.$search-bar-height + variables.$header-height); // 검색 바 높이와 헤더 높이 합산
     }
@@ -347,7 +348,7 @@
     }
 }
 .search-detail-wrapper {
-        padding-top: 4.8rem;
+        padding-top: 4rem;
         display: flex;
         flex-direction: column;
         gap: 7rem;

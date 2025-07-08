@@ -1,5 +1,6 @@
 @use '../abstracts/colors';
-@use '../base/base.scss';
+@use '../base/base.scss';   
+@use '../abstracts/variables';
 @use '../base/typography.scss';
 
 .footer {
@@ -12,7 +13,7 @@
         position: fixed;
         text-align: center;
         right: 1.6rem;
-        bottom: 20%;
+        bottom: calc( variables.$footer-height + 3rem );
         z-index: 100;
         -webkit-transition: .2s;
         transition: .2s;

@@ -204,4 +204,13 @@
   display: flex;
   gap: 0.8rem;
   margin-top: 1rem;
+  
+}
+
+.btn-trash {    
+    width: 1.6rem;
+    height: 1.6rem;
+    background: url(/img/icon/ic-trash.svg) no-repeat center center;
+    display: inline-block;
+    cursor: pointer;
 }
