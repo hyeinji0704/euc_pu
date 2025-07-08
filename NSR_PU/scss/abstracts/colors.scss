@@ -24,8 +24,11 @@ $brand-blue-primary: #2970FF; // 주 브랜드 색상, 메인 버튼, 링크
 $brand-blue-secondary: #557FDB; // 보조 브랜드 색상, 호버/활성 상태
 $brand-blue-action: #165DFF; // 액션 버튼, 강조 링크 등 강력한 상호작용
 $brand-blue-highlight: #0055FF; // 특정 요소 강조, 아이콘 등
+$brand-blue-deep: #2760D1; // 진한 브랜드 블루, 추가 요청 컬러
 $brand-blue-dark: #0F172A; // 가장 어두운 브랜드 계열, 헤더/푸터 배경
 $brand-blue-contrast: #162E5D; // 특정 대비를 위한 어두운 파랑
+$brand-blue-tab-active: #1677FF;
+
 
 // -----------------------------
 // Neutral Colors (중립 색상 - 주로 그레이 계열)
@@ -60,6 +63,10 @@ $off-white-2: #F2F3F5; // 오프 화이트, 미묘한 대비
 $off-white-3: #F4F7FD; // 오프 화이트, 푸른빛
 $off-white-4: #F8F8F8; // 거의 흰색, 일반적인 배경
 $off-white-5: #F9F9F9; // 가장 흔한 오프 화이트 배경
+$off-white-6: #f0f0f0; // 가장 밝은 오프 화이트, 거의 흰색
+
+
+$gray-icon: #898989;
 
 // -----------------------------
 // Status & Accent Colors (상태 및 강조 색상)

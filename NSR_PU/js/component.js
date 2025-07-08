@@ -164,3 +164,81 @@ document.addEventListener('DOMContentLoaded', function () {
     disableMobile: true,
   });
 });
+
+
+// ...기존 코드...
+
+// 탭(상위/하위) 기능 구현
+document.addEventListener('DOMContentLoaded', function() {
+  // 상위 탭
+  const tabWrap = document.querySelector('.tab-wrap');
+  if (tabWrap) {
+    const tabItems = tabWrap.querySelectorAll('.tab-list .tab-item');
+    const tabContents = tabWrap.querySelectorAll('.tab-content');
+    tabItems.forEach(tab => {
+      tab.addEventListener('click', function() {
+        tabItems.forEach(t => t.classList.remove('active'));
+        tabContents.forEach(c => c.classList.remove('active'));
+        this.classList.add('active');
+        const target = tabWrap.querySelector('#' + this.dataset.tab);
+        if (target) target.classList.add('active');
+      });
+    });
+  }
+
+  // 하위 탭 (네트워크맵 분석 탭 안에서만)
+  const innerTabWrap = document.querySelector('.inner-tab-wrap');
+  if (innerTabWrap) {
+    const innerTabItems = innerTabWrap.querySelectorAll('.inner-tab-list .inner-tab-item');
+    const innerTabContents = innerTabWrap.querySelectorAll('.inner-tab-content');
+    innerTabItems.forEach(tab => {
+      tab.addEventListener('click', function() {
+        innerTabItems.forEach(t => t.classList.remove('active'));
+        innerTabContents.forEach(c => c.classList.remove('active'));
+        this.classList.add('active');
+        const target = innerTabWrap.querySelector('#' + this.dataset.tab);
+        if (target) target.classList.add('active');
+      });
+    });
+  }
+});
+
+// ...기존 코드(토글, 드롭다운, 셀렉트, datepicker 등)...
+
+
+
+// 숫자 입력 필드 
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('.custom-number-wrap').forEach(function (wrap) {
+    const input = wrap.querySelector('.custom-number-input');
+    const btnMinus = wrap.querySelector('.btn-number.minus');
+    const btnPlus = wrap.querySelector('.btn-number.plus');
+    const min = parseFloat(input.getAttribute('min')) || 0;
+    const max = parseFloat(input.getAttribute('max')) || 9999;
+    const step = parseFloat(input.getAttribute('step')) || 1;
+
+    btnMinus.addEventListener('click', function () {
+      let val = parseFloat(input.value) || min;
+      if (val > min) {
+        let next = val - step;
+        if (next < min) next = min;
+        input.value = Number(next).toFixed(step % 1 === 0 ? 0 : 1);
+      }
+    });
+
+    btnPlus.addEventListener('click', function () {
+      let val = parseFloat(input.value) || min;
+      if (val < max) {
+        let next = val + step;
+        if (next > max) next = max;
+        input.value = Number(next).toFixed(step % 1 === 0 ? 0 : 1);
+      }
+    });
+
+    input.addEventListener('input', function () {
+      let val = parseFloat(input.value) || min;
+      if (val < min) input.value = min;
+      if (val > max) input.value = max;
+    });
+  });
+});

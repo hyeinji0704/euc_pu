@@ -4,19 +4,50 @@
 @use '../base/typography.scss';
 
 // input table
+
 .input-table {
     .required {
         color: colors.$status-error;
     }
-    .input-group {
-        display: flex;
-        gap: 0.8rem;
-    }
+    
     
     td {
         padding: 1.5rem 1.4rem;
         height: 3.8rem;
-        input {
+        
+        
+        
+    }
+    .table_vertical_3 {
+      th, td {
+        width: 33.3%;
+      }
+      th {
+        background-color: #F8F8F8;
+        border-right: 1px solid #DDDDDD;
+        &:last-child {
+            border-right: none;
+        }
+      }
+      td {
+        border-right: 1px solid #DDDDDD;
+        &:last-child {
+            border-right: none;
+        }
+        textarea {
+          border: 1px solid colors.$text-color-placeholder;
+        }
+      }
+    }
+}
+
+.input-group {
+    display: flex;
+    gap: 0.8rem;
+    
+}
+// input 컴포넌트
+input {
             flex: 1; 
             min-width: 0;
             width: 100%;
@@ -61,85 +92,29 @@
                 }
             }
         }
-        .add_list {
-            height: 11rem;
-            padding: .4rem;
-            border-radius: 0.4rem;
-            outline: none;
-            border: 1px solid colors.$text-color-placeholder;
-            resize: vertical;
-            overflow-y: auto;
-            .add_list_item {
-                padding: 0.6rem 1.2rem;
-                &:hover,
-                &.active  {
-                  background-color: rgba(0, 0, 0, 0.05);
-                }
-            }
-        }
-        .file-wrapper {
-            .file-input {
-                display: flex;
-                gap: 0.8rem;
-                span {
-                    display: inline-block;
-                    flex: 1; 
-                    min-width: 0;
-                    width: 100%;
-                    max-width: 300px;
-                    height: 3.8rem;
-                    padding: 0.6rem 1.2rem;
-                    border-radius: 0.4rem;
-                    outline-width: 1px;
-                    outline-style: solid;
-                    background-color: colors.$white;
-                    outline-color: colors.$text-color-placeholder;
-                }
-            }
-        }
-        .file-input-wrapper {
-            display: flex;
-            align-items: center;
-            gap: 0.8rem;
-            margin-bottom: 1rem;
-            max-width: 50rem;
 
-            .file-display {
-                flex-grow: 1;
-                padding: 0.6rem 1.2rem;
-                outline: 1px solid colors.$text-color-placeholder!important;
-                border-radius: .4rem;
-                color: colors.$text-color-muted;
-            }
+// 파일 첨부 
+.file-input-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+  max-width: 50rem;
 
-            .file-hidden {
-                display: none;
-            }
-        }
-    }
-    .table_vertical_3 {
-      th, td {
-        width: 33.3%;
-      }
-      th {
-        background-color: #F8F8F8;
-        border-right: 1px solid #DDDDDD;
-        &:last-child {
-            border-right: none;
-        }
-      }
-      td {
-        border-right: 1px solid #DDDDDD;
-        &:last-child {
-            border-right: none;
-        }
-        textarea {
-          border: 1px solid colors.$text-color-placeholder;
-        }
-      }
-    }
+  .file-display {
+      flex-grow: 1;
+      padding: 0.6rem 1.2rem;
+      outline: 1px solid colors.$text-color-placeholder!important;
+      border-radius: .4rem;
+      color: colors.$text-color-muted;
+      height: 3.8rem;
+      background-color: colors.$white;
+  }
+
+  .file-hidden {
+      display: none;
+  }
 }
-
 
 // 수정 불-가 상태
 .view-mode {
@@ -171,6 +146,24 @@
     }
 }
 
+.add_list {
+    background-color: colors.$white;
+    width: 100%;
+    height: 11rem;
+    padding: .4rem;
+    border-radius: 0.4rem;
+    outline: none;
+    border: 1px solid colors.$text-color-placeholder;
+    resize: vertical;
+    overflow-y: auto;
+    .add_list_item {
+        padding: 0.6rem 1.2rem;
+        &:hover,
+        &.active  {
+          background-color: rgba(0, 0, 0, 0.05);
+        }
+    }
+}
 
 //select-search 컴포넌트
 .select-search {
@@ -340,7 +333,7 @@
   .checkbox-mark {
     width: 1.6rem;
     height: 1.6rem;
-    border: 1px solid colors.$border-color-default;
+    border: 1px solid colors.$neutral-grey-light;
     border-radius: 0.4rem;
     background-color: #fff;
     transition: background 0.2s ease;
@@ -375,3 +368,137 @@
     min-width: 10rem;
   }
 }
+
+
+// radio
+.radio-group {
+  display: flex;
+  gap: 1rem;
+}
+.custom-radio {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  cursor: pointer;
+
+  input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .radio-mark {
+    width: 1.6rem;
+    height: 1.6rem;
+    border: 1px solid colors.$neutral-grey-light;
+    border-radius: 50%;
+    background-color: #fff;
+    transition: background 0.2s ease, border-color 0.2s ease;
+    display: inline-block;
+    position: relative;
+  }
+
+  input[type="radio"]:checked + .radio-mark {
+    border-color: colors.$brand-blue-action;
+    background-color: colors.$white;
+  }
+
+  input[type="radio"]:checked + .radio-mark::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: colors.$brand-blue-action;
+    display: block;
+    transform: translate(-50%, -50%);
+  }
+
+  .input-etc {
+    margin-left: 0.8rem;
+    padding: 0.4rem 0.8rem;
+    outline: 1px solid colors.$text-color-placeholder;
+    border-radius: 0.4rem;
+    font-size: 1.6rem;
+    line-height: 1.4;
+    min-width: 10rem;
+  }
+}
+
+//숫자입력필드
+
+
+.custom-number-wrap {
+  display: flex;
+  align-items: center;
+  border: 1px solid colors.$text-color-placeholder;
+  border-radius: 0.4rem;
+  background: colors.$white;
+  width: 12rem;
+  height: 4rem;
+  overflow: hidden;
+  position: relative;
+
+  .custom-number-input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: transparent;
+    font-size: 1.6rem;
+    color: #333;
+    outline: none;
+    appearance: textfield;
+    padding: 0 1.2rem; // 오른쪽 버튼 영역 확보
+
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+    -moz-appearance: textfield;
+  }
+
+  .btn-number-group {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 2.6rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid colors.$gray-icon;
+    background: colors.$white;
+    z-index: 1;
+
+    .btn-number {
+      width: 100%;
+      height: 50%;
+      border: none;
+      background: transparent;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      padding: 0;
+
+      &.plus {
+        border-bottom: 1px solid colors.$gray-icon;
+        background: url('/img/icon/ic-arrow-up.svg') no-repeat center center;
+        background-size: 1.4rem 1.4rem;
+      }
+      &.minus {
+        background: url('/img/icon/ic-arrow-down.svg') no-repeat center center;
+        background-size: 1.2rem 1.2rem;
+      }
+
+      img {
+        display: none;
+      }
+    }
+  }
+}
+

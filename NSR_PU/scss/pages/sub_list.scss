@@ -79,8 +79,12 @@
             color: $brand-blue-primary;
         }
     }
-    &.flex_end {
-    justify-content: flex-end;
-  }
+    
 }
 
+.flex_end {
+    @include flex(flex-end, center);
+}
+.justify-between {
+    @include flex(space-between, center);
+}
