@@ -9,7 +9,7 @@
     align-items: center;
     gap: 0.4rem;
     border-radius: 0.4rem;
-    border: 1px solid colors.$text-color-placeholder;
+    border: 1px solid colors.$neutral-grey-soft;
     background: colors.$white;
     span {
         font-size: 1.5rem;
@@ -154,7 +154,7 @@
 }
 .btn-fourth {
   background-color: white;
-  border: 1px solid colors.$text-color-placeholder;
+  border: 1px solid colors.$neutral-grey-soft;
   @include base.flex(space-between, center);
   gap: 0.4rem;
    &:hover,

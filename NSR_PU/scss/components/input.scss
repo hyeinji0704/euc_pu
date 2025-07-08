@@ -35,7 +35,7 @@
             border-right: none;
         }
         textarea {
-          border: 1px solid colors.$text-color-placeholder;
+          border: 1px solid colors.$neutral-grey-soft;
         }
       }
     }
@@ -44,54 +44,54 @@
 .input-group {
     display: flex;
     gap: 0.8rem;
-    
+
 }
 // input 컴포넌트
 input {
-            flex: 1; 
-            min-width: 0;
-            width: 100%;
-            max-width: 300px;
-            height: 3.8rem;
-            padding: 0.6rem 1.2rem;
-            border-radius: 0.4rem;
-            outline-width: 1px;
-            outline-style: solid;
-            background-color: colors.$white;
+    flex: 1; 
+    min-width: 0;
+    width: 100%;
+    max-width: 300px;
+    height: 3.8rem;
+    padding: 0.6rem 1.2rem;
+    border-radius: 0.4rem;
+    outline-width: 1px;
+    outline-style: solid;
+    background-color: colors.$white;
 
-            &::placeholder {
-                color: colors.$text-color-muted;
-            }
-            &.form-input-narrow {
-                width: 16.4rem;
-            }
-            // 입력 전
-            &:placeholder-shown {
-                outline-color: colors.$text-color-placeholder;
-            }
-            // 입력 후 (placeholder 없고 focus 안 됨)
-            &:not(:placeholder-shown):not(:focus) {
-                outline-color: colors.$text-color-primary; 
-            }
-            // 입력 중
-            &:focus {
-                outline: 1.5px solid colors.$brand-blue-primary;
-            }
-            // 비활성화 상태
-            &:disabled {
-                background-color: #e9ecef;
-                outline-color: #ddd;
-                cursor: not-allowed;
-                color: #999;
-            }
-            &.search-input {
-                &:focus {
-                    outline-width: 1px;
-                    outline-color: colors.$text-color-placeholder;
-                    box-shadow: none;
-                }
-            }
+    &::placeholder {
+        color: colors.$text-color-muted;
+    }
+    &.form-input-narrow {
+        width: 16.4rem;
+    }
+    // 입력 전
+    &:placeholder-shown {
+        outline-color: colors.$neutral-grey-soft;
+    }
+    // 입력 후 (placeholder 없고 focus 안 됨)
+    &:not(:placeholder-shown):not(:focus) {
+        outline-color: colors.$text-color-primary; 
+    }
+    // 입력 중
+    &:focus {
+        outline: 1.5px solid colors.$brand-blue-primary;
+    }
+    // 비활성화 상태
+    &:disabled {
+        background-color: #e9ecef;
+        outline-color: #ddd;
+        cursor: not-allowed;
+        color: #999;
+    }
+    &.search-input {
+        &:focus {
+            outline-width: 1px;
+            outline-color: colors.$neutral-grey-soft;
+            box-shadow: none;
         }
+    }
+}
 
 // 파일 첨부 
 .file-input-wrapper {
@@ -104,7 +104,7 @@ input {
   .file-display {
       flex-grow: 1;
       padding: 0.6rem 1.2rem;
-      outline: 1px solid colors.$text-color-placeholder!important;
+      outline: 1px solid colors.$neutral-grey-soft!important;
       border-radius: .4rem;
       color: colors.$text-color-muted;
       height: 3.8rem;
@@ -120,7 +120,7 @@ input {
 .view-mode {
     background-color: #EEE !important;
     outline-width: 1px !important;
-    outline-color: colors.$text-color-placeholder !important;
+    outline-color: colors.$neutral-grey-soft !important;
     box-shadow: none !important;
     pointer-events: none; // 마우스 이벤트 차단
   cursor: default;
@@ -131,12 +131,11 @@ input {
     height: 11rem;
     padding: 1rem 1.2rem;
     border-radius: 0.4rem;
-    outline: none;
-    border: 1px solid colors.$text-color-placeholder;
+    outline: 1px solid colors.$neutral-grey-soft;
     resize: vertical;
 
     &::placeholder {
-        color: colors.$text-color-placeholder;
+        color: colors.$neutral-grey-soft;
     }
 
     &:focus {
@@ -144,6 +143,10 @@ input {
         border-color: transparent;
         box-shadow: none;
     }
+
+    &:not(:placeholder-shown):not(:focus) {
+      outline: 1px solid #212121;
+}
 }
 
 .add_list {
@@ -153,7 +156,7 @@ input {
     padding: .4rem;
     border-radius: 0.4rem;
     outline: none;
-    border: 1px solid colors.$text-color-placeholder;
+    border: 1px solid colors.$neutral-grey-soft;
     resize: vertical;
     overflow-y: auto;
     .add_list_item {
@@ -171,7 +174,7 @@ input {
   width: 14rem;
   height: 3.8rem;
   border-radius: 0.4rem;
-  border: 1px solid colors.$text-color-placeholder;
+  border: 1px solid colors.$neutral-grey-soft;
   background: url('/img/icon/ic-select_arrow.svg') calc(100% - 7px) center no-repeat;
   background-size: 18px;
   cursor: pointer;
@@ -361,7 +364,7 @@ input {
   .input-etc {
     margin-left: 0.8rem;
     padding: 0.4rem 0.8rem;
-    outline: 1px solid colors.$text-color-placeholder;
+    outline: 1px solid colors.$neutral-grey-soft;
     border-radius: 0.4rem;
     font-size: 1.6rem;
     line-height: 1.4;
@@ -421,7 +424,7 @@ input {
   .input-etc {
     margin-left: 0.8rem;
     padding: 0.4rem 0.8rem;
-    outline: 1px solid colors.$text-color-placeholder;
+    outline: 1px solid colors.$neutral-grey-soft;
     border-radius: 0.4rem;
     font-size: 1.6rem;
     line-height: 1.4;
@@ -435,7 +438,7 @@ input {
 .custom-number-wrap {
   display: flex;
   align-items: center;
-  border: 1px solid colors.$text-color-placeholder;
+  border: 1px solid colors.$neutral-grey-soft;
   border-radius: 0.4rem;
   background: colors.$white;
   width: 12rem;
