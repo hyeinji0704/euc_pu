@@ -47,7 +47,8 @@
 // ----------------------------------------------------
 @use 'pages/search';
 @use 'pages/sub_list';
-@use 'pages/report'
+@use 'pages/report';
+@use 'pages/modal';
 
 // ----------------------------------------------------
 // 참고: `@use` 규칙은 @import와 달리 파일당 한 번만 작성합니다.

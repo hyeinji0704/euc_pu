@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../js/plugin/jquery/jquery-3.6.0.min.js"></script>
+    <!-- date-range -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ko.js"></script>
+    <script src="../js/component.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <title>input_검색_modal</title>
+</head>
+<body>
+    <div class="modal_wrapper">
+        <div class="modal_header">
+            <h1>국가명 검색</h1>
+            <button class="modal_btn_delete"></button>
+        </div>
+        <div class="modal_search">
+            <!-- 검색 영역 -->
+            <div class="content-search-section">     
+                <input type="text" class="search-input" placeholder="검색어를 입력하세요." id="searchInput">
+                <button class="btn btn--search">검색</button>
+            </div>
+        </div>
+        <div class="modal_content">
+            <!-- 콘텐츠 액션 -->
+            <div class="content-actions">
+                <div class="total-count">
+                    총 <span class="count">52</span>건
+                </div>
+                <div class="action-buttons">
+                    <!-- 보고서 생성 버튼 -->
+                    <button class="btn btn--report sm"><span class="btn-icon"></span>보고서 생성</button>
+                    <!-- 전체삭제 버튼 -->
+                    <button class="btn btn--danger sm">전체삭제</button>   
+                    <!-- 추가 버튼 -->
+                    <button class="btn btn--third sm"><span class="btn-icon plus"></span>추가</button>
+                </div>
+            </div>
+            <!-- 데이터 테이블 -->
+            <div class="table-container">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>NO.</th>
+                            <th>국가</th>
+                            <th>영문</th>
+                            <th>코드</th>
+                            <th>국정제도</th>
+                            <th>동작</th>
+                        </tr>
+                    </thead>
+                    <tbody id="reportTableBody">
+                        <tr>
+                            <td>1</td>
+                            <td a href="#" class="click-title">뉴질랜드</td>
+                            <td>Gabon</td>
+                            <td>GA</td>
+                            <td>대통령제</td>
+                            <td>
+                                <div class="action-menu">
+                                    <button class="menu-btn" onclick="toggleMenu(this)"><span></span></button>
+                                    <div class="dropdown-menu">
+                                        <a href="#" class="dropdown-item" onclick="return false;"><span class="edit-icon"></span>수정</a>
+                                        <a href="#" class="dropdown-item delete" onclick="return false;"><span class="delete-icon"></span>삭제요청</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td a href="#" class="click-title">뉴질랜드</td>
+                            <td>UNaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</td>
+                            <td>UNaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</td>
+                            <td>UNaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</td>
+                            <td>
+                                <div class="action-menu">
+                                    <button class="menu-btn" onclick="toggleMenu(this)"><span></span></button>
+                                    <div class="dropdown-menu">
+                                        <a href="#" class="dropdown-item" onclick="return false;"><span class="edit-icon"></span>수정</a>
+                                        <a href="#" class="dropdown-item delete" onclick="return false;"><span class="delete-icon"></span>삭제요청</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td a href="#" class="click-title">뉴질랜드</td>
+                            <td>New Zealand</td>
+                            <td>NZ</td>
+                            <td>내각제</td>
+                            <td>
+                                <div class="action-menu">
+                                    <button class="menu-btn" onclick="toggleMenu(this)"><span></span></button>
+                                    <div class="dropdown-menu">
+                                        <a href="#" class="dropdown-item" onclick="return false;"><span class="edit-icon"></span>수정</a>
+                                        <a href="#" class="dropdown-item delete" onclick="return false;"><span class="delete-icon"></span>삭제요청</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td a href="#" class="click-title">뉴질랜드</td>
+                            <td>New Zealand</td>
+                            <td>NZ</td>
+                            <td>내각제</td>
+                            <td>
+                                <div class="action-menu">
+                                    <button class="menu-btn" onclick="toggleMenu(this)"><span></span></button>
+                                    <div class="dropdown-menu">
+                                        <a href="#" class="dropdown-item" onclick="return false;"><span class="edit-icon"></span>수정</a>
+                                        <a href="#" class="dropdown-item delete" onclick="return false;"><span class="delete-icon"></span>삭제요청</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td a href="#" class="click-title">뉴질랜드</td>
+                            <td>New Zealand</td>
+                            <td>NZ</td>
+                            <td>내각제</td>
+                            <td>
+                                <div class="action-menu">
+                                    <button class="menu-btn" onclick="toggleMenu(this)"><span></span></button>
+                                    <div class="dropdown-menu">
+                                        <a href="#" class="dropdown-item" onclick="return false;"><span class="edit-icon"></span>수정</a>
+                                        <a href="#" class="dropdown-item delete" onclick="return false;"><span class="delete-icon"></span>삭제요청</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td a href="#" class="click-title">뉴질랜드</td>
+                            <td>New Zealand</td>
+                            <td>NZ</td>
+                            <td>내각제</td>
+                            <td>
+                                <div class="action-menu">
+                                    <button class="menu-btn" onclick="toggleMenu(this)"><span></span></button>
+                                    <div class="dropdown-menu">
+                                        <a href="#" class="dropdown-item" onclick="return false;"><span class="edit-icon"></span>수정</a>
+                                        <a href="#" class="dropdown-item delete" onclick="return false;"><span class="delete-icon"></span>삭제요청</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td a href="#" class="click-title">뉴질랜드</td>
+                            <td>New Zealand</td>
+                            <td>NZ</td>
+                            <td>내각제</td>
+                            <td>
+                                <div class="action-menu">
+                                    <button class="menu-btn" onclick="toggleMenu(this)"><span></span></button>
+                                    <div class="dropdown-menu">
+                                        <a href="#" class="dropdown-item" onclick="return false;"><span class="edit-icon"></span>수정</a>
+                                        <a href="#" class="dropdown-item delete" onclick="return false;"><span class="delete-icon"></span>삭제요청</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td a href="#" class="click-title">뉴질랜드</td>
+                            <td>New Zealand</td>
+                            <td>NZ</td>
+                            <td>내각제</td>
+                            <td>
+                                <div class="action-menu">
+                                    <button class="menu-btn" onclick="toggleMenu(this)"><span></span></button>
+                                    <div class="dropdown-menu">
+                                        <a href="#" class="dropdown-item" onclick="return false;"><span class="edit-icon"></span>수정</a>
+                                        <a href="#" class="dropdown-item delete" onclick="return false;"><span class="delete-icon"></span>삭제요청</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td a href="#" class="click-title">뉴질랜드</td>
+                            <td>New Zealand</td>
+                            <td>NZ</td>
+                            <td>내각제</td>
+                            <td>
+                                <div class="action-menu">
+                                    <button class="menu-btn" onclick="toggleMenu(this)"><span></span></button>
+                                    <div class="dropdown-menu">
+                                        <a href="#" class="dropdown-item" onclick="return false;"><span class="edit-icon"></span>수정</a>
+                                        <a href="#" class="dropdown-item delete" onclick="return false;"><span class="delete-icon"></span>삭제요청</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td a href="#" class="click-title">뉴질랜드</td>
+                            <td>New Zealand</td>
+                            <td>NZ</td>
+                            <td>내각제</td>
+                            <td>
+                                <div class="action-menu">
+                                    <button class="menu-btn" onclick="toggleMenu(this)"><span></span></button>
+                                    <div class="dropdown-menu">
+                                        <a href="#" class="dropdown-item" onclick="return false;"><span class="edit-icon"></span>수정</a>
+                                        <a href="#" class="dropdown-item delete" onclick="return false;"><span class="delete-icon"></span>삭제요청</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>11</td>
+                            <td a href="#" class="click-title">뉴질랜드</td>
+                            <td>New Zealand</td>
+                            <td>NZ</td>
+                            <td>내각제</td>
+                            <td>
+                                <div class="action-menu">
+                                    <button class="menu-btn" onclick="toggleMenu(this)"><span></span></button>
+                                    <div class="dropdown-menu">
+                                        <a href="#" class="dropdown-item" onclick="return false;"><span class="edit-icon"></span>수정</a>
+                                        <a href="#" class="dropdown-item delete" onclick="return false;"><span class="delete-icon"></span>삭제요청</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td a href="#" class="click-title">뉴질랜드</td>
+                            <td>New Zealand</td>
+                            <td>NZ</td>
+                            <td>내각제</td>
+                            <td>
+                                <div class="action-menu">
+                                    <button class="menu-btn" onclick="toggleMenu(this)"><span></span></button>
+                                    <div class="dropdown-menu">
+                                        <a href="#" class="dropdown-item" onclick="return false;"><span class="edit-icon"></span>수정</a>
+                                        <a href="#" class="dropdown-item delete" onclick="return false;"><span class="delete-icon"></span>삭제요청</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- 페이지네이션 -->
+            <div class="pagination">  
+                <a href="#" class="page-link page-prev disabled " onclick="return false;"><span></span></a>
+                <a href="#" class="page-link active" onclick="return false;">1</a>
+                <a href="#" class="page-link" onclick="return false;">2</a>
+                <a href="#" class="page-link" onclick="return false;">3</a>
+                <a href="#" class="page-link" onclick="return false;">4</a>
+                <a href="#" class="page-link" onclick="return false;">5</a>
+                <span class="page-dots">...</span>
+                <a href="#" class="page-link" onclick="return false;">10</a>
+                <a href="#" class="page-link page-next " onclick="return false;"><span></span></a>
+            </div>
+        </div>
+        <div class="btn-wrap">
+            <button class="btn btn--secondary">이전</button>
+            <button class="btn btn--primary">목록</button>
+        </div>
+    </div>
+</body>
+</html>

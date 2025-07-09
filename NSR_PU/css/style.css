@@ -2601,4 +2601,30 @@ body, .report-preview, .report-preview * {
   flex-wrap: nowrap;
 }
 
+.modal_wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 4rem 3.5rem;
+}
+.modal_wrapper .modal_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.modal_wrapper .modal_header h1 {
+  font-size: 2.6rem;
+  font-weight: 700;
+}
+.modal_wrapper .modal_header button {
+  width: 6rem;
+  height: 6rem;
+  padding: 2rem;
+  background: url(/img/icon/ic-modal-delete.svg) no-repeat center center;
+  background-size: 1.8rem;
+}
+
 /*# sourceMappingURL=style.css.map */

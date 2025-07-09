@@ -166,7 +166,7 @@
                                     <td>
                                         <div class="input-group">
                                             <input type="text" class="form-input search-input " placeholder="한글명" readonly/>
-                                            <button class="btn btn--third sm ">검색</button>
+                                            <button class="btn btn--third sm " onclick="openCountryModal()">검색</button>
                                         </div>
                                     </td>
                                     <th><label>영문명 <span class="required">*</span></label></th>
@@ -332,3 +332,12 @@
     </footer>
 </body>
 </html>
+<script>
+  function openCountryModal() {
+    const popup = window.open(
+      'modal_search.html',
+      '국가명검색',
+      'width=800,height=600,scrollbars=yes,resizable=yes'
+    );
+  }
+</script>

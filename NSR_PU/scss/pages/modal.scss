@@ -1,0 +1,26 @@
+@use '../abstracts/colors' as *;
+@use '../abstracts/variables' as *;
+@use '../base/base' as *;
+@use '../base/typography' as *;
+
+.modal_wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 4rem 3.5rem;
+    .modal_header {
+        @include flex(space-between, center);
+        h1 {
+            font-size: 2.6rem;
+            font-weight: 700;
+        }
+        button {
+            width: 6rem;
+            height: 6rem;
+            padding: 2rem;
+            background: url(/img/icon/ic-modal-delete.svg) no-repeat center center;
+            background-size: 1.8rem;
+        }
+    }
+}
