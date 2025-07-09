@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../js/plugin/jquery/jquery-3.6.0.min.js"></script>
+    <!-- date-range -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ko.js"></script>
+    <script src="/js/downloadPDF.js"></script>
+    <script src="../js/component.js"></script>
+    <link rel='stylesheet' href='//cdn.jsdelivr.net/font-kopub/1.0/kopubdotum.css'> <!--  kopub 폰트 cdn -->
+    <link rel="stylesheet" href="../css/style.css">
+    <title>보고서_보고서 작성</title>
+</head>
+<body>
+    <div class="report-preview-wrapper">
+        <div class="report-preview">
+            <div class="report-header">
+                <h1>유럽 우주 전략</h1>
+                <div class="logo"><img class="logo" src="/img/logo.svg" alt="NSR사이버안보정책데이터베이스"></div>
+            </div>
+
+            <div class="report-meta">
+            <p>작성일 : <span>2016년 10월 26일</span></p>
+            <p>작성자 : <span>Donald Tusk</span></p>
+            </div>
+
+            <div class="report-section">
+                <!-- 키워드 -->
+                <div class="report-row">
+                    <div class="report-label">키워드</div>
+                    <div class="report-content">space security, 우주정보, space, 우주</div>
+                </div>
+
+                <!-- 주요내용 -->
+                <div class="report-row">
+                    <div class="report-label">주요내용</div>
+                    <div class="report-content">
+                        <ul>
+                        <li>
+                            <p>1. 안보와 방위</p>
+                            - 유럽의 우주 활동 강화 및 우주 기술과 데이터를 통한 사회, 경제 발전 및 보편적 경쟁력 확보
+                            </li>
+                        <li>
+                            <p>2. 안보와 방위</p>
+                            - 유럽의 우주 활동 강화 및 우주 기술과 데이터를 통한 사회, 경제 발전 및 보편적 경쟁력 확보
+                            </li>
+                        <li>
+                        <p>3. 안보와 방위</p>
+                        - 유럽의 우주 활동 강화 및 우주 기술과 데이터를 통한 사회, 경제 발전 및 보편적 경쟁력 확보
+                        </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 워드 클라우드 분석 -->
+                <div class="report-row analysis">
+                    <div class="report-label">워드 클라우드 분석</div>
+                    <div class="report-content">
+                        <p>- 보안에 대한 워드 클라우드</p>
+                        <div class="report-img">
+                            <img src="/img/report-example.png" alt="워드 클라우드" style="max-width: 100%; height: auto;" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="report-buttons">
+                <div class="action-buttons">
+                    <button class="btn btn--pdf " onclick="downloadPDF()"><span class="btn-icon"></span>PDF저장</button>
+                    <button class="btn btn--search " onclick="window.print()">인쇄</button>
+                    <button class="btn btn--fourth sm" onclick="window.close()">닫기</button>
+                </div>
+            
+            </div>
+        </div>
+    </div>
+</body>
+</html>

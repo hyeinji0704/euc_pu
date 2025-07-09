@@ -10,7 +10,7 @@
     <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ko.js"></script>
     <script src="../js/component.js"></script>
     <link rel="stylesheet" href="../css/style.css">
-    <title>정책정보_국가,국제기구 정보(input_list)</title>
+    <title>보고서_보고서 작성</title>
 </head>
 
 <body>
@@ -33,7 +33,7 @@
                 <nav class="nav" id="gnb">
                     <h2 class="pop_title">전체메뉴</h2>
                     <ul id="head_menu" class="topmenu fullmenu">
-                        <li class="depth1 on ">
+                        <li class="depth1 ">
                             <a href="" class=""><span>정책정보</span></a>
                             <div class="submenu">
                                 <ul class="depth2 sub01">
@@ -43,7 +43,7 @@
                                 </ul>
                             </div> 
                         </li>
-                        <li class="depth1 ">
+                        <li class="depth1  ">
                             <a href=""><span>정책발간현황</span></a>
                             <div class="submenu">
                                 <ul class="depth2 sub01">
@@ -67,7 +67,7 @@
                                 </ul>
                             </div> 
                         </li>
-                        <li class="depth1"> 
+                        <li class="depth1 on"> 
                             <a href=""><span>분석</span></a>
                             <div class="submenu">
                                 <ul class="depth2 sub01">
@@ -126,17 +126,29 @@
         <div class="container sub-wrapper">
             <aside id="lnb_layout" class="lnb_wrap">
                 <div id="remote" class="lnb_header">
-                    <h2>정책정보</h2>
+                    <h2>분석</h2>
                     <div id="lnb" class="lnb_depth2">
                         <ul class="depth2_ul lnb_depth2__list">
                             <li class="on">
-                                <a href="#" class="link_2th off">국가, 국제기구 정보</a>
+                                <a href="#" class="link_2th off">국가정책 비교</a>
                             </li>
                             <li>
-                                <a href="#" class="link_2th">조직 정보</a>
+                                <a href="#" class="link_2th off">타임라인 분석</a>
                             </li>
                             <li>
-                                <a href="#" class="link_2th">정책 정보</a>
+                                <a href="#" class="link_2th off">네트워크 분석</a>
+                            </li>
+                            <li>
+                                <a href="#" class="link_2th off">워드 클라우드 분석</a>
+                            </li>
+                             <li>
+                                <a href="#" class="link_2th off">네트워크맵 분석</a>
+                            </li>
+                            <li>
+                                <a href="#" class="link_2th off">토픽분석</a>
+                            </li>
+                            <li>
+                                <a href="#" class="link_2th off">보고서</a>
                             </li>
                         </ul>
                     </div>
@@ -150,148 +162,192 @@
                     <nav class="breadcrumb">
                         <a href="#" class="home"><span>홈</span></a>
                         <span class="arrow-icon"></span>
-                        <a href="#">정책정보</a>
-                        <span class="arrow-icon"></span>
-                        <a class="current">국가,국제기구 정보</a>
+                        <a href="#">보고서</a>
                     </nav>
                 </div>
                 <!-- input 테이블 -->
-                <div class="search-detail-wrapper">
+                <div class="search-detail-wrapper report-form-container">
                     <div class="search-detail-box">
-                        <h3 class="sd-tit">기본정보</h3>
+                        <div class="sd-header">
+                            <h3 class="sd-tit">보고서 작성</h3>
+                            <div class="action-buttons">
+                                <button class="btn btn--fourth sm">미리보기</button>
+                                <button class="btn btn--search save-button">저장</button>
+                            </div>
+                        </div>
                         <table class="meta-table input-table">
+                             <colgroup>
+                                <col />
+                                <col />
+                                <col />
+                                <col />
+                            </colgroup>
                             <tbody>
                                 <tr>
-                                    <th><label>한글명 <span class="required">*</span></label></th>
-                                    <td>
+                                    <th ><label>보고서 제목</label></th>
+                                    <td  colspan="3">
                                         <div class="input-group">
-                                            <input type="text" class="form-input search-input " placeholder="한글명" readonly/>
-                                            <button class="btn btn--third sm ">검색</button>
-                                        </div>
-                                    </td>
-                                    <th><label>영문명 <span class="required">*</span></label></th>
-                                    <td>
-                                        <input type="text" class="form-input" placeholder="영문명" />
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th><label>국가코드</label></th>
-                                    <td>
-                                        <input type="text" class="form-input-narrow" placeholder="KR" value="KR" />
-                                    </td>
-                                    <th><label>국정제도</label></th>
-                                    <td>
-                                        <div class="input-group">
-                                            <div class="select-search">
-                                                <button class="select-search__label">전체</button>
-                                                <ul class="select-search__list">
-                                                    <li class="select-search__item">국정제도</li>
-                                                    <li class="select-search__item">정책 제도</li>
-                                                    <li class="select-search__item">법 제도</li>
-                                                    <li class="select-search__item">지침 제도</li>
-                                                    <li class="select-search__item">기타</li>
-                                                </ul>
-                                            </div>
-                                            <input type="text" class="form-input" placeholder="직접 입력" style="flex: 1;" />
+                                            <input type="text" class="max-auto" placeholder="보고서 제목"/>
                                         </div>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th><label>컨트롤 타워</label></th>
+                                    <th><label>작성일</label></th>
                                     <td>
+                                        <input type="text" placeholder="작성일" class="form-input-narrow"  />
+                                    </td>
+                                    <th><label>작성자</label></th>
+                                    <td>
+                                        <input type="text" placeholder="작성자" class="form-input-narrow" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th ><label>키워드</label></th>
+                                    <td  colspan="3">
                                         <div class="input-group">
-                                            <input type="text" class="form-input search-input " placeholder="컨트롤타워" readonly/>
-                                            <button class="btn btn--third sm ">검색</button>
+                                            <input type="text" class="max-auto" placeholder="키워드"/>
                                         </div>
                                     </td>
-                                    <th rowspan="2" style="vertical-align: middle;">국가사이버보안/안보전략</th>
-                                    <td rowspan="2" style="vertical-align: middle;">
+                                </tr>
+                                <tr>
+                                   <th rowspan="2" style="vertical-align: middle;">주요내용</th>
+                                    <td rowspan="2" colspan="3" style="vertical-align: middle;">
                                         <textarea class="textarea-large" placeholder="내용을 입력하세요"></textarea>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th><label>실무총괄조직</label></th>
-                                    <td>
-                                        <div class="input-group">
-                                            <input type="text" class="form-input search-input " placeholder="실무총괄조직" readonly/>
-                                            <button class="btn btn--third sm ">검색</button>
-                                        </div>
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>  
                     <div class="search-detail-box">
-                        <div class="sd-header">
-                            <h3 class="sd-tit">소속다자기구</h3>
-                            <div class="action-buttons">
-                                <button class="btn btn--third sm"><span class="btn-icon plus"></span>행추가</button>
-                            </div>
-                        </div>
+                        <h3 class="sd-tit">타임라인 분석</h3>
                         <table class="meta-table input-table">
+                             <colgroup>
+                                <col />
+                                <col />
+                                <col />
+                                <col />
+                            </colgroup>
                             <tbody>
-                               <tr>
-                                    <th style="width: 147px;"><label for="default">소속다자기구</label></th>
-                                    <td style="width: auto" class="">
+                                <tr>
+                                    <th ><label>분석 제목</label></th>
+                                    <td  colspan="3">
                                         <div class="input-group">
-                                            <input type="text" class="form-input " placeholder="소속다자기구" />
-                                            <button class="btn btn--fourth sm"><span class="btn-icon minus"></span>행삭제</button>
+                                            <input type="text" class="max-auto" placeholder="보고서 제목" readonly/>
                                         </div>
                                     </td>
                                 </tr>
-                               <tr>
-                                    <th style="width: 147px;"><label for="default">소속다자기구</label></th>
-                                    <td style="width: auto" class="">
-                                        <div class="input-group">
-                                            <input type="text" class="form-input " placeholder="소속다자기구" />
-                                            <button class="btn btn--fourth sm"><span class="btn-icon minus"></span>행삭제</button>
-                                        </div>
+                                <tr>
+                                    <th><label>데이터</label></th>
+                                    <td colspan="3">
+                                        <button class="btn btn--third sm"><span class="btn-icon plus"></span>추가</button>
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
                     <div class="search-detail-box">
-                        <div class="sd-header">
-                            <h3 class="sd-tit">역대국가원수 / 국제기구장</h3>
-                            <div class="action-buttons">
-                                <button class="btn btn--third sm"><span class="btn-icon plus"></span>행추가</button>
-                            </div>
-                        </div>
+                        <h3 class="sd-tit">워드 클라우드 분석</h3>
                         <table class="meta-table input-table">
+                             <colgroup>
+                                <col />
+                                <col />
+                                <col />
+                                <col />
+                            </colgroup>
                             <tbody>
-                               <tr>
-                                    <th style="width: 110px;"><label for="default">재임기간 <span class="required">*</span></label></th>
-                                    <td style="width: auto" >
-                                        <div class="date-range">
-                                            <input type="text" id="reign-start" class="form-input date-picker" placeholder="YYYY-MM-DD" readonly />
-                                            <span class="date-tilde">~</span>
-                                            <input type="text" id="reign-end" class="form-input date-picker" placeholder="YYYY-MM-DD" readonly />
-                                        </div>
-                                    </td>
-                                    <th style="width: 147px;"><label>국가원수명,기구장명 <span class="required">*</span></label></th>
-                                    <td style="width: auto">
+                                <tr>
+                                    <th ><label>분석 제목</label></th>
+                                    <td  colspan="3">
                                         <div class="input-group">
-                                            <input type="text" class="form-input " placeholder="소속다자기구" />
-                                            <button class="btn btn--fourth sm"><span class="btn-icon minus"></span>행삭제</button>
+                                            <input type="text" class="max-auto" placeholder="보고서 제목" readonly/>
                                         </div>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th style="width: 110px;"><label for="default">재임기간 <span class="required">*</span></label></th>
-                                    <td style="width: auto" >
-                                        <div class="date-range">
-                                            <input type="text" id="reign-start" class="form-input date-picker" placeholder="YYYY-MM-DD" readonly />
-                                            <span class="date-tilde">~</span>
-                                            <input type="text" id="reign-end" class="form-input date-picker" placeholder="YYYY-MM-DD" readonly />
+                                    <th><label>데이터</label></th>
+                                    <td colspan="3">
+                                        <button class="btn btn--third sm"><span class="btn-icon plus"></span>추가</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="search-detail-box">
+                        <h3 class="sd-tit">네트워크 분석</h3>
+                        <table class="meta-table input-table">
+                             <colgroup>
+                                <col />
+                                <col />
+                                <col />
+                                <col />
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th ><label>분석 제목</label></th>
+                                    <td  colspan="3">
+                                        <div class="input-group">
+                                            <input type="text" class="max-auto" placeholder="보고서 제목" readonly/>
                                         </div>
                                     </td>
-                                    <th style="width: 147px;"><label>국가원수명,기구장명 <span class="required">*</span></label></th>
-                                    <td style="width: auto">
+                                </tr>
+                                <tr>
+                                    <th><label>데이터</label></th>
+                                    <td colspan="3">
+                                        <button class="btn btn--third sm"><span class="btn-icon plus"></span>추가</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="search-detail-box">
+                        <h3 class="sd-tit">네트워크맵 분석</h3>
+                        <table class="meta-table input-table">
+                             <colgroup>
+                                <col />
+                                <col />
+                                <col />
+                                <col />
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th ><label>분석 제목</label></th>
+                                    <td  colspan="3">
                                         <div class="input-group">
-                                            <input type="text" class="form-input " placeholder="소속다자기구" />
-                                            <button class="btn btn--fourth sm"><span class="btn-icon minus"></span>행삭제</button>
+                                            <input type="text" class="max-auto" placeholder="보고서 제목" readonly/>
                                         </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><label>데이터</label></th>
+                                    <td colspan="3">
+                                        <button class="btn btn--third sm"><span class="btn-icon plus"></span>추가</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="search-detail-box">
+                        <h3 class="sd-tit">토픽 분석</h3>
+                        <table class="meta-table input-table">
+                             <colgroup>
+                                <col />
+                                <col />
+                                <col />
+                                <col />
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th ><label>분석 제목</label></th>
+                                    <td  colspan="3">
+                                        <div class="input-group">
+                                            <input type="text" class="max-auto" placeholder="보고서 제목" readonly/>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><label>데이터</label></th>
+                                    <td colspan="3">
+                                        <button class="btn btn--third sm"><span class="btn-icon plus"></span>추가</button>
                                     </td>
                                 </tr>
                             </tbody>
@@ -300,7 +356,6 @@
                 </div>
                 <div class="btn-wrap">
                     <button class="btn btn--secondary">목록</button>
-                    <button class="btn btn--primary">등록</button>
                 </div>
             </div>
         </div>
@@ -308,7 +363,7 @@
      <footer class="footer">
         <div class="container">
             <div class="footer-wrapper">
-                <div class="footer-details">
+                <div class="footer-details"> 
                     <div class="footer-organization">
                         <div class="footer-title">국가보안기술연구소</div>
                         <div class="footer-location">[30147] 대전광역시 유성구 유성대로 1559 (전민동)</div>
@@ -324,7 +379,7 @@
         </div>
         <div class="quick-aside">
             <div class="chat-ai aside-btn">
-                <img src="/img/icon/ic-ai.svg" alt="채팅 아이콘" />
+                <img src="/img/icon/ic-ai.svg" alt="채팅 아이콘" /> 
                 <span>Chat AI</span>
             </div>
             <div class="feedback aside-btn">사이버안보 역량평가</div>
@@ -332,3 +387,14 @@
     </footer>
 </body>
 </html>
+<!-- 저장 버튼에 save-button 클래스가 있다고 가정 -->
+<script>
+  document.querySelector('.save-button').addEventListener('click', function () {
+  window.open(
+    'report_preview.html',
+    '_blank',
+    'width=850,height=1200,top=0,left=100,resizable=yes,scrollbars=yes'
+  );
+});
+
+</script>

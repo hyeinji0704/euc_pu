@@ -3,6 +3,8 @@
 @use '../base/typography.scss' as *;
 @use '../abstracts/variables' as *;
 
+
+
 .content-area {
     width: calc($layout-max-width-container - $layout-min-lnb-width - 6rem);
 }
@@ -62,6 +64,7 @@
         background-color: $white;
         border-radius: .4rem;
         width: calc(100% - 6.8rem);
+        max-width: none;
         &::placeholder {
             color: $neutral-grey-subtle;
         }
@@ -87,4 +90,8 @@
 }
 .justify-between {
     @include flex(space-between, center);
+}
+
+.report-form-container {
+    gap: 2.4rem;
 }

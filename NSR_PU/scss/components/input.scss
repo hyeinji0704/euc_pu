@@ -5,93 +5,121 @@
 
 // input table
 
-.input-table {
-    .required {
-        color: colors.$status-error;
-    }
-    
-    
-    td {
-        padding: 1.5rem 1.4rem;
-        height: 3.8rem;
-        
-        
-        
-    }
-    .table_vertical_3 {
-      th, td {
-        width: 33.3%;
-      }
-      th {
-        background-color: #F8F8F8;
-        border-right: 1px solid #DDDDDD;
-        &:last-child {
-            border-right: none;
-        }
-      }
-      td {
-        border-right: 1px solid #DDDDDD;
-        &:last-child {
-            border-right: none;
-        }
-        textarea {
-          border: 1px solid colors.$neutral-grey-soft;
-        }
-      }
-    }
+// 1. 공통 input 스타일 정의
+@mixin input-base {
+  flex: 1;
+  min-width: 0;
+  width: 100%;
+  max-width: 300px;
+  height: 3.8rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.4rem;
+  outline-width: 1px;
+  outline-style: solid;
+  background-color: colors.$white;
+
+  &::placeholder {
+    color: colors.$text-color-muted;
+  }
+
+  &:placeholder-shown {
+    outline-color: colors.$neutral-grey-soft;
+  }
+
+  &:not(:placeholder-shown):not(:focus) {
+    outline-color: colors.$text-color-primary;
+  }
+
+  &:focus {
+    outline: 1.5px solid colors.$brand-blue-primary;
+  }
+
+  &:disabled {
+    background-color: #e9ecef;
+    outline-color: #ddd;
+    cursor: not-allowed;
+    color: #999;
+  }
+
+  &.form-input-narrow {
+    width: 16.4rem;
+  }
+
+  &.search-input:focus {
+    outline-width: 1px;
+    outline-color: colors.$neutral-grey-soft;
+    box-shadow: none;
+  }
+
+  &.max-auto {
+    width: 100%;
+    max-width: none;
+  }
 }
+
 
 .input-group {
+  display: flex;
+  gap: 0.8rem;
+  width: 100%;
+}
+
+input {
+  @include input-base;
+}
+
+.input-table {
+  .required {
+    color: colors.$status-error;
+  }
+
+  .input-group {
     display: flex;
     gap: 0.8rem;
-
-}
-// input 컴포넌트
-input {
-    flex: 1; 
-    min-width: 0;
     width: 100%;
-    max-width: 300px;
-    height: 3.8rem;
-    padding: 0.6rem 1.2rem;
-    border-radius: 0.4rem;
-    outline-width: 1px;
-    outline-style: solid;
-    background-color: colors.$white;
+  }
 
-    &::placeholder {
-        color: colors.$text-color-muted;
+  td {
+    padding: 1.5rem 1.4rem;
+    height: 3.8rem;
+
+    input {
+      @include input-base;
     }
-    &.form-input-narrow {
-        width: 16.4rem;
+  }
+
+  .table_vertical_3 {
+    th, td {
+      width: 33.3%;
     }
-    // 입력 전
-    &:placeholder-shown {
-        outline-color: colors.$neutral-grey-soft;
+
+    th {
+      background-color: #F8F8F8;
+      border-right: 1px solid #DDDDDD;
+
+      &:last-child {
+        border-right: none;
+      }
     }
-    // 입력 후 (placeholder 없고 focus 안 됨)
-    &:not(:placeholder-shown):not(:focus) {
-        outline-color: colors.$text-color-primary; 
+
+    td {
+      border-right: 1px solid #DDDDDD;
+
+      &:last-child {
+        border-right: none;
+      }
+
+      textarea {
+        border: 1px solid colors.$neutral-grey-soft;
+      }
     }
-    // 입력 중
-    &:focus {
-        outline: 1.5px solid colors.$brand-blue-primary;
-    }
-    // 비활성화 상태
-    &:disabled {
-        background-color: #e9ecef;
-        outline-color: #ddd;
-        cursor: not-allowed;
-        color: #999;
-    }
-    &.search-input {
-        &:focus {
-            outline-width: 1px;
-            outline-color: colors.$neutral-grey-soft;
-            box-shadow: none;
-        }
-    }
+  }
 }
+
+
+
+
+
 
 // 파일 첨부 
 .file-input-wrapper {
@@ -118,12 +146,12 @@ input {
 
 // 수정 불-가 상태
 .view-mode {
-    background-color: #EEE !important;
+    background-color: colors.$white !important;
     outline-width: 1px !important;
-    outline-color: colors.$neutral-grey-soft !important;
+    outline-color: colors.$white !important;
     box-shadow: none !important;
     pointer-events: none; // 마우스 이벤트 차단
-  cursor: default;
+    cursor: default;
 }
 
 .textarea-large {
@@ -403,34 +431,26 @@ input {
     position: relative;
   }
 
+  // ✅ checked 상태일 때
   input[type="radio"]:checked + .radio-mark {
     border-color: colors.$brand-blue-action;
     background-color: colors.$white;
-  }
 
-  input[type="radio"]:checked + .radio-mark::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: colors.$brand-blue-action;
-    display: block;
-    transform: translate(-50%, -50%);
-  }
-
-  .input-etc {
-    margin-left: 0.8rem;
-    padding: 0.4rem 0.8rem;
-    outline: 1px solid colors.$neutral-grey-soft;
-    border-radius: 0.4rem;
-    font-size: 1.6rem;
-    line-height: 1.4;
-    min-width: 10rem;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0.8rem; // 또는 8px
+      height: 0.8rem;
+      border-radius: 50%;
+      background: colors.$brand-blue-action;
+      transform: translate(-50%, -50%);
+      display: block;
+    }
   }
 }
+
 
 //숫자입력필드
 

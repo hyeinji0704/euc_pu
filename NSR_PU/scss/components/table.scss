@@ -3,6 +3,11 @@
 @use '../base/base.scss';
 @use '../base/typography.scss';
 
+@mixin ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 .sd-header { 
     @include base.flex(space-between, flex-end);       
 
@@ -18,7 +23,12 @@
     border-collapse: collapse;
     table-layout: fixed;
     border-top: 2px solid colors.$text-color-primary;
-    
+    colgroup {
+    col:nth-child(1) { width: 18%; }
+    col:nth-child(2) { width: 32%; }
+    col:nth-child(3) { width: 18%; }
+    col:nth-child(4) { width: 32%; }
+  }
     th, td {
         border-bottom: 1px solid colors.$neutral-grey-lighter;
         padding: 1.4rem ;
@@ -93,6 +103,7 @@
         margin-top: 5rem;
     }
 }
+
 .data-table {
     width: 100%;
     border-collapse: collapse;
@@ -129,9 +140,11 @@
         padding: 8px 20px;
         text-align: center;
         border-bottom: 1px solid colors.$background-color-lighter;
+        @include ellipsis;
+        max-width: 20rem;
         &.empty-data {
             text-align: center;
-            color: colors.$neutral-grey-soft;
+            color: colors.$text-color-placeholder;
             font-size: 1.5rem;
             padding: 1.2rem 1.8rem;
         }
@@ -166,6 +179,11 @@
             cursor: default !important;
         }
     }
+}
+
+.hover-disabled {
+    background: none !important;
+    cursor: default !important;
 }
 
 //policy table
@@ -286,7 +304,7 @@
                     background: url(/img/icon/ic-edit.svg) no-repeat center ;
                 }
                 &.delete-icon {
-                    background: url(/img/icon/ic-delete.svg) no-repeat center ;
+                    background: url(/img/icon/ic-trash-red.svg) no-repeat center ;
                 }
              }
         }

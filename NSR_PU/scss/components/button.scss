@@ -1,55 +1,30 @@
+// === button.scss 리팩토링 구조 ===
+
 @use '../abstracts/colors';
 @use '../abstracts/variables';
 @use '../base/base.scss';
 @use '../base/typography.scss';
 
-.download-btn {
-    display: flex;
-    padding: 0.4rem 0.6rem 0.4rem 1.2rem;
-    align-items: center;
-    gap: 0.4rem;
-    border-radius: 0.4rem;
-    border: 1px solid colors.$neutral-grey-soft;
-    background: colors.$white;
-    span {
-        font-size: 1.5rem;
-        font-weight: 500;
-        line-height: 2.4rem; /* 160% */
-        padding-right: 2.6rem;
-        position: relative;
-        &::after {
-            position: absolute;
-            width: 1.8rem;
-            height: 1.8rem;
-            top: 50%;
-            transform: translateY(-50%);
-            right: 0.3rem;
-            background: url(/img/icon/ic-download.svg) no-repeat center center;
-            content: "";
-        }
-    }
-}
-
-.btn-wrap {
-    @include base.flex(space-between, center);
-    margin-top: 0.5rem;
-    padding: 4rem 0;
-}
+// ================================
+// 1. Base Button (공통 구조)
+// ================================
 .btn {
-  font-size: 1.8rem;
+  @include base.flex(center, center);
   font-weight: 500;
-  line-height: 2.2rem;
-  padding: 1.2rem 3rem;
   border-radius: 0.4rem;
   transition: all 0.2s ease;
   cursor: pointer;
+  font-size: 1.8rem;
+  line-height: 2.2rem;
+  padding: 1.2rem 3rem;
+
   &.sm {
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 24px;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
     padding: 0.8rem 1.3rem;
     height: 4rem;
   }
+
   &:disabled {
     background-color: #F5F5F5;
     border: 1px solid #F5F5F5;
@@ -58,8 +33,10 @@
   }
 }
 
-// Filled type
-.btn-primary {
+// ================================
+// 2. Variant: Filled (Primary)
+// ================================
+.btn--primary {
   background-color: colors.$brand-blue-primary;
   color: white;
   border: none;
@@ -78,8 +55,10 @@
   }
 }
 
-// Outlined type
-.btn-secondary {
+// ================================
+// 3. Variant: Outline (Secondary)
+// ================================
+.btn--secondary {
   background-color: white;
   border: 1px solid #767676;
   color: colors.$text-color-primary;
@@ -100,21 +79,24 @@
   }
 }
 
-.btn-third {
+// ================================
+// 4. Variant: Outline with Icon (Third)
+// ================================
+.btn--third {
   background-color: white;
   border: 1px solid colors.$brand-blue-primary;
   color: colors.$brand-blue-primary;
   @include base.flex(space-between, center);
   gap: 0.4rem;
-   &:hover,
+
+  &:hover,
   &:focus {
-   background-color: colors.$brand-blue-hover;
-  border-color: colors.$brand-blue-hover;
+    background-color: colors.$brand-blue-hover;
+    border-color: colors.$brand-blue-hover;
     color: colors.$white;
-    .btn-icon {
-      &.plus {
+
+    .btn-icon.plus {
       background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' viewBox='0 0 16 16'%3e%3cpath fill='%23fff' fill-rule='evenodd' d='M8.75 7.25h4.5a.75.75 0 1 1 0 1.5h-4.5v4.5a.75.75 0 1 1-1.5 0v-4.5h-4.5a.75.75 0 0 1 0-1.5h4.5v-4.5a.75.75 0 0 1 1.5 0v4.5Z' clip-rule='evenodd'/%3e%3c/svg%3e");
-    }
     }
   }
 
@@ -122,15 +104,27 @@
     background-color: colors.$brand-blue-primary;
     border-color: colors.$brand-blue-primary;
     color: colors.$white;
-    .btn-icon {
-      &.plus {
+
+    .btn-icon.plus {
       background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' viewBox='0 0 16 16'%3e%3cpath fill='%23fff' fill-rule='evenodd' d='M8.75 7.25h4.5a.75.75 0 1 1 0 1.5h-4.5v4.5a.75.75 0 1 1-1.5 0v-4.5h-4.5a.75.75 0 0 1 0-1.5h4.5v-4.5a.75.75 0 0 1 1.5 0v4.5Z' clip-rule='evenodd'/%3e%3c/svg%3e");
-    }
     }
   }
 
   &.is-animating {
     box-shadow: 0 0 0 4px colors.$brand-blue-light;
+  }
+
+  .btn-icon {
+    width: 1.6rem;
+    height: 1.6rem;
+
+    &.plus {
+      background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' viewBox='0 0 16 16'%3e%3cpath fill='%232970FF' fill-rule='evenodd' d='M8.75 7.25h4.5a.75.75 0 1 1 0 1.5h-4.5v4.5a.75.75 0 1 1-1.5 0v-4.5h-4.5a.75.75 0 0 1 0-1.5h4.5v-4.5a.75.75 0 0 1 1.5 0v4.5Z' clip-rule='evenodd'/%3e%3c/svg%3e");
+    }
+
+    &.minus {
+      background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' viewBox='0 0 16 16'%3e%3cpath fill='%23212121' fill-rule='evenodd' d='M14.333 8a.667.667 0 0 1-.666.667H2.333a.667.667 0 0 1 0-1.333h11.334c.368 0 .666.298.666.666Z' clip-rule='evenodd'/%3e%3c/svg%3e");
+    }
   }
 
   &:disabled {
@@ -139,29 +133,19 @@
     color: #999;
     cursor: not-allowed;
   }
-  .btn-icon {
-    width: 1.6rem;
-    height: 1.6rem;
-    
-
-    &.plus {
-      background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' viewBox='0 0 16 16'%3e%3cpath fill='%232970FF' fill-rule='evenodd' d='M8.75 7.25h4.5a.75.75 0 1 1 0 1.5h-4.5v4.5a.75.75 0 1 1-1.5 0v-4.5h-4.5a.75.75 0 0 1 0-1.5h4.5v-4.5a.75.75 0 0 1 1.5 0v4.5Z' clip-rule='evenodd'/%3e%3c/svg%3e");
-    }
-    &.minus {
-      background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' viewBox='0 0 16 16'%3e%3cpath fill='%23212121' fill-rule='evenodd' d='M14.333 8a.667.667 0 0 1-.666.667H2.333a.667.667 0 0 1 0-1.333h11.334c.368 0 .666.298.666.666Z' clip-rule='evenodd'/%3e%3c/svg%3e");
-    }
-  }
 }
-.btn-fourth {
+
+// ================================
+// 5. Variant: Neutral Outline (Fourth)
+// ================================
+.btn--fourth {
   background-color: white;
   border: 1px solid colors.$neutral-grey-soft;
   @include base.flex(space-between, center);
   gap: 0.4rem;
-   &:hover,
-  &:focus {
-   background-color: colors.$fill-color-card-bg;
-  }
 
+  &:hover,
+  &:focus,
   &:active {
     background-color: colors.$fill-color-card-bg;
   }
@@ -170,49 +154,195 @@
     box-shadow: 0 0 0 4px colors.$background-color-light;
   }
 
+  .btn-icon.minus {
+    width: 1.6rem;
+    height: 1.6rem;
+    background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' viewBox='0 0 16 16'%3e%3cpath fill='%23212121' fill-rule='evenodd' d='M14.333 8a.667.667 0 0 1-.666.667H2.333a.667.667 0 0 1 0-1.333h11.334c.368 0 .666.298.666.666Z' clip-rule='evenodd'/%3e%3c/svg%3e");
+  }
+
   &:disabled {
     background-color: #F5F5F5;
     border: 1px solid #F5F5F5;
     color: #999;
     cursor: not-allowed;
   }
-  .btn-icon {
-    width: 1.6rem;
-    height: 1.6rem;
-    
-    &.minus {
-      background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' viewBox='0 0 16 16'%3e%3cpath fill='%23212121' fill-rule='evenodd' d='M14.333 8a.667.667 0 0 1-.666.667H2.333a.667.667 0 0 1 0-1.333h11.334c.368 0 .666.298.666.666Z' clip-rule='evenodd'/%3e%3c/svg%3e");
+}
+
+// ================================
+// 6. 기타 버튼들
+// ================================
+
+// 🔄 btn--download로 통합
+.btn--download {
+  display: flex;
+  padding: 0.4rem 0.6rem 0.4rem 1.2rem;
+  align-items: center;
+  gap: 0.4rem;
+  border-radius: 0.4rem;
+  border: 1px solid colors.$neutral-grey-soft;
+  background: colors.$white;
+
+  span {
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 2.4rem;
+    padding-right: 2.6rem;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      width: 1.8rem;
+      height: 1.8rem;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 0.3rem;
+      background: url(/img/icon/ic-download.svg) no-repeat center center;
+      content: "";
     }
   }
 }
 
-
-.btn-search {
+// 🔄 btn--download로 통합
+.btn--pdf {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  word-break: keep-all;
-  padding: 12px 16px;
-  border-radius: 4px;     
-  background: colors.$text-color-primary;
-  color: colors.$white;
+  padding: 0.4rem 1.2rem ;
   font-size: 1.6rem;
-  height: 4rem;
+  align-items: center;
+  gap: 0.4rem;
+  border-radius: 0.4rem;
+  border: 1px solid colors.$neutral-grey-soft;
+  background: colors.$white;
+
+  span {
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 2.4rem;
+    padding-right: 2.6rem;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      width: 1.8rem;
+      height: 1.8rem;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 0.3rem;
+      background: url(/img/icon/ic-pdf.svg) no-repeat center center;
+      content: "";
+    }
+  }
 }
 
+// 버튼 래퍼
+.btn-wrap {
+  @include base.flex(space-between, center);
+  margin-top: 0.5rem;
+  padding: 4rem 0;
+}
+
+// 액션 버튼 그룹
 .action-buttons {
   display: flex;
   gap: 0.5rem;
   margin-top: 1rem;
+
   &.no-mt {
     margin-top: 0;
   }
 }
 
-.btn-trash {    
+// 휴지통 아이콘 버튼
+.btn-trash {
+  width: 1.4rem;
+  height: 1.4rem;
+  background: url(/img/icon/ic-delete.svg) no-repeat center center;
+  display: inline-block;
+  cursor: pointer;
+}
+
+// 🔄 btn--search로 통합
+.btn--search {
+  background: colors.$text-color-primary;
+  color: colors.$white;
+  font-size: 1.6rem;
+  height: 4rem;
+  padding: 1.2rem 1.6rem;
+  word-break: keep-all;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.4rem;
+
+  &:hover,
+  &:focus {
+    background: darken(colors.$text-color-primary, 5%);
+  }
+
+  &:active {
+    background: darken(colors.$text-color-primary, 10%);
+  }
+
+  &.is-animating {
+    box-shadow: 0 0 0 4px rgba(colors.$text-color-primary, 0.3);
+  }
+
+  &:disabled {
+    background-color: #F5F5F5;
+    color: #999;
+    cursor: not-allowed;
+  }
+}
+
+
+.btn--report {
+  background-color: #757575; // 예시: 중간 회색
+  color: white;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+
+  .btn-icon {
     width: 1.6rem;
     height: 1.6rem;
-    background: url(/img/icon/ic-trash.svg) no-repeat center center;
-    display: inline-block;
-    cursor: pointer;
+    background: url('/img/icon/ic-doc.svg') no-repeat center center;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: darken(#757575, 5%);
+  }
+
+  &:active {
+    background-color: darken(#757575, 10%);
+  }
+
+  &.is-animating {
+    box-shadow: 0 0 0 4px rgba(#757575, 0.3);
+  }
+}
+
+.btn--danger {
+  background-color: white;
+  color: #FF3B30;
+  border: 1px solid #FF3B30;
+
+  &:hover,
+  &:focus {
+    background-color: #FFEBEB;
+  }
+
+  &:active {
+    background-color: #FFDADA;
+  }
+
+  &.is-animating {
+    box-shadow: 0 0 0 4px rgba(#FF3B30, 0.2);
+  }
+
+  &:disabled {
+    border-color: #ddd;
+    color: #999;
+  }
 }

@@ -1,0 +1,103 @@
+@use '../abstracts/colors' as *;
+@use '../abstracts/variables' as *;
+@use '../base/base' as *;
+@use '../base/typography' as *;
+
+
+body, .report-preview, .report-preview * {
+  font-family: 'KoPub Dotum', sans-serif !important;
+}
+
+.report-preview-wrapper {
+    padding: 3rem 3.5rem;
+    .report-preview{
+        padding: 7rem 5rem;
+        border: 1px solid $border-color-default;
+        .report-header {
+            @include flex(space-between, center);
+            h1 {
+                font-size: 3.6rem !important;
+            }
+            font-weight: 700;
+            .logo {
+                img {
+                    width: 241px;
+                    height: auto;
+                }
+            }
+            margin-bottom: 4rem;
+        }
+        .report-meta {
+            padding: 2rem;
+            background-color: $fill-color-card-bg;
+            p {
+                font-size: 1.6rem;
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+.report-section {
+    margin:  2rem 0 4rem 0;
+    border: 1px solid $neutral-grey-lighter;
+}
+.report-row {
+  display: flex;
+  align-items: stretch; 
+  
+  border-bottom: 1px solid $neutral-grey-lighter ;
+  &.analysis {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .report-label {
+        width: 100%;
+        text-align: center;
+        border-right: 0;
+        border-bottom: 1px solid $neutral-grey-lighter;
+        justify-content: center;
+    }
+  }
+}
+
+.report-label {
+  font-weight: 500;
+  width: 140px;
+  padding: 2rem;
+  border-right: 1px solid $neutral-grey-lighter ;
+  background-color: $off-white-4;
+  font-weight: bold;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+
+.report-content {
+    width: 100%;
+  flex: 1;
+  word-break: keep-all;
+  padding: 1.5rem;
+  font-size: 1.3rem;
+  ul {
+    p {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+    }
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem; 
+}
+.report-img {
+    @include flex(center, center);
+     img {
+    width: 44rem;
+    height: auto;
+ }
+}
+
+}
+
+.report-buttons {
+    @include flex(center, center);
+}
