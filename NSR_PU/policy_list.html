@@ -168,7 +168,8 @@
                 <!-- 콘텐츠 액션 -->
                 <div class="content-actions flex_end">
                     <div class="action-buttons">
-                        <button class="btn btn--third sm"><span class="btn-icon plus"></span>비교 정책 추가</button>
+                        <button class="btn btn--third sm" onclick="openCountryModal()"><span class="btn-icon plus"></span>비교 정책 추가</button>
+                        <!-- 추가 버튼 클릭 시, 정책현황 추가 모달 페이지(modal_policy.html)가 열립니다. -->
                     </div>
                 </div>
                 <!-- 데이터 테이블 -->
@@ -324,3 +325,15 @@
     </footer>
 </body>
 </html>
+
+                                            
+
+<script>
+  function openCountryModal() {
+    const popup = window.open(
+      'modal_policy.html',
+      '정책발간현황 조회',
+      'width=1000,height=600,scrollbars=yes,resizable=yes'
+    );
+  }
+</script>

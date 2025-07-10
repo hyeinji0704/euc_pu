@@ -17,6 +17,10 @@
   font-size: 1.8rem;
   line-height: 2.2rem;
   padding: 1.2rem 3rem;
+  &.lg {
+    padding: 1.2rem 0;
+    width: 9.4rem;
+  }
 
   &.sm {
     font-size: 1.6rem;
@@ -86,7 +90,7 @@
   background-color: white;
   border: 1px solid colors.$brand-blue-primary;
   color: colors.$brand-blue-primary;
-  @include base.flex(space-between, center);
+  @include base.flex(center, center);
   gap: 0.4rem;
 
   &:hover,
@@ -165,6 +169,12 @@
     border: 1px solid #F5F5F5;
     color: #999;
     cursor: not-allowed;
+  }
+  .trash {
+    width: 1.6rem;
+    height: 1.6rem;
+    background: url(/img/icon/ic-trash.svg) no-repeat center;
+
   }
 }
 
@@ -259,6 +269,9 @@
   display: inline-block;
   cursor: pointer;
 }
+
+
+
 
 // 🔄 btn--search로 통합
 .btn--search {

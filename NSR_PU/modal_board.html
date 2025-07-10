@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../js/plugin/jquery/jquery-3.6.0.min.js"></script>
+    <!-- date-range -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ko.js"></script>
+    <script src="../js/component.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <title>list_클릭 후_modal</title>
+</head>
+<body>
+    <div class="modal_wrapper">
+        <div class="modal_header">
+            <h1>정책발간현황 조회</h1>
+            <button class="modal_btn_delete"></button>
+        </div>
+        <div class="modal_content">
+            <!-- 데이터 테이블 -->
+            <div class="table-container">
+                <table class="input-table meta-table ">
+                    <tbody>
+                        <tr>
+                            <th style="width: 125px;"><label for="default">분류</label></th>
+                            <td style="width: auto" class="">
+                                <p>지침</p>
+                            </td>
+                            <th style="width: 125px;"><label for="default">수집처</label></th>
+                            <td style="width: auto" class="">
+                                <p>NCSC</p>
+                            </td>
+                            <th style="width: 125px;"><label for="default">수집일시</label></th>
+                            <td style="width: auto" class="">
+                                <p>2024.06.24</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th style="width: 125px;"><label for="default">제목</label></th>
+                            <td style="width: auto" colspan="5">
+                                <p>FISMA 2023</p>                                
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="6">
+                                <p class="textarea">
+                                    The NCSC developed the CAF in its role as national technical authority for cyber security with an expectation that it would be used, amongst other things, as a tool to support effective cyber regulation. The NCSC itself has no regulatory responsibilities, and organisations subject to cyber regulation should consult with their regulators to learn whether they should use the CAF in the context of meeting regulatory requirements.
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th colspan="6" style="padding: 0;">
+                                <div class="board-files-list">
+                                    <a href="#" download class="meta-files-item board-files-item">
+                                        <div class="mf-info">
+                                            <div class="mf-tit">원본파일</div>
+                                            <div class="mf-link">CELEX_52016_DC_0705_EN_TXT_07bd287ba1.pdf</div>
+                                        </div>
+                                        <button class="btn btn--download"><span>다운로드</span></button>
+                                    </a>
+                                    <a href="#" download class="meta-files-item board-files-item">
+                                        <div class="mf-info">
+                                            <div class="mf-tit">원본파일</div>
+                                            <div class="mf-link"> 유럽우주전략 검토.pdf</div>
+                                        </div>
+                                        <button class="btn btn--download"><span>다운로드</span></button>
+                                    </a>
+                                </div>
+                            </th>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="btn-wrap">
+            <button class="btn btn--secondary lg">닫기</button>
+            <div class="action-buttons">
+                <button class="btn btn--primary lg">등록</button>
+                <button class="btn btn--third lg js-open-delete-popup">삭제요청</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 삭제요청 클릭 시 팝업 -->
+    <div class="popup popup-delete-request" style="display: none;" role="dialog" aria-modal="true">
+        <div class="popup-overlay"></div>
+        <div class="popup-container popup-small">
+            <div class="popup-header">
+            <h3 class="popup-title">삭제 요청하시겠습니까?</h3>
+            </div>
+            <div class="popup-body">
+                <textarea class="form-textarea" placeholder="삭제 사유를 입력하세요."></textarea>
+            </div>
+            <div class="popup-footer">
+                <button type="button" class="btn btn--secondary sm js-close-delete-popup">취소</button>
+                <button type="button" class="btn btn--primary sm">확인</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+        // 열기
+    document.querySelector('.js-open-delete-popup')?.addEventListener('click', () => {
+    document.querySelector('.popup-delete-request').style.display = 'flex';
+    });
+
+    // 닫기
+    document.querySelectorAll('.js-close-delete-popup').forEach(btn => {
+    btn.addEventListener('click', () => {
+        document.querySelector('.popup-delete-request').style.display = 'none';
+    });
+    });
+
+</script>

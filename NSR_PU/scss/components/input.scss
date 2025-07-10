@@ -86,6 +86,11 @@ input {
     input {
       @include input-base;
     }
+    .textarea {
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
+
   }
 
   .table_vertical_3 {
@@ -198,6 +203,7 @@ input {
 
 //select-search 컴포넌트
 .select-search {
+  
   position: relative;
   width: 14rem;
   height: 3.8rem;
@@ -205,9 +211,11 @@ input {
   border: 1px solid colors.$neutral-grey-soft;
   background: url('/img/icon/ic-select_arrow.svg') calc(100% - 7px) center no-repeat;
   background-size: 18px;
+  background-color: colors.$white;
   cursor: pointer;
 
   &__label {
+    background-color: colors.$white;
     display: flex;
     align-items: center;
     width: 100%;
@@ -264,6 +272,7 @@ input {
     outline: 1.5px solid colors.$brand-blue-primary;
     border: none;
     .select-search__list {
+      z-index: 10;
       max-height: 50rem;
       border-radius: 0 0 0.4rem 0.4rem ;
       box-shadow: 0px 3px 6px -4px rgba(0, 0, 0, 0.12), 0px 6px 16px 0px rgba(0, 0, 0, 0.08), 0px 9px 28px 8px rgba(0, 0, 0, 0.05);
@@ -275,8 +284,10 @@ input {
 .date-range {
     @include base.flex(space-between, center);
     gap: 0.8rem;
+    
 
     .form-input {
+      
         &.date-picker {
             width: 14rem;
             height: 3.8rem;
@@ -285,6 +296,7 @@ input {
             border-radius: 0.4rem;
             letter-spacing: -0.03rem;
             background: url('/img/icon/ic-calendar.svg') no-repeat right 1rem center;
+            background-color: colors.$white;
             background-size: 1.6rem;
             cursor: pointer;
         }

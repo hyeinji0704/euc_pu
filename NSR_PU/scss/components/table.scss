@@ -56,47 +56,57 @@
     width: 100%;
     margin-top: 1.8rem;
     border-top: 2px solid colors.$text-color-primary;
-    a { 
-       @include base.flex(space-between, center);
-       padding: 2.4rem 3rem;
-       background-color: colors.$off-white-5;
-       border-bottom: 1px solid  colors.$background-color-lighter;
-       &:hover {
-        // background-color: colors.$fill-color-card-bg;
-        // .download-btn {
-        //     background-color: colors.$fill-color-card-bg;
-        // }
-        .mf-info  {
-            .mf-link {
-                text-decoration: underline;
-            }
-        }
-       }
-       .mf-info {
-        display: flex;
-        gap: 2.4rem;
-        .mf-tit {
-            font-weight: 600;
-        }
-        .mf-link {
-            color: colors.$text-color-secondary;
-            position: relative;
-            padding-left: 2.6rem;
-            &::before {
-                position: absolute;
-                content: "";
-                top: 50%;
-                transform: translateY(-50%);
-                left: 0;
-                width: 1.8rem;
-                height: 1.8rem;
-                background: url(/img/icon/ic-file.svg) no-repeat center center;
-            }
-        }
-       }
-       
-    }
 } 
+.board-files-list {
+    width: 100%;
+    > .meta-files-item:last-child {
+        border-bottom: 0;
+    }
+}
+.meta-files-item { 
+    @include base.flex(space-between, center);
+    padding: 2.4rem 3rem;
+    background-color: colors.$off-white-5;
+    border-bottom: 1px solid  colors.$background-color-lighter;
+    &.board-files-item {
+        padding: 1.4rem;
+    }
+    &:hover {
+    // background-color: colors.$fill-color-card-bg;
+    // .download-btn {
+    //     background-color: colors.$fill-color-card-bg;
+    // }
+    .mf-info  {
+        .mf-link {
+            text-decoration: underline;
+        }
+    }
+    }
+    .mf-info {
+    display: flex;
+    gap: 2.4rem;
+    .mf-tit {
+        font-weight: 600;
+    }
+    .mf-link {
+        color: colors.$text-color-secondary;
+        position: relative;
+        padding-left: 2.6rem;
+        font-weight: 400;
+        &::before {
+            position: absolute;
+            content: "";
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+            width: 1.8rem;
+            height: 1.8rem;
+            background: url(/img/icon/ic-file.svg) no-repeat center center;
+        }
+    }
+    }
+    
+}
 
 .table-container {
     &.policy-list {
@@ -115,12 +125,12 @@
         font-weight: 700;
         color: #333;
         border-bottom: 1px solid #ddd;
-        &:nth-child(1) { width: 5%; };
-        &:nth-child(2) { width: 30%; };
-        &:nth-child(3) { width: 30%; };
-        &:nth-child(4) { width: 10%; };
-        &:nth-child(5) { width: 15%; };
-        &:nth-child(6) { width: 10%; };
+        // &:nth-child(1) { width: 5%; };
+        // &:nth-child(2) { width: 30%; };
+        // &:nth-child(3) { width: 30%; };
+        // &:nth-child(4) { width: 10%; };
+        // &:nth-child(5) { width: 15%; };
+        // &:nth-child(6) { width: 10%; };
     }
     tr {
         &:hover {
@@ -129,7 +139,6 @@
             .click-title {
                 color: colors.$brand-blue-primary;
                 text-decoration: underline;
-                font-weight: 600;
             }
         }
 
@@ -180,7 +189,6 @@
         }
     }
 }
-
 .hover-disabled {
     background: none !important;
     cursor: default !important;
@@ -297,19 +305,11 @@
             &.delete {
                 color: colors.$accent-red;
             }
-            span {
-                width: 16px;
-                height: 16px;
-                &.edit-icon {
-                    background: url(/img/icon/ic-edit.svg) no-repeat center ;
-                }
-                &.delete-icon {
-                    background: url(/img/icon/ic-trash-red.svg) no-repeat center ;
-                }
-             }
+            
         }
     }
 }
+
 
 // 페이지네이션
 .pagination {
