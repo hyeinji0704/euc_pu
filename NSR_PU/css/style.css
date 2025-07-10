@@ -82,7 +82,7 @@ img {
 body {
   font-family: "Pretendard", "KoPub Dotum", sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 15px;
   line-height: 1.5;
   color: #212121;
 }
@@ -169,7 +169,7 @@ select {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-  background: transparent url(/img/icon/ic-select_arrow.svg) no-repeat center right 6px/auto 22px;
+  background: transparent url(../img/icon/ic-select_arrow.svg) no-repeat center right 6px/auto 22px;
   border: none;
 }
 select:focus {
@@ -244,7 +244,7 @@ html {
 .header .logo a {
   display: block;
   height: 100%;
-  background: url(/img/logo.svg) 0 0/auto 5.8rem no-repeat;
+  background: url(../img/logo.svg) 0 0/auto 5.8rem no-repeat;
   position: relative;
   z-index: 1;
 }
@@ -516,47 +516,6 @@ html {
   background-color: #000000;
   position: relative;
 }
-.footer .quick-aside {
-  position: absolute;
-  position: fixed;
-  text-align: center;
-  right: 1.6rem;
-  bottom: calc(158px + 3rem);
-  z-index: 100;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
-  width: 16.5rem;
-  font-size: 1.5rem;
-  font-weight: 600;
-}
-.footer .quick-aside .aside-btn {
-  border-radius: 50px;
-  padding: 1rem 0;
-  cursor: pointer;
-}
-.footer .quick-aside .aside-btn.chat-ai {
-  background-color: #2970FF;
-  color: #FFFFFF;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  gap: 0.5rem;
-}
-.footer .quick-aside .aside-btn.chat-ai:hover {
-  background-color: #165DFF;
-}
-.footer .quick-aside .aside-btn.feedback {
-  background-color: #FFFFFF;
-  border: 1.5px solid #2970FF;
-  margin-top: 0.8rem;
-  color: #2970FF;
-}
-.footer .quick-aside .aside-btn.feedback:hover {
-  background-color: #165DFF;
-  color: #FFFFFF;
-}
 .footer .container .footer-wrapper {
   display: flex;
   justify-content: space-between;
@@ -578,6 +537,51 @@ html {
 .footer .container .footer-copyright {
   margin-top: 0.5rem;
   color: #7E7F86;
+}
+
+body {
+  position: relative;
+}
+
+.quick-aside {
+  position: absolute;
+  text-align: center;
+  right: 1.6rem;
+  bottom: calc(158px + 3rem);
+  z-index: 100;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  width: 16.5rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.quick-aside .aside-btn {
+  border-radius: 50px;
+  padding: 1rem 0;
+  cursor: pointer;
+}
+.quick-aside .aside-btn.chat-ai {
+  background-color: #2970FF;
+  color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 0.5rem;
+}
+.quick-aside .aside-btn.chat-ai:hover {
+  background-color: #165DFF;
+}
+.quick-aside .aside-btn.feedback {
+  background-color: #FFFFFF;
+  border: 1.5px solid #2970FF;
+  margin-top: 0.8rem;
+  color: #2970FF;
+}
+.quick-aside .aside-btn.feedback:hover {
+  background-color: #165DFF;
+  color: #FFFFFF;
 }
 
 .lnb_wrap {
@@ -649,7 +653,7 @@ html {
   right: 0;
   top: 50%;
   transform: translateY(-50%);
-  background: url(/img/icon/ic-toggle_arrow.svg) no-repeat center center/contain;
+  background: url(../img/icon/ic-toggle_arrow.svg) no-repeat center center/contain;
   transition: transform 0.3s ease;
 }
 .lnb_wrap .lnb_header .lnb_depth2 > ul > li .link_2th.collapsed::before {
@@ -878,7 +882,7 @@ html {
 .btn--fourth .trash {
   width: 1.6rem;
   height: 1.6rem;
-  background: url(/img/icon/ic-trash.svg) no-repeat center;
+  background: url(../img/icon/ic-trash.svg) no-repeat center;
 }
 
 .btn--download {
@@ -904,7 +908,7 @@ html {
   top: 50%;
   transform: translateY(-50%);
   right: 0.3rem;
-  background: url(/img/icon/ic-download.svg) no-repeat center center;
+  background: url(../img/icon/ic-download.svg) no-repeat center center;
   content: "";
 }
 
@@ -932,7 +936,7 @@ html {
   top: 50%;
   transform: translateY(-50%);
   right: 0.3rem;
-  background: url(/img/icon/ic-pdf.svg) no-repeat center center;
+  background: url(../img/icon/ic-pdf.svg) no-repeat center center;
   content: "";
 }
 
@@ -958,7 +962,7 @@ html {
 .btn-trash {
   width: 1.4rem;
   height: 1.4rem;
-  background: url(/img/icon/ic-delete.svg) no-repeat center center;
+  background: url(../img/icon/ic-delete.svg) no-repeat center center;
   display: inline-block;
   cursor: pointer;
 }
@@ -1002,7 +1006,7 @@ html {
 .btn--report .btn-icon {
   width: 1.6rem;
   height: 1.6rem;
-  background: url("/img/icon/ic-doc.svg") no-repeat center center;
+  background: url("../img/icon/ic-doc.svg") no-repeat center center;
 }
 .btn--report:hover, .btn--report:focus {
   background-color: rgb(104.25, 104.25, 104.25);
@@ -1233,7 +1237,7 @@ input.max-auto {
   height: 3.8rem;
   border-radius: 0.4rem;
   border: 1px solid #B3B4BE;
-  background: url("/img/icon/ic-select_arrow.svg") calc(100% - 7px) center no-repeat;
+  background: url("../img/icon/ic-select_arrow.svg") calc(100% - 7px) center no-repeat;
   background-size: 18px;
   background-color: #FFFFFF;
   cursor: pointer;
@@ -1311,7 +1315,7 @@ input.max-auto {
   font-size: 1.5rem;
   border-radius: 0.4rem;
   letter-spacing: -0.03rem;
-  background: url("/img/icon/ic-calendar.svg") no-repeat right 1rem center;
+  background: url("../img/icon/ic-calendar.svg") no-repeat right 1rem center;
   background-color: #FFFFFF;
   background-size: 1.6rem;
   cursor: pointer;
@@ -1507,11 +1511,11 @@ input.max-auto {
 }
 .custom-number-wrap .btn-number-group .btn-number.plus {
   border-bottom: 1px solid #898989;
-  background: url("/img/icon/ic-arrow-up.svg") no-repeat center center;
+  background: url("../img/icon/ic-arrow-up.svg") no-repeat center center;
   background-size: 1.4rem 1.4rem;
 }
 .custom-number-wrap .btn-number-group .btn-number.minus {
-  background: url("/img/icon/ic-arrow-down.svg") no-repeat center center;
+  background: url("../img/icon/ic-arrow-down.svg") no-repeat center center;
   background-size: 1.2rem 1.2rem;
 }
 .custom-number-wrap .btn-number-group .btn-number img {
@@ -1619,7 +1623,7 @@ input.max-auto {
   left: 0;
   width: 1.8rem;
   height: 1.8rem;
-  background: url(/img/icon/ic-file.svg) no-repeat center center;
+  background: url(../img/icon/ic-file.svg) no-repeat center center;
 }
 
 .table-container.policy-list {
@@ -1678,7 +1682,7 @@ input.max-auto {
 .data-table td.policy-add .policy-add-inner .state-add {
   width: 9rem;
   height: 9rem;
-  background: url(/img/state-images/state-add.svg) no-repeat center center;
+  background: url(../img/state-images/state-add.svg) no-repeat center center;
 }
 .data-table td.policy-add .policy-add-inner .text {
   font-weight: 500;
@@ -1764,7 +1768,7 @@ input.max-auto {
   display: block;
   width: 1.8rem;
   height: 1.8rem;
-  background: url(/img/icon/ic-more-dot.svg) no-repeat center center;
+  background: url(../img/icon/ic-more-dot.svg) no-repeat center center;
 }
 .action-menu:hover, .action-menu:focus {
   background-color: #D9DEE7;
@@ -1841,16 +1845,16 @@ input.max-auto {
   background-position: center;
 }
 .pagination .page-link.page-prev span {
-  background: url(/img/icon/ic-pg-left.svg);
+  background: url(../img/icon/ic-pg-left.svg);
 }
 .pagination .page-link.page-next span {
-  background: url(/img/icon/ic-pg-left.svg);
+  background: url(../img/icon/ic-pg-left.svg);
 }
 .pagination .page-link.page-next span {
   transform: rotate(180deg);
 }
 .pagination .page-link.disabled span {
-  background: url(/img/icon/ic-pg-left-disabled.svg);
+  background: url(../img/icon/ic-pg-left-disabled.svg);
 }
 .pagination .page-dots {
   padding: 8px 4px;
@@ -1982,7 +1986,7 @@ input.max-auto {
 .inner-tab-container .empty-state .state-empty {
   width: 9rem;
   height: 9rem;
-  background: url("/img/state-images/state-empty.svg") no-repeat center center;
+  background: url("../img/state-images/state-empty.svg") no-repeat center center;
   background-size: contain;
 }
 .inner-tab-container .empty-state .text {
@@ -2031,7 +2035,7 @@ input.max-auto {
   min-width: 160px;
   height: 6.8rem;
   margin: 0 2.7rem 0 3.4rem;
-  background: transparent url(/img/icon/ic-select_arrow.svg) no-repeat center right/auto 22px;
+  background: transparent url(../img/icon/ic-select_arrow.svg) no-repeat center right/auto 22px;
   font-size: 2rem;
   font-weight: 500;
 }
@@ -2074,7 +2078,7 @@ input.max-auto {
   display: inline-block;
   width: 30px;
   height: 30px;
-  background: url(/img/icon/ic-total-search.svg) no-repeat center center;
+  background: url(../img/icon/ic-total-search.svg) no-repeat center center;
 }
 .total-search-bar .tsb-box .tsb-btn span {
   line-height: 2.2rem;
@@ -2200,7 +2204,7 @@ input.max-auto {
 .search-layout .search-layout-main .search-layout-content .search-header .search-more .ic-more {
   width: 1.8rem;
   height: 1.8rem;
-  background: url(/img/icon/ic-more-arrow.svg) no-repeat center center;
+  background: url(../img/icon/ic-more-arrow.svg) no-repeat center center;
 }
 .search-layout .search-layout-main .search-layout-content .search-item {
   padding: 3rem;
@@ -2327,7 +2331,7 @@ input.max-auto {
   height: 2.6rem;
   font-size: 0;
   line-height: 0;
-  background: url(/img/icon/ic-delete.svg) no-repeat center center;
+  background: url(../img/icon/ic-delete.svg) no-repeat center center;
 }
 .search-layout .search-layout-side .compare-box .compare-footer {
   padding-top: 2.2rem;
@@ -2412,7 +2416,7 @@ input.max-auto {
 .page-header .breadcrumb .home {
   width: 3.4rem;
   height: 3.4rem;
-  background: url(/img/icon/ic-home.svg) no-repeat center center;
+  background: url(../img/icon/ic-home.svg) no-repeat center center;
 }
 .page-header .breadcrumb .home span {
   font-size: 0;
@@ -2421,7 +2425,7 @@ input.max-auto {
 .page-header .breadcrumb .arrow-icon {
   width: 1.8rem;
   height: 1.8rem;
-  background: url(/img/icon/ic-breadcrumb.svg) no-repeat center center;
+  background: url(../img/icon/ic-breadcrumb.svg) no-repeat center center;
 }
 
 .content-search-section {
@@ -2545,7 +2549,7 @@ input.max-auto {
   gap: 2.4rem;
 }
 
-body, .report-preview, .report-preview * {
+.report-preview, .report-preview * {
   font-family: "KoPub Dotum", sans-serif !important;
 }
 
@@ -2677,7 +2681,7 @@ body, .report-preview, .report-preview * {
   width: 6rem;
   height: 6rem;
   padding: 2rem;
-  background: url(/img/icon/ic-modal-delete.svg) no-repeat center center;
+  background: url(../img/icon/ic-modal-delete.svg) no-repeat center center;
   background-size: 1.8rem;
 }
 .modal_wrapper .modal_content {

@@ -209,7 +209,7 @@ input {
   height: 3.8rem;
   border-radius: 0.4rem;
   border: 1px solid colors.$neutral-grey-soft;
-  background: url('/img/icon/ic-select_arrow.svg') calc(100% - 7px) center no-repeat;
+  background: url('../img/icon/ic-select_arrow.svg') calc(100% - 7px) center no-repeat;
   background-size: 18px;
   background-color: colors.$white;
   cursor: pointer;
@@ -295,7 +295,7 @@ input {
             font-size: 1.5rem;
             border-radius: 0.4rem;
             letter-spacing: -0.03rem;
-            background: url('/img/icon/ic-calendar.svg') no-repeat right 1rem center;
+            background: url('../img/icon/ic-calendar.svg') no-repeat right 1rem center;
             background-color: colors.$white;
             background-size: 1.6rem;
             cursor: pointer;
@@ -522,11 +522,11 @@ input {
 
       &.plus {
         border-bottom: 1px solid colors.$gray-icon;
-        background: url('/img/icon/ic-arrow-up.svg') no-repeat center center;
+        background: url('../img/icon/ic-arrow-up.svg') no-repeat center center;
         background-size: 1.4rem 1.4rem;
       }
       &.minus {
-        background: url('/img/icon/ic-arrow-down.svg') no-repeat center center;
+        background: url('../img/icon/ic-arrow-down.svg') no-repeat center center;
         background-size: 1.2rem 1.2rem;
       }
 

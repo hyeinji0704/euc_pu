@@ -101,7 +101,7 @@
             left: 0;
             width: 1.8rem;
             height: 1.8rem;
-            background: url(/img/icon/ic-file.svg) no-repeat center center;
+            background: url(../img/icon/ic-file.svg) no-repeat center center;
         }
     }
     }
@@ -170,7 +170,7 @@
                 .state-add {
                     width: 9rem;
                     height: 9rem;
-                    background: url(/img/state-images/state-add.svg) no-repeat center center;
+                    background: url(../img/state-images/state-add.svg) no-repeat center center;
                 }
                 .text {
                     font-weight: 500;
@@ -263,7 +263,7 @@
             display: block;
             width: 1.8rem;
             height: 1.8rem;
-            background: url(/img/icon/ic-more-dot.svg) no-repeat center center;
+            background: url(../img/icon/ic-more-dot.svg) no-repeat center center;
         }
         cursor: pointer;
         padding: 6px;
@@ -346,12 +346,12 @@
         }
         &.page-prev {
             span {
-                background: url(/img/icon/ic-pg-left.svg);
+                background: url(../img/icon/ic-pg-left.svg);
             }
         }
         &.page-next {
             span {
-                background: url(/img/icon/ic-pg-left.svg);
+                background: url(../img/icon/ic-pg-left.svg);
             }
             span {
                 transform: rotate(180deg);
@@ -359,7 +359,7 @@
         }
         &.disabled {
             span {
-                background: url(/img/icon/ic-pg-left-disabled.svg);
+                background: url(../img/icon/ic-pg-left-disabled.svg);
             }
         }
     }

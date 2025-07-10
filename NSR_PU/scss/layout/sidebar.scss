@@ -82,7 +82,7 @@
                             right: 0;
                             top: 50%; // 수정: 수직 중앙 정렬
                             transform: translateY(-50%); // 추가: 정확한 중앙 정렬
-                            background: url(/img/icon/ic-toggle_arrow.svg) no-repeat center center / contain;
+                            background: url(../img/icon/ic-toggle_arrow.svg) no-repeat center center / contain;
                             transition: transform 0.3s ease; // 추가: 회전 애니메이션
                         }
                         

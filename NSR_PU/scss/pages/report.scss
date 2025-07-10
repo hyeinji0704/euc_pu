@@ -4,7 +4,7 @@
 @use '../base/typography' as *;
 
 
-body, .report-preview, .report-preview * {
+.report-preview, .report-preview * {
   font-family: 'KoPub Dotum', sans-serif !important;
 }
 

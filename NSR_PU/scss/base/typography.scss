@@ -57,7 +57,7 @@ $line-height-heading: $line-height-tight;
 body {
   font-family: $font-family-primary;   // _fonts.scss 에서 임포트 (style.scss에서 최종 임포트)
   font-weight: $font-weight-regular; // _fonts.scss 에서 임포트
-  font-size: $font-size-body;        // 이 파일 내에서 정의된 변수 사용
+  font-size: 15px;        // 이 파일 내에서 정의된 변수 사용
   line-height: $line-height-body;    // 이 파일 내에서 정의된 변수 사용
   color: $text-color-primary;              // _colors.scss 에서 임포트
 }
