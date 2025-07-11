@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style.css" />
+  <title>NSR_PU</title>
+  <style>
+    .container {
+        width: 1400px;
+        margin: 0 auto;
+        padding: 5rem 0;
+    }
+    h1 {
+        padding-top: 3rem;
+    }
+    .desc {
+      color: #555;
+      margin-top: 1rem;
+      margin-bottom: 2rem;
+      font-size: 1.8rem;
+    }
+    .grid-sections {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+        gap: 2rem;
+    }
+
+    .section {
+        background: #fff;
+        border: 1px solid #ddd;
+        margin-bottom: 2rem;
+        border-radius: 0.6rem;
+        padding: 2rem;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+    }
+
+    .section h2 {
+        margin-bottom: 1rem;
+        color: #2970FF;
+        border: none;
+        padding: 0;
+        font-size: 2.2rem;
+    }
+
+    ul.link-list {
+        list-style: none;
+        padding: 0 16px;
+        margin: 0;
+    }
+    ul.link-list li {
+        margin-bottom: 0.6rem;
+    }
+
+    ul.link-list li a {
+      font-size: 1.8rem;
+        color: #333;
+        text-decoration: none;
+        position: relative;
+      padding-left: 20px;
+    }
+
+    ul.link-list li a:hover {
+        text-decoration: underline;
+        color: #2970FF;
+    }
+
+    ul.link-list li a span.dot {
+        position: absolute;
+        display: block;
+        width: 5px;
+        height: 5px;
+        top: 50%;
+        left: 0;
+        border-radius: 50px;
+        transform: translateY(-50%);
+        background-color: #000;
+    }
+    .meta {
+      background: #fff;
+      padding: 1.6rem 2rem;
+      border: 1px solid #ddd;
+      border-radius: 0.6rem;
+      margin-bottom: 2rem;
+    }
+    .meta p {
+      margin: 0.4rem 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>NSR_퍼블리싱</h1>
+    <p class="desc">프로젝트 작업물을 빠르게 확인할 수 있는 링크 모음입니다.</p>
+
+    <div class="meta">
+      <p><strong>프로젝트명:</strong> NSR_사이버안보정책데이터베이스</p>
+      <p><strong>담당자:</strong> 지혜인</p>
+      <p><strong>작성일:</strong> 2025-07-10</p>
+      <p><strong>설명:</strong> 검색, 보고서, 모달 등 주요 화면 퍼블리싱 작업 정리</p>
+    </div>
+
+  
+<div class="grid-sections">
+  <div class="section">
+    <h2>🧱 공통 레이아웃</h2>
+    <ul class="link-list">
+      <li><a href="./nsr_layout/header.html" target="_blank"><span class="dot"></span>헤더</a></li>
+      <li><a href="./nsr_layout/footer.html" target="_blank"><span class="dot"></span>푸터</a></li>
+      <li><a href="./nsr_layout/sidebar.html" target="_blank"><span class="dot"></span>사이드바</a></li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>🔍 검색 관련</h2>
+    <ul class="link-list">
+      <li><a href="./nsr_pages/search/search.html" target="_blank"><span class="dot"></span>통합 검색</a></li>
+      <li><a href="./nsr_pages/search/search-detail.html" target="_blank"><span class="dot"></span>검색 상세</a></li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>📚 정책 페이지</h2>
+    <ul class="link-list">
+      <li><a href="./nsr_pages/policy/policy_list.html" target="_blank"><span class="dot"></span>정책 리스트</a></li>
+      <li><a href="./nsr_pages/policy/policy_list_empty.html" target="_blank"><span class="dot"></span>정책 리스트 (빈 상태)</a></li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>📚 분석 페이지</h2>
+    <ul class="link-list">
+      <li><a href="./nsr_pages/analysis/analysis.html" target="_blank"><span class="dot"></span>분석 페이지</a></li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>📄 보고서 페이지</h2>
+    <ul class="link-list">
+      <li><a href="./nsr_pages/report/report_input.html" target="_blank"><span class="dot"></span>보고서 입력</a></li>
+      <li><a href="./nsr_pages/report/report_preview.html" target="_blank"><span class="dot"></span>보고서 미리보기</a></li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>✍ 입력/수정 화면</h2>
+    <ul class="link-list">
+      <li><a href="./nsr_pages/input/input.html" target="_blank"><span class="dot"></span>입력 폼</a></li>
+      <li><a href="./nsr_pages/input/input_modify.html" target="_blank"><span class="dot"></span>입력 수정 폼</a></li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>📂 서브 리스트</h2>
+    <ul class="link-list">
+      <li><a href="./nsr_pages/sublist/sub_list_st01.html" target="_blank"><span class="dot"></span>서브 리스트 유형 1</a></li>
+      <li><a href="./nsr_pages/sublist/sub_list_st02.html" target="_blank"><span class="dot"></span>서브 리스트 유형 2</a></li>
+      <li><a href="./nsr_pages/sublist/sub_list_empty.html" target="_blank"><span class="dot"></span>서브 리스트 (빈 상태)</a></li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>📦 모달 화면</h2>
+    <ul class="link-list">
+      <li><a href="./nsr_modal/modal_board.html" target="_blank"><span class="dot"></span>게시판 모달</a></li>
+      <li><a href="./nsr_modal/modal_policy.html" target="_blank"><span class="dot"></span>정책 모달</a></li>
+      <li><a href="./nsr_modal/modal_search.html" target="_blank"><span class="dot"></span>검색 모달</a></li>
+    </ul>
+  </div>
+</div>
+
+<div class="section">
+  <h2>🎨 버튼 스타일 가이드</h2>
+  <ul class="link-list">
+    <li><strong>기본 클래스:</strong> <code>.btn</code></li>
+    <li><strong>사이즈:</strong> <code>.lg</code>, <code>.sm</code></li>
+    <li><strong>상태:</strong> <code>:hover</code>, <code>:active</code>, <code>:disabled</code>, <code>.is-animating</code></li>
+  </ul>
+
+  <h3 style="margin-top:1.6rem;">🔹 Filled 버튼</h3>
+  <div class="btn-preview">
+    <button class="btn btn--primary">Primary</button>
+    <button class="btn btn--secondary">Secondary</button>
+    <button class="btn btn--third"><span class="btn-icon plus"></span>Third</button>
+    <button class="btn btn--fourth"><span class="btn-icon minus"></span>Fourth</button>
+  </div>
+
+  <h3 style="margin-top:2rem;">🔹 기타 변형</h3>
+  <div class="btn-preview">
+    <button class="btn btn--download"><span>Download</span></button>
+    <button class="btn btn--pdf"><span>PDF 저장</span></button>
+    <button class="btn btn--search">검색</button>
+    <button class="btn btn--report"><span class="btn-icon"></span>보고서</button>
+    <button class="btn btn--danger">삭제</button>
+  </div>
+</div>
