@@ -30,7 +30,7 @@ html {
   scroll-behavior: smooth;
 }
 
-.visually-hidden {
+.visually_hidden {
   position: absolute;
   width: 1px;
   height: 1px;

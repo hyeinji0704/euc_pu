@@ -29,18 +29,18 @@
     .modal_content {
         width: 100%;
         
-        .data-table {
+        .data_table {
             td {
                 max-width: 12rem;
             }
         }
-        .modal-detail-box {
+        .modal_detail_box {
             padding-top: 1.2rem;
-            .md-tit {
+            .md_tit {
                 font-size: 2rem;
                 font-weight: 700;;
             }
-            .policy-item {
+            .policy_item {
                 @include flex(space-between, center);
                 p {
                     margin-bottom: 0;
@@ -57,7 +57,7 @@
             }
         }
     }
-    .btn-wrap {
+    .btn_wrap {
         padding: 2rem 0 0 0 ;
     }
 }

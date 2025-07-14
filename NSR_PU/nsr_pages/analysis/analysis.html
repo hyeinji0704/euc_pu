@@ -3,123 +3,157 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="/js/plugin/jquery/jquery-3.6.0.min.js"></script>
+    <script src="/js/plugin/jquery/jquery-3.5.1.min.js"></script>
+    <script src="/js/header.js"></script>
     <script src="/js/component.js"></script>
     <link rel="stylesheet" href="/css/style.css">
     <title>분석_네트워크맵 분석</title>
 </head>
 
 <body>
-    <header class="header active">
+    <header class="header">
         <div class="gnb_area">
-            <div class="container">
-                <h1 class="logo">
-                    <a href="/main.do" alt="NSR">
-                        <span class="hidden">NSR사이버안보정책데이터베이스</span>
-                    </a>
-                </h1>
-                <button type="button" class="btn_allmenu">
-                    <span>전체 메뉴</span>
-                    <i class="icon-menu"></i>
-                </button>
-                <button type="button" class="btn_sch_open">
-                    <span >통합검색열기</span>
-                    <i class="icon-menu"></i>
-                </button>
-                <nav class="nav" id="gnb">
-                    <h2 class="pop_title">전체메뉴</h2>
-                    <ul id="head_menu" class="topmenu fullmenu">
-                        <li class="depth1 ">
-                            <a href="" class=""><span>정책정보</span></a>
-                            <div class="submenu">
-                                <ul class="depth2 sub01">
-                                    <li ><a href="">국가,국제기구 정보</a></li>
-                                    <li ><a href="">조직 정보</a></li>
-                                    <li ><a href="">정책 정보</a></li>
-                                </ul>
-                            </div> 
-                        </li>
-                        <li class="depth1">
-                            <a href=""><span>정책발간현황</span></a>
-                            <div class="submenu">
-                                <ul class="depth2 sub01">
-                                    <li ><a href="">정책발간현황 조회</a></li>
-                                    <li class="is-depth3">
-                                        <a href="">정책발간현황 분류별</a>
-                                        <ul class="depth3">
-                                            <li><a href="">전략 문건</a></li>
-                                            <li><a href="">법 문건</a></li>
-                                            <li><a href="">지침 문건</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="is-depth3">
-                                        <a href="">정책발간현황 수집처별</a>
-                                        <ul class="depth3">
-                                            <li><a href="">전략 문건</a></li>
-                                            <li><a href="">법 문건</a></li>
-                                            <li><a href="">지침 문건</a></li>
-                                        </ul>
-                                    </li> 
-                                </ul>
-                            </div> 
-                        </li>
-                        <li class="depth1 on"> 
-                            <a href=""><span>분석</span></a>
-                            <div class="submenu">
-                                <ul class="depth2 sub01">
-                                    <li ><a href="">국가정책 비교</a></li>
-                                    <li ><a href="">타임라인 분석</a></li>
-                                    <li ><a href="">네트워크 분석</a></li>
-                                    <li ><a href="">워드 클라우드 분석</a></li>
-                                    <li ><a href="">네트워크맵 분석</a></li>
-                                    <li ><a href="">토픽 분석</a></li>
-                                    <li ><a href="">보고서</a></li>
-                                </ul>
-                            </div> 
-                        </li>
-                        <li class="depth1">
-                            <a href=""><span>마이페이지</span></a>
-                            <div class="submenu">
-                                <ul class="depth2 sub01">
-                                    <li ><a href="">정보수정</a></li>
-                                </ul>
-                            </div> 
-                        </li>
-                    </ul>
-                    <button class="pop_close">
-                        <i></i>
-                        <span class="hidden">전체메뉴 레이어 닫기</span>
-                    </button>
-                </nav>
+            <div class="container ">
+                <div class="gnb_left">
+                    <h1 class="logo">
+                        <a href="#">
+                            <span class="hidden">NSR사이버안보정책데이터베이스</span>
+                        </a>
+                    </h1>
+                    <nav class="nav" id="gnb">
+                        <ul id="head_menu" class="topmenu">
+                            <li class="depth1">
+                                <a href="#">
+                                    <span>정책정보</span>
+                                </a>
+                                <div class="submenu first">
+                                    <ul class="depth2 sub01">
+                                        <li>
+                                            <a href="#">국가,국제기구 정보</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">조직 정보</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">정책 정보</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="depth1">
+                                <a href="#">
+                                    <span>정책발간현황</span>
+                                </a>
+                                <div class="submenu">
+                                    <ul class="depth2 sub02">
+                                        <li class="">
+                                            <a href="#">정책발간현황 조회</a>
+                                        </li>
+                                        <li class="">
+                                            <a href="#">정책발간현황 분류별</a>
+                                            <ul class="depth3">
+                                                <li>
+                                                    <a href="#">전략 문건</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">법 문건</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">지침 문건</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="">
+                                            <a href="#">정책발간현황 수집처별</a>
+                                            <ul class="depth3">
+                                                <li>
+                                                    <a href="#">전략 문건</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">법 문건</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">지침 문건</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="depth1">
+                                <a href="#">
+                                    <span>분석</span>
+                                </a>
+                                <div class="submenu">
+                                    <ul class="depth2 sub04">
+                                        <li class="sub01 subfirst">
+                                            <a href="#">국가정책 비교</a>
+                                        </li>
+                                        <li class="sub01">
+                                            <a href="#">타임라인 분석</a>
+                                        </li>
+                                        <li class="sub02">
+                                            <a href="#">네트워크 분석</a>
+                                        </li>
+                                        <li class="sub03">
+                                            <a href="#">워드 클라우드 분석</a>
+                                        </li>
+                                        <li class="sub03">
+                                            <a href="#">네트워크맵 분석</a>
+                                        </li>
+                                        <li class="">
+                                            <a href="#">토픽 분석</a>
+                                        </li>
+                                        <li class="sub06">
+                                            <a href="#">보고서</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="depth1">
+                                <a href="#">
+                                    <span>마이페이지</span>
+                                </a>
+                                <div class="submenu">
+                                    <ul class="depth2 sub05">
+                                        <li class="sub01 subfirst">
+                                            <a href="#">정보수정</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
                 <div class="gnb_util">
                     <div class="group_btn">
                         <!-- 로그인 전 -->
-                        <div class="logged-out login-area">
-                            <span class="member-link">
+                        <div class="logged_out login_area">
+                            <span class="member_link">
                             <a href="#" class="btn_login">로그인</a>
                             </span>
                         </div>
                         <!-- 로그인 후 -->
-                        <div class="logged-in login-area">
-                            <div class="user-info">
-                                <span class="user-thumb"><img src="/img/icon/ic-user.svg" alt="프로필 이미지"  /></span>
-                                <span class="user-name"><strong>홍길동</strong>님</span>
+                        <div class="logged_in login_area">
+                            <div class="user_info">
+                                <span class="user_thumb"><img src="/img/icon/ic-user.svg" alt="프로필 이미지"  /></span>
+                                <span class="user_name"><strong>홍길동</strong>님</span>
                             </div>
-                            <span class="member-link">
+                            <span class="member_link">
                             <a href="#" class="btn_logout">로그아웃</a>
                             </span>
                         </div>
                     </div>
-                    <button id="btn_sch" class="btn-sch">
+                    <button id="btn_sch" class="btn_sch">
                         <img src="/img/icon/ic-search.svg" alt="검색 아이콘" />
                         <span>검색</span>
                     </button>
                 </div>
             </div>
         </div>
-    </header> 
-    <div class="main-content">
-        <div class="container sub-wrapper">
+    </header>
+    <div class="main">
+        <div class="container sub_wrapper">
             <aside id="lnb_layout" class="lnb_wrap">
                 <div id="remote" class="lnb_header">
                     <h2>분석</h2>
@@ -150,32 +184,32 @@
                     </div>
                 </div>
             </aside>
-            <div class="content-area">
+            <div class="content_area">
                 <!-- 페이지 헤더 -->
-                <div class="page-header">
-                    <h1 class="page-title">네트워크맵 분석</h1>
+                <div class="page_header">
+                    <h1 class="page_title">네트워크맵 분석</h1>
                     <!-- 브레드크럼 -->
                     <nav class="breadcrumb">
                         <a href="#" class="home"><span>홈</span></a>
-                        <span class="arrow-icon"></span>
+                        <span class="arrow_icon"></span>
                         <a href="#">분석</a>
-                        <span class="arrow-icon"></span>
+                        <span class="arrow_icon"></span>
                         <a href="#" class="current">네트워크맵 분석</a>
                     </nav>
                 </div>
                 <!-- ...상위 탭 구조... -->
-                <div class="tab-wrap">
-                    <ul class="tab-list">
-                        <li class="tab-item active" data-tab="tab1">네트워크맵 분석</li>
-                        <li class="tab-item" data-tab="tab2">분석 히스토리</li>
-                        <li class="tab-item" data-tab="tab3">분석 결과관리</li>
+                <div class="tab_wrap">
+                    <ul class="tab_list">
+                        <li class="tab_item active" data-tab="tab1">네트워크맵 분석</li>
+                        <li class="tab_item" data-tab="tab2">분석 히스토리</li>
+                        <li class="tab_item" data-tab="tab3">분석 결과관리</li>
                     </ul>
-                    <div class="tab-content active" id="tab1">
-                        <div class="analysis-box">
+                    <div class="tab_content active" id="tab1">
+                        <div class="analysis_box">
                             <!-- 검색 영역 -->
-                             <div class="analysis-search">
-                                <div class="analysis-search-section">
-                                    <div class="analysis-search-label">
+                             <div class="analysis_search">
+                                <div class="analysis_search_section">
+                                    <div class="analysis_search_label">
                                         <span class="label">분석대상검색</span>
                                         <ul class="add_list">
                                             <li class="add_list_item active">국정제도</li>
@@ -185,82 +219,82 @@
                                             <li class="add_list_item">기타</li>
                                         </ul>
                                     </div>
-                                    <div class="action-buttons flex_end">
+                                    <div class="action_buttons flex_end">
                                         <button class="btn btn--fourth sm"></span>삭제</button>
                                         <button class="btn btn--search sm">검색</button>
                                     </div>
                                 </div>
-                                <div class="analysis-search-section">
-                                    <div class="analysis-search-label">
+                                <div class="analysis_search_section">
+                                    <div class="analysis_search_label">
                                         <span class="label">분석시 동의어 적용</span>
-                                        <label class="custom-checkbox">
+                                        <label class="custom_checkbox">
                                             <input type="checkbox" name="useType" value="동의어 적용" />
-                                            <span class="checkbox-mark"></span>
+                                            <span class="checkbox_mark"></span>
                                             동의어 적용
                                         </label>
                                     </div>
                                 </div>
-                                <div class="analysis-search-section">
-                                    <div class="analysis-search-label">
+                                <div class="analysis_search_section">
+                                    <div class="analysis_search_label">
                                         <span class="label">분석 단위 선택</span>
-                                        <div class="radio-group">
-                                            <label class="custom-radio">
+                                        <div class="radio_group">
+                                            <label class="custom_radio">
                                                 <input type="radio" value="문서" checked />
-                                                <span class="radio-mark"></span>
-                                                <span class="label-text">문서</span>
+                                                <span class="radio_mark"></span>
+                                                <span class="label_text">문서</span>
                                             </label>
-                                            <label class="custom-radio">
+                                            <label class="custom_radio">
                                                 <input type="radio" value="문단"  />
-                                                <span class="radio-mark"></span>
-                                                <span class="label-text">문단</span>
+                                                <span class="radio_mark"></span>
+                                                <span class="label_text">문단</span>
                                             </label>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="analysis-search-section">
-                                    <div class="analysis-search-label">
+                                <div class="analysis_search_section">
+                                    <div class="analysis_search_label">
                                         <span class="label">TF-IDF하위단어삭제(%)</span>
-                                        <div class="custom-number-wrap">
-                                            <input type="text" class="custom-number-input" value="0" min="0" max="10" step="0.1" inputmode="numeric" pattern="[0-9]*" />
-                                            <div class="btn-number-group">
-                                                <button type="button" class="btn-number plus" aria-label="증가"></button>
-                                                <button type="button" class="btn-number minus" aria-label="감소"></button>
+                                        <div class="custom_number_wrap">
+                                            <input type="text" class="custom_number_input" value="0" min="0" max="10" step="0.1" inputmode="numeric" pattern="[0_9]*" />
+                                            <div class="btn_number_group">
+                                                <button type="button" class="btn_number plus" aria-label="증가"></button>
+                                                <button type="button" class="btn_number minus" aria-label="감소"></button>
                                             </div>
                                         </div>
-                                        <div class="table-caption">
+                                        <div class="table_caption">
                                             * 권장 : 0.5% ~ 5%
                                         </div>
                                     </div>
                                 </div>
-                                <div class="analysis-search-section">
-                                    <div class="analysis-search-label">
+                                <div class="analysis_search_section">
+                                    <div class="analysis_search_label">
                                         <span class="label">하위연관관계삭제(동시출현문단수)</span>
-                                        <div class="custom-number-wrap">
-                                            <input type="text" class="custom-number-input" value="0" min="0" max="10" step="0.1" inputmode="numeric" pattern="[0-9]*" />
-                                            <div class="btn-number-group">
-                                                <button type="button" class="btn-number plus" aria-label="증가"></button>
+                                        <div class="custom_number_wrap">
+                                            <input type="text" class="custom_number_input" value="0" min="0" max="10" step="0.1" inputmode="numeric" pattern="[0_9]*" />
+                                            <div class="btn_number_group">
+                                                <button type="button" class="btn_number plus" aria-label="증가"></button>
                                                 <button type="button" class="btn-number minus" aria-label="감소"></button>
                                             </div>
                                         </div>
-                                        <div class="table-caption">
+                                        <div class="table_caption">
                                             * 권장: 1~3(문단/문서수가 많을 수록 높은 값 입력 권장)
                                         </div>
                                     </div>
                                 </div>
-                                <div class="analysis-search-section section-border">
-                                    <div class="analysis-search-label justify-between">
+                                <div class="analysis_search_section section_border">
+                                    <div class="analysis_search_label justify_between">
                                         <span class="label">분석결과</span>
                                         <div class=" flex_end">
                                             <button class="btn btn--search sm">워드클라우드 분석</button>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="analysis-search-section">
-                                    <div class="analysis-search-label">
+                                <div class="analysis_search_section">
+                                    <div class="analysis_search_label">
                                         <span class="label">저장명</span>
-                                        <div class="input-group justify-between ">
-                                            <input type="text" class="form-input search-input max-auto" placeholder="예시: 정책비교_2025"/>
-                                            <div class="action-buttons no-mt">
+                                        <div class="input_group justify_between ">
+                                            <input type="text" class="form_input search_input max_auto" placeholder="예시: 정책비교_2025"/>
+                                            <div class="action_buttons no_mt">
                                                 <button class="btn btn--fourth sm"></span>히스토리 저장</button>
                                                 <button class="btn btn--fourth sm"></span>이미지 저장</button>
                                             </div>
@@ -269,32 +303,32 @@
                                 </div>
                              </div>
                             <!-- 하위 탭 구조 시작 -->
-                            <div class="inner-tab-wrap">
-                                <ul class="inner-tab-list">
-                                    <li class="inner-tab-item active" data-tab="inner1">시각화</li>
-                                    <li class="inner-tab-item" data-tab="inner2">워드테이블</li>
-                                    <li class="inner-tab-item" data-tab="inner3">삭제된 TF-IDF 하위 단어</li>
+                            <div class="inner_tab_wrap">
+                                <ul class="inner_tab_list">
+                                    <li class="inner_tab_item active" data-tab="inner1">시각화</li>
+                                    <li class="inner_tab_item" data-tab="inner2">워드테이블</li>
+                                    <li class="inner_tab_item" data-tab="inner3">삭제된 TF-IDF 하위 단어</li>
                                 </ul>
-                                <div class="inner-tab-content active" id="inner1">
-                                    <div class="inner-tab-container">
-                                        <div class="empty-state">
-                                            <span class="state-empty"></span>
+                                <div class="inner_tab_content active" id="inner1">
+                                    <div class="inner_tab_container">
+                                        <div class="empty_state">
+                                            <span class="state_empty"></span>
                                             <span class="text">조회된 데이터가 없습니다.</span>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="inner-tab-content" id="inner2">
-                                    <div class="inner-tab-container">
-                                        <div class="empty-state">
-                                            <span class="state-empty"></span>
+                                <div class="inner_tab_content" id="inner2">
+                                    <div class="inner_tab_container">
+                                        <div class="empty_state">
+                                            <span class="state_empty"></span>
                                             <span class="text">조회된 데이터가 없습니다.</span>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="inner-tab-content" id="inner3">
-                                   <div class="inner-tab-container">
-                                        <div class="empty-state">
-                                            <span class="state-empty"></span>
+                                <div class="inner_tab_content" id="inner3">
+                                   <div class="inner_tab_container">
+                                        <div class="empty_state">
+                                            <span class="state_empty"></span>
                                             <span class="text">조회된 데이터가 없습니다.</span>
                                         </div>
                                     </div>
@@ -303,12 +337,12 @@
                             <!-- 하위 탭 구조 끝 -->
                         </div>
                     </div>
-                    <div class="tab-content" id="tab2">
-                        <div class="analysis-box">
+                    <div class="tab_content" id="tab2">
+                        <div class="analysis_box">
                             <!-- 검색 영역 -->
-                             <div class="analysis-search">
-                                <div class="analysis-search-section">
-                                    <div class="analysis-search-label">
+                             <div class="analysis_search">
+                                <div class="analysis_search_section">
+                                    <div class="analysis_search_label">
                                         <span class="label">분석대상검색</span>
                                         <ul class="add_list">
                                             <li class="add_list_item active">국정제도</li>
@@ -318,82 +352,82 @@
                                             <li class="add_list_item">기타</li>
                                         </ul>
                                     </div>
-                                    <div class="action-buttons flex_end">
+                                    <div class="action_buttons flex_end">
                                         <button class="btn btn--fourth sm"></span>삭제</button>
                                         <button class="btn btn--search sm">검색</button>
                                     </div>
                                 </div>
-                                <div class="analysis-search-section">
-                                    <div class="analysis-search-label">
+                                <div class="analysis_search_section">
+                                    <div class="analysis_search_label">
                                         <span class="label">분석시 동의어 적용</span>
-                                        <label class="custom-checkbox">
+                                        <label class="custom_checkbox">
                                             <input type="checkbox" name="useType" value="동의어 적용" />
-                                            <span class="checkbox-mark"></span>
+                                            <span class="checkbox_mark"></span>
                                             동의어 적용
                                         </label>
                                     </div>
                                 </div>
-                                <div class="analysis-search-section">
-                                    <div class="analysis-search-label">
+                                <div class="analysis_search_section">
+                                    <div class="analysis_search_label">
                                         <span class="label">분석 단위 선택</span>
-                                        <div class="radio-group">
-                                            <label class="custom-radio">
+                                        <div class="radio_group">
+                                            <label class="custom_radio">
                                                 <input type="radio" value="문서" checked />
-                                                <span class="radio-mark"></span>
-                                                <span class="label-text">문서</span>
+                                                <span class="radio_mark"></span>
+                                                <span class="label_text">문서</span>
                                             </label>
-                                            <label class="custom-radio">
+                                            <label class="custom_radio">
                                                 <input type="radio" value="문단"  />
-                                                <span class="radio-mark"></span>
-                                                <span class="label-text">문단</span>
+                                                <span class="radio_mark"></span>
+                                                <span class="label_text">문단</span>
                                             </label>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="analysis-search-section">
-                                    <div class="analysis-search-label">
+                                <div class="analysis_search_section">
+                                    <div class="analysis_search_label">
                                         <span class="label">TF-IDF하위단어삭제(%)</span>
-                                        <div class="custom-number-wrap">
-                                            <input type="text" class="custom-number-input" value="0" min="0" max="10" step="0.1" inputmode="numeric" pattern="[0-9]*" />
-                                            <div class="btn-number-group">
-                                                <button type="button" class="btn-number plus" aria-label="증가"></button>
-                                                <button type="button" class="btn-number minus" aria-label="감소"></button>
+                                        <div class="custom_number_wrap">
+                                            <input type="text" class="custom_number_input" value="0" min="0" max="10" step="0.1" inputmode="numeric" pattern="[0-9]*" />
+                                            <div class="btn_number_group">
+                                                <button type="button" class="btn_number plus" aria-label="증가"></button>
+                                                <button type="button" class="btn_number minus" aria-label="감소"></button>
                                             </div>
                                         </div>
-                                        <div class="table-caption">
+                                        <div class="table_caption">
                                             * 권장 : 0.5% ~ 5%
                                         </div>
                                     </div>
                                 </div>
-                                <div class="analysis-search-section">
-                                    <div class="analysis-search-label">
+                                <div class="analysis_search_section">
+                                    <div class="analysis_search_label">
                                         <span class="label">하위연관관계삭제(동시출현문단수)</span>
-                                        <div class="custom-number-wrap">
-                                            <input type="text" class="custom-number-input" value="0" min="0" max="10" step="0.1" inputmode="numeric" pattern="[0-9]*" />
-                                            <div class="btn-number-group">
-                                                <button type="button" class="btn-number plus" aria-label="증가"></button>
-                                                <button type="button" class="btn-number minus" aria-label="감소"></button>
+                                        <div class="custom_number_wrap">
+                                            <input type="text" class="custom_number_input" value="0" min="0" max="10" step="0.1" inputmode="numeric" pattern="[0-9]*" />
+                                            <div class="btn_number_group">
+                                                <button type="button" class="btn_number plus" aria-label="증가"></button>
+                                                <button type="button" class="btn_number minus" aria-label="감소"></button>
                                             </div>
                                         </div>
-                                        <div class="table-caption">
+                                        <div class="table_caption">
                                             * 권장: 1~3(문단/문서수가 많을 수록 높은 값 입력 권장)
                                         </div>
                                     </div>
                                 </div>
-                                <div class="analysis-search-section section-border">
-                                    <div class="analysis-search-label justify-between">
+                                <div class="analysis_search_section section_border">
+                                    <div class="analysis_search_label justify_between">
                                         <span class="label">분석결과</span>
                                         <div class=" flex_end">
                                             <button class="btn btn--search sm">워드클라우드 분석</button>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="analysis-search-section">
-                                    <div class="analysis-search-label">
+                                <div class="analysis_search_section">
+                                    <div class="analysis_search_label">
                                         <span class="label">저장명</span>
-                                        <div class="input-group justify-between ">
-                                            <input type="text" class="form-input search-input max-auto" placeholder="예시: 정책비교_2025"/>
-                                            <div class="action-buttons no-mt">
+                                        <div class="input_group justify_between ">
+                                            <input type="text" class="form_input search_input max_auto" placeholder="예시: 정책비교_2025"/>
+                                            <div class="action_buttons no_mt">
                                                 <button class="btn btn--fourth sm"></span>히스토리 저장</button>
                                                 <button class="btn btn--fourth sm"></span>이미지 저장</button>
                                             </div>
@@ -402,32 +436,32 @@
                                 </div>
                              </div>
                             <!-- 하위 탭 구조 시작 -->
-                            <div class="inner-tab-wrap">
-                                <ul class="inner-tab-list">
-                                    <li class="inner-tab-item active" data-tab="inner1">시각화</li>
-                                    <li class="inner-tab-item" data-tab="inner2">워드테이블</li>
-                                    <li class="inner-tab-item" data-tab="inner3">삭제된 TF-IDF 하위 단어</li>
+                            <div class="inner_tab_wrap">
+                                <ul class="inner_tab_list">
+                                    <li class="inner_tab_item active" data-tab="inner1">시각화</li>
+                                    <li class="inner_tab_item" data-tab="inner2">워드테이블</li>
+                                    <li class="inner_tab_item" data-tab="inner3">삭제된 TF-IDF 하위 단어</li>
                                 </ul>
-                                <div class="inner-tab-content active" id="inner1">
-                                    <div class="inner-tab-container">
-                                        <div class="empty-state">
-                                            <span class="state-empty"></span>
+                                <div class="inner_tab_content active" id="inner1">
+                                    <div class="inner_tab_container">
+                                        <div class="empty_state">
+                                            <span class="state_empty"></span>
                                             <span class="text">조회된 데이터가 없습니다.</span>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="inner-tab-content" id="inner2">
-                                    <div class="inner-tab-container">
-                                        <div class="empty-state">
-                                            <span class="state-empty"></span>
+                                <div class="inner_tab_content" id="inner2">
+                                    <div class="inner_tab_container">
+                                        <div class="empty_state">
+                                            <span class="state_empty"></span>
                                             <span class="text">조회된 데이터가 없습니다.</span>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="inner-tab-content" id="inner3">
-                                   <div class="inner-tab-container">
-                                        <div class="empty-state">
-                                            <span class="state-empty"></span>
+                                <div class="inner_tab_content" id="inner3">
+                                   <div class="inner_tab_container">
+                                        <div class="empty_state">
+                                            <span class="state_empty"></span>
                                             <span class="text">조회된 데이터가 없습니다.</span>
                                         </div>
                                     </div>
@@ -436,12 +470,12 @@
                             <!-- 하위 탭 구조 끝 -->
                         </div>
                     </div>
-                    <div class="tab-content" id="tab3">
-                        <div class="analysis-box">
+                    <div class="tab_content" id="tab3">
+                        <div class="analysis_box">
                             <!-- 검색 영역 -->
-                             <div class="analysis-search">
-                                <div class="analysis-search-section">
-                                    <div class="analysis-search-label">
+                             <div class="analysis_search">
+                                <div class="analysis_search_section">
+                                    <div class="analysis_search_label">
                                         <span class="label">분석대상검색</span>
                                         <ul class="add_list">
                                             <li class="add_list_item active">국정제도</li>
@@ -451,82 +485,82 @@
                                             <li class="add_list_item">기타</li>
                                         </ul>
                                     </div>
-                                    <div class="action-buttons flex_end">
+                                    <div class="action_buttons flex_end">
                                         <button class="btn btn--fourth sm"></span>삭제</button>
                                         <button class="btn btn--search sm">검색</button>
                                     </div>
                                 </div>
-                                <div class="analysis-search-section">
-                                    <div class="analysis-search-label">
+                                <div class="analysis_search_section">
+                                    <div class="analysis_search_label">
                                         <span class="label">분석시 동의어 적용</span>
-                                        <label class="custom-checkbox">
+                                        <label class="custom_checkbox">
                                             <input type="checkbox" name="useType" value="동의어 적용" />
-                                            <span class="checkbox-mark"></span>
+                                            <span class="checkbox_mark"></span>
                                             동의어 적용
                                         </label>
                                     </div>
                                 </div>
-                                <div class="analysis-search-section">
-                                    <div class="analysis-search-label">
+                                <div class="analysis_search_section">
+                                    <div class="analysis_search_label">
                                         <span class="label">분석 단위 선택</span>
-                                        <div class="radio-group">
-                                            <label class="custom-radio">
+                                        <div class="radio_group">
+                                            <label class="custom_radio">
                                                 <input type="radio" value="문서" checked />
-                                                <span class="radio-mark"></span>
-                                                <span class="label-text">문서</span>
+                                                <span class="radio_mark"></span>
+                                                <span class="label_text">문서</span>
                                             </label>
-                                            <label class="custom-radio">
+                                            <label class="custom_radio">
                                                 <input type="radio" value="문단"  />
-                                                <span class="radio-mark"></span>
-                                                <span class="label-text">문단</span>
+                                                <span class="radio_mark"></span>
+                                                <span class="label_text">문단</span>
                                             </label>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="analysis-search-section">
-                                    <div class="analysis-search-label">
+                                <div class="analysis_search_section">
+                                    <div class="analysis_search_label">
                                         <span class="label">TF-IDF하위단어삭제(%)</span>
-                                        <div class="custom-number-wrap">
-                                            <input type="text" class="custom-number-input" value="0" min="0" max="10" step="0.1" inputmode="numeric" pattern="[0-9]*" />
-                                            <div class="btn-number-group">
-                                                <button type="button" class="btn-number plus" aria-label="증가"></button>
-                                                <button type="button" class="btn-number minus" aria-label="감소"></button>
+                                        <div class="custom_number_wrap">
+                                            <input type="text" class="custom_number_input" value="0" min="0" max="10" step="0.1" inputmode="numeric" pattern="[0-9]*" />
+                                            <div class="btn_number_group">
+                                                <button type="button" class="btn_number plus" aria-label="증가"></button>
+                                                <button type="button" class="btn_number minus" aria-label="감소"></button>
                                             </div>
                                         </div>
-                                        <div class="table-caption">
+                                        <div class="table_caption">
                                             * 권장 : 0.5% ~ 5%
                                         </div>
                                     </div>
                                 </div>
-                                <div class="analysis-search-section">
-                                    <div class="analysis-search-label">
+                                <div class="analysis_search_section">
+                                    <div class="analysis_search_label">
                                         <span class="label">하위연관관계삭제(동시출현문단수)</span>
-                                        <div class="custom-number-wrap">
-                                            <input type="text" class="custom-number-input" value="0" min="0" max="10" step="0.1" inputmode="numeric" pattern="[0-9]*" />
-                                            <div class="btn-number-group">
-                                                <button type="button" class="btn-number plus" aria-label="증가"></button>
-                                                <button type="button" class="btn-number minus" aria-label="감소"></button>
+                                        <div class="custom_number_wrap">
+                                            <input type="text" class="custom_number_input" value="0" min="0" max="10" step="0.1" inputmode="numeric" pattern="[0-9]*" />
+                                            <div class="btn_number_group">
+                                                <button type="button" class="btn_number plus" aria-label="증가"></button>
+                                                <button type="button" class="btn_number minus" aria-label="감소"></button>
                                             </div>
                                         </div>
-                                        <div class="table-caption">
+                                        <div class="table_caption">
                                             * 권장: 1~3(문단/문서수가 많을 수록 높은 값 입력 권장)
                                         </div>
                                     </div>
                                 </div>
-                                <div class="analysis-search-section section-border">
-                                    <div class="analysis-search-label justify-between">
+                                <div class="analysis_search_section section_border">
+                                    <div class="analysis_search_label justify_between">
                                         <span class="label">분석결과</span>
                                         <div class=" flex_end">
                                             <button class="btn btn--search sm">워드클라우드 분석</button>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="analysis-search-section">
-                                    <div class="analysis-search-label">
+                                <div class="analysis_search_section">
+                                    <div class="analysis_search_label">
                                         <span class="label">저장명</span>
-                                        <div class="input-group justify-between ">
-                                            <input type="text" class="form-input search-input max-auto" placeholder="예시: 정책비교_2025"/>
-                                            <div class="action-buttons no-mt">
+                                        <div class="input_group justify_between ">
+                                            <input type="text" class="form_input search_input max_auto" placeholder="예시: 정책비교_2025"/>
+                                            <div class="action_buttons no_mt">
                                                 <button class="btn btn--fourth sm"></span>히스토리 저장</button>
                                                 <button class="btn btn--fourth sm"></span>이미지 저장</button>
                                             </div>
@@ -535,32 +569,32 @@
                                 </div>
                              </div>
                             <!-- 하위 탭 구조 시작 -->
-                            <div class="inner-tab-wrap">
-                                <ul class="inner-tab-list">
-                                    <li class="inner-tab-item active" data-tab="inner1">시각화</li>
-                                    <li class="inner-tab-item" data-tab="inner2">워드테이블</li>
-                                    <li class="inner-tab-item" data-tab="inner3">삭제된 TF-IDF 하위 단어</li>
+                            <div class="inner_tab_wrap">
+                                <ul class="inner_tab_list">
+                                    <li class="inner_tab_item active" data-tab="inner1">시각화</li>
+                                    <li class="inner_tab_item" data-tab="inner2">워드테이블</li>
+                                    <li class="inner_tab_item" data-tab="inner3">삭제된 TF-IDF 하위 단어</li>
                                 </ul>
-                                <div class="inner-tab-content active" id="inner1">
-                                    <div class="inner-tab-container">
-                                        <div class="empty-state">
-                                            <span class="state-empty"></span>
+                                <div class="inner_tab_content active" id="inner1">
+                                    <div class="inner_tab_container">
+                                        <div class="empty_state">
+                                            <span class="state_empty"></span>
                                             <span class="text">조회된 데이터가 없습니다.</span>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="inner-tab-content" id="inner2">
-                                    <div class="inner-tab-container">
-                                        <div class="empty-state">
-                                            <span class="state-empty"></span>
+                                <div class="inner_tab_content" id="inner2">
+                                    <div class="inner_tab_container">
+                                        <div class="empty_state">
+                                            <span class="state_empty"></span>
                                             <span class="text">조회된 데이터가 없습니다.</span>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="inner-tab-content" id="inner3">
-                                   <div class="inner-tab-container">
-                                        <div class="empty-state">
-                                            <span class="state-empty"></span>
+                                <div class="inner_tab_content" id="inner3">
+                                   <div class="inner_tab_container">
+                                        <div class="empty_state">
+                                            <span class="state_empty"></span>
                                             <span class="text">조회된 데이터가 없습니다.</span>
                                         </div>
                                     </div>
@@ -575,15 +609,15 @@
     </div>
     <footer class="footer">
         <div class="container">
-            <div class="footer-wrapper">
-                <div class="footer-details">
-                    <div class="footer-organization">
-                        <div class="footer-title">국가보안기술연구소</div>
-                        <div class="footer-location">[30147] 대전광역시 유성구 유성대로 1559 (전민동)</div>
+            <div class="footer_wrapper">
+                <div class="footer_details">
+                    <div class="footer_organization">
+                        <div class="footer_title">국가보안기술연구소</div>
+                        <div class="footer_location">[30147] 대전광역시 유성구 유성대로 1559 (전민동)</div>
                     </div>
-                    <div class="footer-copyright">© NSR.All Rights Reserved</div>
+                    <div class="footer_copyright">© NSR.All Rights Reserved</div>
                 </div>
-                <div class="footer-logo">
+                <div class="footer_logo">
                     <a href="/">
                         <img src="/img/logo.svg" alt="로고" />
                     </a>
@@ -591,12 +625,12 @@
             </div>
         </div>
     </footer>
-    <div class="quick-aside">
-        <div class="chat-ai aside-btn">
+    <div class="quick_aside">
+        <div class="chat_ai aside_btn">
             <img src="/img/icon/ic-ai.svg" alt="채팅 아이콘" />
             <span>Chat AI</span>
         </div>
-        <div class="feedback aside-btn">사이버안보 역량평가</div>
+        <div class="feedback aside_btn">사이버안보 역량평가</div>
     </div>
 </body>
 </html> 

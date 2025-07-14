@@ -61,15 +61,15 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   // ✅ 드롭다운 버튼
-  const menuButtons = document.querySelectorAll('.menu-btn');
+  const menuButtons = document.querySelectorAll('.menu_btn');
   menuButtons.forEach((btn) => {
     btn.addEventListener("click", function (e) {
       e.stopPropagation();
       const dropdown = btn.nextElementSibling;
       const isOpen = dropdown.classList.contains("show");
 
-      document.querySelectorAll(".dropdown-menu").forEach(menu => menu.classList.remove("show"));
-      document.querySelectorAll(".menu-btn").forEach(b => b.classList.remove("active"));
+      document.querySelectorAll(".dropdown_menu").forEach(menu => menu.classList.remove("show"));
+      document.querySelectorAll(".menu_btn").forEach(b => b.classList.remove("active"));
 
       if (!isOpen) {
         dropdown.classList.add("show");
@@ -79,13 +79,13 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   document.addEventListener("click", function () {
-    document.querySelectorAll(".dropdown-menu").forEach(menu => menu.classList.remove("show"));
-    document.querySelectorAll(".menu-btn").forEach(b => b.classList.remove("active"));
+    document.querySelectorAll(".dropdown_menu").forEach(menu => menu.classList.remove("show"));
+    document.querySelectorAll(".menu_btn").forEach(b => b.classList.remove("active"));
   });
 
   // ✅ Select Search
-  const label = document.querySelector('.select-search__label');
-  const options = document.querySelectorAll('.select-search__item');
+  const label = document.querySelector('.select_search__label');
+  const options = document.querySelectorAll('.select_search__item');
   if (label) {
     options.forEach(function (option) {
       option.addEventListener('click', function () {
@@ -95,57 +95,71 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     label.addEventListener("click", function () {
-      const parent = this.closest(".select-search");
-      if (parent.classList.contains("view-mode")) return;
+      const parent = this.closest(".select_search");
+      if (parent.classList.contains("view_mode")) return;
       parent.classList.toggle("active");
     });
   }
 
   // ✅ Date Picker
   if (typeof flatpickr !== 'undefined') {
-    flatpickr(".date-picker", {
+    flatpickr(".date_picker", {
       locale: "ko",
       dateFormat: "Y-m-d",
       disableMobile: true,
     });
   }
 
-  // ✅ 탭 기능 (상위/하위)
-  const tabWrap = document.querySelector('.tab-wrap');
+  // ✅ 하위 탭 바인딩 함수
+  function initInnerTabs(scope = document) {
+    const innerTabWraps = scope.querySelectorAll('.inner_tab_wrap');
+
+    innerTabWraps.forEach(innerTabWrap => {
+      const innerTabItems = innerTabWrap.querySelectorAll('.inner_tab_list .inner_tab_item');
+      const innerTabContents = innerTabWrap.querySelectorAll('.inner_tab_content');
+
+      innerTabItems.forEach(tab => {
+        tab.addEventListener('click', function () {
+          innerTabItems.forEach(t => t.classList.remove('active'));
+          innerTabContents.forEach(c => c.classList.remove('active'));
+          this.classList.add('active');
+          const target = innerTabWrap.querySelector('#' + this.dataset.tab);
+          if (target) target.classList.add('active');
+        });
+      });
+    });
+  }
+
+  // ✅ 상위 탭 기능 + 하위 탭 동시 초기화
+  const tabWrap = document.querySelector('.tab_wrap');
   if (tabWrap) {
-    const tabItems = tabWrap.querySelectorAll('.tab-list .tab-item');
-    const tabContents = tabWrap.querySelectorAll('.tab-content');
+    const tabItems = tabWrap.querySelectorAll('.tab_list .tab_item');
+    const tabContents = tabWrap.querySelectorAll('.tab_content');
+
     tabItems.forEach(tab => {
       tab.addEventListener('click', function () {
         tabItems.forEach(t => t.classList.remove('active'));
         tabContents.forEach(c => c.classList.remove('active'));
         this.classList.add('active');
-        const target = tabWrap.querySelector('#' + this.dataset.tab);
-        if (target) target.classList.add('active');
-      });
-    });
-  }
 
-  const innerTabWrap = document.querySelector('.inner-tab-wrap');
-  if (innerTabWrap) {
-    const innerTabItems = innerTabWrap.querySelectorAll('.inner-tab-list .inner-tab-item');
-    const innerTabContents = innerTabWrap.querySelectorAll('.inner-tab-content');
-    innerTabItems.forEach(tab => {
-      tab.addEventListener('click', function () {
-        innerTabItems.forEach(t => t.classList.remove('active'));
-        innerTabContents.forEach(c => c.classList.remove('active'));
-        this.classList.add('active');
-        const target = innerTabWrap.querySelector('#' + this.dataset.tab);
-        if (target) target.classList.add('active');
+        const target = tabWrap.querySelector('#' + this.dataset.tab);
+        if (target) {
+          target.classList.add('active');
+          initInnerTabs(target); // 해당 상위 탭 콘텐츠에 속한 하위 탭 바인딩
+        }
       });
     });
+
+    // 페이지 최초 로드 시 첫 번째 탭의 하위 탭 바인딩
+    const firstActive = tabWrap.querySelector('.tab_content.active');
+    if (firstActive) initInnerTabs(firstActive);
   }
 
   // ✅ 숫자 입력 필드
-  document.querySelectorAll('.custom-number-wrap').forEach(function (wrap) {
-    const input = wrap.querySelector('.custom-number-input');
-    const btnMinus = wrap.querySelector('.btn-number.minus');
-    const btnPlus = wrap.querySelector('.btn-number.plus');
+  document.querySelectorAll('.custom_number_wrap').forEach(function (wrap) {
+    const input = wrap.querySelector('.custom_number_input');
+    const btnMinus = wrap.querySelector('.btn_number.minus');
+    const btnPlus = wrap.querySelector('.btn_number.plus');
     const min = parseFloat(input.getAttribute('min')) || 0;
     const max = parseFloat(input.getAttribute('max')) || 9999;
     const step = parseFloat(input.getAttribute('step')) || 1;

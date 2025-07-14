@@ -8,16 +8,16 @@
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.sd-header { 
+.sd_header { 
     @include base.flex(space-between, flex-end);       
 
 }
 
-.sd-tit {
+.sd_tit {
     font-size: 2.2rem;
     font-weight: 600;
 }
-.meta-table { 
+.meta_table { 
     width: 100%;
     margin-top: 1.8rem;
     border-collapse: collapse;
@@ -52,43 +52,43 @@
 }
 
 //파일 업로드 리스트
-.meta-files-list {
+.meta_files_list {
     width: 100%;
     margin-top: 1.8rem;
     border-top: 2px solid colors.$text-color-primary;
 } 
-.board-files-list {
+.board_files_list {
     width: 100%;
-    > .meta-files-item:last-child {
+    > .meta_files_item:last-child {
         border-bottom: 0;
     }
 }
-.meta-files-item { 
+.meta_files_item { 
     @include base.flex(space-between, center);
     padding: 2.4rem 3rem;
     background-color: colors.$off-white-5;
     border-bottom: 1px solid  colors.$background-color-lighter;
-    &.board-files-item {
+    &.board_files_item {
         padding: 1.4rem;
     }
     &:hover {
     // background-color: colors.$fill-color-card-bg;
-    // .download-btn {
+    // .download_btn {
     //     background-color: colors.$fill-color-card-bg;
     // }
-    .mf-info  {
-        .mf-link {
+    .mf_info  {
+        .mf_link {
             text-decoration: underline;
         }
     }
     }
-    .mf-info {
+    .mf_info {
     display: flex;
     gap: 2.4rem;
-    .mf-tit {
+    .mf_tit {
         font-weight: 600;
     }
-    .mf-link {
+    .mf_link {
         color: colors.$text-color-secondary;
         position: relative;
         padding-left: 2.6rem;
@@ -108,13 +108,13 @@
     
 }
 
-.table-container {
-    &.policy-list {
+.table_container {
+    &.policy_list {
         margin-top: 5rem;
     }
 }
 
-.data-table {
+.data_table {
     width: 100%;
     border-collapse: collapse;
     border-top: 2px solid colors.$black;
@@ -136,7 +136,7 @@
         &:hover {
             background-color: colors.$off-white-5;
             cursor: pointer;
-            .click-title {
+            .click_title {
                 color: colors.$brand-blue-primary;
                 text-decoration: underline;
             }
@@ -151,23 +151,23 @@
         border-bottom: 1px solid colors.$background-color-lighter;
         @include ellipsis;
         max-width: 20rem;
-        &.empty-data {
+        &.empty_data {
             text-align: center;
             color: colors.$text-color-placeholder;
             font-size: 1.5rem;
             padding: 1.2rem 1.8rem;
         }
-        &.policy-add {
+        &.policy_add {
             text-align: center;
             font-size: 1.8rem;
             padding: 4.5rem 5rem;
-            .policy-add-inner {
+            .policy_add_inner {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
                 gap: 0.4rem;
-                .state-add {
+                .state_add {
                     width: 9rem;
                     height: 9rem;
                     background: url(../img/state-images/state-add.svg) no-repeat center center;
@@ -181,21 +181,21 @@
             }
         }
     }
-    .policy-add,
-    tr.hover-disabled {
+    .policy_add,
+    tr.hover_disabled {
         &:hover {
             background: none !important;
             cursor: default !important;
         }
     }
 }
-.hover-disabled {
+.hover_disabled {
     background: none !important;
     cursor: default !important;
 }
 
 //policy table
-.policy-compare-table {
+.policy_compare_table {
     width: 100%;
     border-collapse: collapse;
     table-layout: fixed;
@@ -208,7 +208,7 @@
     th {
         font-weight: 700;
         text-align: left! important;
-        .compare-header {
+        .compare_header {
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -234,7 +234,7 @@
             border-right: none;
         }
     }
-    th.col-title,
+    th.col_title,
     td:first-child {
         width: 156px; // 구분 열만 고정
         background: colors.$background-color-lightest;
@@ -242,12 +242,12 @@
         text-align: left;
     }
 
-    th:not(.col-title),
+    th:not(.col_title),
     td:not(:first-child) {
         width: calc((100% - 180px) / 3); // 나머지 3개 열 동일 비율
     }
 }
-.table-caption {
+.table_caption {
     margin-top: 1.4rem;
     font-size: 1.4rem;
     text-align: left;
@@ -255,10 +255,10 @@
 
 
 //드롭다운 메뉴
-.action-menu {
+.action_menu {
     position: relative;
     display: inline-block;
-    .menu-btn {
+    .menu_btn {
         span {
             display: block;
             width: 1.8rem;
@@ -273,7 +273,7 @@
         background-color: colors.$border-color-light;
         border-radius: 0.3rem;
     }
-    .dropdown-menu {
+    .dropdown_menu {
         position: absolute;
         top: 100%;
         left: 0;
@@ -286,7 +286,7 @@
         &.show {
             display: block; 
         }
-        .dropdown-item {
+        .dropdown_item {
             display: flex;
             align-items: center;
             gap: 0.6rem;
@@ -319,7 +319,7 @@
     gap: 8px;
     margin-top: 30px;
 
-    .page-link {
+    .page_link {
         width: 36px;
         height: 36px;
         @include base.flex(center, center);
@@ -344,12 +344,12 @@
             background-repeat: no-repeat;
             background-position: center;
         }
-        &.page-prev {
+        &.page_prev {
             span {
                 background: url(../img/icon/ic-pg-left.svg);
             }
         }
-        &.page-next {
+        &.page_next {
             span {
                 background: url(../img/icon/ic-pg-left.svg);
             }
@@ -364,7 +364,7 @@
         }
     }
 
-    .page-dots {
+    .page_dots {
         padding: 8px 4px;
         color: #666;
     }

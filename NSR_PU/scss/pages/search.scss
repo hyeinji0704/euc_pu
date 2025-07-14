@@ -5,7 +5,7 @@
 
 //통합검색 
 
-.total-search-bar {
+.total_search_bar {
     position: absolute;
     top: variables.$header-height; // 헤더 높이 사용
     left: 0;
@@ -13,11 +13,11 @@
     height: 17rem;
     padding-top: 5rem;
     padding-bottom: 5rem;
-    &.sd-border {
+    &.sd_border {
         border-bottom: 1px solid colors.$border-color-lightest;
     }
     
-    .tsb-box {
+    .tsb_box {
         @include base.flex(center, center);
         position: relative;
         height: 7rem;
@@ -35,7 +35,7 @@
             background-color: colors.$text-color-muted;
             content: "";
         }
-        .tsb-select {
+        .tsb_select {
             position: relative;
             min-width: 160px;
             height: 6.8rem;
@@ -44,11 +44,11 @@
             font-size: 2rem;   
             font-weight: 500;
         }
-        .searchForm-input-wr {
+        .searchForm_input_wr {
             position: relative;
             width: 100%;
         }
-        .tsb-input {
+        .tsb_input {
             position: relative;
             height: 68px;
             line-height: 68px;
@@ -64,7 +64,7 @@
                 color: colors.$text-color-subtle;
             }
         }
-        .tsb-btn {
+        .tsb_btn {
             position: relative;
             min-width: 16.5rem;
             height: 9rem;
@@ -76,7 +76,7 @@
             color: colors.$white;
             @include base.flex(center, center);
             gap: 1rem;
-            .ic-search {
+            .ic_search {
                 display: inline-block;
                 width: 30px;
                 height: 30px;
@@ -92,22 +92,22 @@
         }
     }
 }
-.main-content {
+.main {
     padding: 0 3rem;
     padding-top: calc(variables.$header-height + 3.2rem) ;
     min-height: calc(100vh - variables.$header-height - variables.$footer-height); // 헤더, 풋터 높이만큼 제외
-    &.total-search-wrap {
+    &.total_search_wrap {
         padding-top: calc(variables.$search-bar-height + variables.$header-height); // 검색 바 높이와 헤더 높이 합산
     }
-    &.tsb-main-content {
+    &.tsb_main_content {
         padding-top: calc(variables.$header-height + variables.$search-bar-height);
     }
 }
 
-.sub-top-area {
+.sub_top_area {
     position: relative;
     align-items: flex-start; 
-    .total-search-nav {
+    .total_search_nav {
         padding-bottom: 4.6rem;
     }
     .twoline {
@@ -141,7 +141,7 @@
     }
 }
 
-.search-summary {
+.search_summary {
     padding: 2rem 0;
     background-color: colors.$off-white-3;
     border-radius: 1rem;
@@ -152,34 +152,34 @@
         color: colors.$brand-blue-primary;
     }
 }
-.search-layout {
+.search_layout {
     @include base.flex(space-between, flex-start);
     padding-top: 4.6rem;
     position: relative;
     padding-right: 25.3rem;
-    .search-layout-main {
+    .search_layout_main {
         display: flex;
         flex-direction: column;
         gap: 6rem;
         width: 100%;
         margin-right: 2.6rem;
-        .search-layout-content {
-            .search-header {
+        .search_layout_content {
+            .search_header {
                 @include base.flex(space-between, center);
                 padding-bottom: 2rem;
                 border-bottom: 3px solid #000;
-                .search-title {
+                .search_title {
                     font-size: 2.1rem;
-                    .search-keyword {
+                    .search_keyword {
                         font-weight: 700;
                     }
-                    .search-count {
+                    .search_count {
                         color: colors.$brand-blue-primary;
                         font-weight: 500;
                         letter-spacing: -0.03em;
                     }
                 }
-                .search-more {
+                .search_more {
                     display: flex;
                     align-items: center;
                     gap: 0.4rem;
@@ -187,36 +187,36 @@
                     font-weight: 500;
                     font-size: 1.6rem;
                     line-height: 1;
-                    .ic-more {
+                    .ic_more {
                         width: 1.8rem;
                         height: 1.8rem;
                         background: url(../img/icon/ic-more-arrow.svg) no-repeat center center;
                     }
                 }
             }
-            .search-item {
+            .search_item {
                 padding: 3rem;
                 border-top: 1px solid colors.$background-color-lighter;
                 &:hover {
                     background-color: colors.$off-white-5;
                 }
-                .search-item-title-wrap {
+                .search_item_title_wrap {
                     padding: 1.5rem 0 1.6rem 0;
                     display: flex;
                     flex-direction: column;
                     gap: 0.2rem;
-                    .search-item-title {
+                    .search_item_title {
                         font-size: 1.8rem;
                         font-weight: 600;
                     }
-                    .search-item-subtitle {
+                    .search_item_subtitle {
                         color: colors.$text-color-placeholder;
                     }
                 }
-                .search-item-meta {
+                .search_item_meta {
                     display: flex;
                     gap: 4rem;
-                    .search-item-meta-item {
+                    .search_item_meta_item {
                         display: flex;
                         gap: 1rem;
                         dt {
@@ -230,29 +230,29 @@
 
                 }
             }
-            .search-result-list {
+            .search_result_list {
                 border-bottom: 1px solid colors.$neutral-dark-2;
             }
         }
     }
-    .search-layout-side {
+    .search_layout_side {
         min-width: 25.3rem;
         position: absolute;
         top: 8rem;
         right: 0;
-        .compare-box {
+        .compare_box {
             padding: 2.4rem 2rem;
             border: 1px solid colors.$background-color-lighter;
             border-radius: 2rem;
             box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
-            .compare-header {
+            .compare_header {
                 @include base.flex(space-between, center);
                 padding-bottom: 1.6rem;
                 border-bottom: 1px solid colors.$background-color-lighter;
-                .compare-title {
+                .compare_title {
                     font-size: 2.2rem;
                 }
-                .compare-count {
+                .compare_count {
                     display: block;
                     padding: 0 0.8rem;
                     border-radius: 5rem;
@@ -262,8 +262,8 @@
                     line-height: 2.4rem;
                 }
             }
-            .compare-body {
-                .compare-label-wrap {
+            .compare_body {
+                .compare_label_wrap {
                     padding: 2rem 0;
                     @include base.flex(space-between, center);
                     .label {
@@ -271,7 +271,7 @@
                         font-weight: 500;
                         line-height: 2.2rem;
                     }
-                    .add-btn {
+                    .add_btn {
                         border-radius: 5rem;
                         border:  1px solid colors.$brand-blue-primary;
                         width: 31px;
@@ -296,7 +296,7 @@
                     border-bottom: 1px solid colors.$background-color-lighter;
                     li {
                         @include base.flex(space-between, center);
-                        .compare-item-title { 
+                        .compare_item_title { 
                             .tag {
                                 margin-right: 0.5rem;
                             }
@@ -304,7 +304,7 @@
                                 font-size: 1.6rem;
                             }
                         }
-                        .remove-btn {
+                        .remove_btn {
                             width: 2.6rem;
                             height: 2.6rem; 
                             font-size: 0;
@@ -314,9 +314,9 @@
                     }
                 }
             }
-            .compare-footer {
+            .compare_footer {
                 padding-top: 2.2rem;
-                .submit-btn {
+                .submit_btn {
                     padding: 1.2rem 0;
                     width: 100%;
                     background-color: colors.$text-color-primary;
@@ -339,36 +339,36 @@
 
 //통합세부내용
 
-.search-detail {
+.search_detail {
     padding-top: 4.8rem;
-    .search-detail-title {
+    .search_detail_title {
         display: flex;
         flex-direction: column;
-        .search-item-title {
+        .search_item_title {
             font-size: 3rem;
             font-weight: 700;
         }
-        .search-item-subtitle {
+        .search_item_subtitle {
             color: colors.$text-color-placeholder;
         }
     }
 }
-.search-detail-wrapper {
+.search_detail_wrapper {
         padding-top: 4rem;
         display: flex;
         flex-direction: column;
         gap: 7rem;
-        .sd-content {
+        .sd_content {
             margin: 3rem 0;
             padding-top: 3rem ;
             border-top: 2px solid colors.$text-color-primary;
             p {
                 line-height: 3.8rem;
-               &.cn-t {
+               &.cn_t {
                 font-weight: 600;
                } 
             }
-            .cn-space {
+            .cn_space {
                 height: 2.4rem;
             }
         }

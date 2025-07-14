@@ -10,21 +10,21 @@
     position: relative;
     
    .container {
-        .footer-wrapper {
+        .footer_wrapper {
         @include base.flex(space-between, center);
         }
-        .footer-details {
+        .footer_details {
             font-size: typography.$font-size-small;
             color: colors.$neutral-grey-soft;
         }
-        .footer-organization {
+        .footer_organization {
             display: flex;
             gap: 2rem;
-            .footer-title {
+            .footer_title {
                 font-weight: 500;
             }
         }
-        .footer-copyright {
+        .footer_copyright {
             margin-top: 0.5rem;
             color: colors.$text-color-subtle;                
         }
@@ -34,7 +34,7 @@
 body {
     position: relative;
 }
-.quick-aside {
+.quick_aside {
     position: absolute;
     text-align: center;
     right: 1.6rem;
@@ -45,11 +45,11 @@ body {
     width: 16.5rem;
     font-size: 1.5rem;
     font-weight: 600;
-    .aside-btn {
+    .aside_btn {
         border-radius: 50px;
         padding: 1rem 0;
         cursor: pointer;
-        &.chat-ai {
+        &.chat_ai {
             background-color: colors.$brand-blue-primary;
             color: colors.$white;
             @include base.flex(center, center);

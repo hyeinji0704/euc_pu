@@ -5,12 +5,12 @@
 
 
 
-.report-preview-wrapper {
+.report_preview_wrapper {
     padding: 3rem 3.5rem;
-    .report-preview{
+    .report_preview{
         padding: 7rem 5rem;
         border: 1px solid $border-color-default;
-        .report-header {
+        .report_header {
             @include flex(space-between, center);
             h1 {
                 font-size: 3.6rem !important;
@@ -24,7 +24,7 @@
             }
             margin-bottom: 4rem;
         }
-        .report-meta {
+        .report_meta {
             padding: 2rem;
             background-color: $fill-color-card-bg;
             p {
@@ -34,11 +34,11 @@
         }
     }
 }
-.report-section {
+.report_section {
     margin:  2rem 0 4rem 0;
     border: 1px solid $neutral-grey-lighter;
 }
-.report-row {
+.report_row {
   display: flex;
   align-items: stretch; 
   
@@ -47,7 +47,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    .report-label {
+    .report_label {
         width: 100%;
         text-align: center;
         border-right: 0;
@@ -57,7 +57,7 @@
   }
 }
 
-.report-label {
+.report_label {
   font-weight: 500;
   width: 140px;
   padding: 2rem;
@@ -70,22 +70,25 @@
   align-items: center;
 }
 
-.report-content {
+.report_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     width: 100%;
   flex: 1;
   word-break: keep-all;
   padding: 1.5rem;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   ul {
     p {
-        font-size: 1.3rem;
+        font-size: 1.4rem;
         margin-bottom: 1rem;
     }
     display: flex;
     flex-direction: column;
     gap: 1.6rem; 
 }
-.report-img {
+.report_img {
     @include flex(center, center);
      img {
     width: 44rem;
@@ -95,6 +98,6 @@
 
 }
 
-.report-buttons {
+.report_buttons {
     @include flex(center, center);
 }

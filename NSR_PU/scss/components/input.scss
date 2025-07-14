@@ -41,24 +41,24 @@
     color: #999;
   }
 
-  &.form-input-narrow {
+  &.form_input_narrow {
     width: 16.4rem;
   }
 
-  &.search-input:focus {
+  &.search_input:focus {
     outline-width: 1px;
     outline-color: colors.$neutral-grey-soft;
     box-shadow: none;
   }
 
-  &.max-auto {
+  &.max_auto {
     width: 100%;
     max-width: none;
   }
 }
 
 
-.input-group {
+.input_group {
   display: flex;
   gap: 0.8rem;
   width: 100%;
@@ -68,12 +68,12 @@ input {
   @include input-base;
 }
 
-.input-table {
+.input_table {
   .required {
     color: colors.$status-error;
   }
 
-  .input-group {
+  .input_group {
     display: flex;
     gap: 0.8rem;
     width: 100%;
@@ -127,14 +127,14 @@ input {
 
 
 // 파일 첨부 
-.file-input-wrapper {
+.file_input_wrapper {
   display: flex;
   align-items: center;
   gap: 0.8rem;
   margin-bottom: 1rem;
   max-width: 50rem;
 
-  .file-display {
+  .file_display {
       flex-grow: 1;
       padding: 0.6rem 1.2rem;
       outline: 1px solid colors.$neutral-grey-soft!important;
@@ -144,13 +144,13 @@ input {
       background-color: colors.$white;
   }
 
-  .file-hidden {
+  .file_hidden {
       display: none;
   }
 }
 
 // 수정 불-가 상태
-.view-mode {
+.view_mode {
     background-color: colors.$white !important;
     outline-width: 1px !important;
     outline-color: colors.$white !important;
@@ -159,7 +159,7 @@ input {
     cursor: default;
 }
 
-.textarea-large {
+.textarea_large {
     width: 100%;
     height: 11rem;
     padding: 1rem 1.2rem;
@@ -202,7 +202,7 @@ input {
 }
 
 //select-search 컴포넌트
-.select-search {
+.select_search {
   
   position: relative;
   width: 14rem;
@@ -215,7 +215,6 @@ input {
   cursor: pointer;
 
   &__label {
-    background-color: colors.$white;
     display: flex;
     align-items: center;
     width: 100%;
@@ -269,9 +268,9 @@ input {
   }
 
   &.active {
-    outline: 1.5px solid colors.$brand-blue-primary;
+    outline: 1px solid colors.$brand-blue-primary;
     border: none;
-    .select-search__list {
+    .select_search__list {
       z-index: 10;
       max-height: 50rem;
       border-radius: 0 0 0.4rem 0.4rem ;
@@ -281,14 +280,14 @@ input {
 }
 
 //date-range 컴포넌트
-.date-range {
+.date_range {
     @include base.flex(space-between, center);
     gap: 0.8rem;
     
 
-    .form-input {
+    .form_input {
       
-        &.date-picker {
+        &.date_picker {
             width: 14rem;
             height: 3.8rem;
             padding: 0 1.2rem;
@@ -301,14 +300,14 @@ input {
             cursor: pointer;
         }
     }
-    .date-tilde {
+    .date_tilde {
         font-size: 1.4rem;
         color: colors.$text-color-quaternary;
     }
 }
 
 
-.flatpickr-calendar {
+.flatpickr_calendar {
   font-family: 'Pretendard', sans-serif;
   border-radius: 0.8rem;
   box-shadow: 0 0 0 1px #ddd, 0 4px 16px rgba(0, 0, 0, 0.08);
@@ -318,7 +317,7 @@ input {
   }
 
 
-  .flatpickr-months {
+  .flatpickr_months {
     padding: 0.2rem;
     color: rgba(134, 144, 156, 0.60);
     font-size: 1.1rem;
@@ -326,7 +325,7 @@ input {
     line-height: 2rem; /* 181.818% */
   }
 
-  .flatpickr-day {
+  .flatpickr_day {
     &.selected,
     &.today {
       background: colors.$brand-blue-highlight;
@@ -335,12 +334,12 @@ input {
     }
   }
 
-  .flatpickr-weekday {
+  .flatpickr_weekday {
     font-weight: 500;
     color: #888;
   }
 
-  .flatpickr-day:hover {
+  .flatpickr_day:hover {
     background: rgba(0, 81, 255, 0.1);
   }
 }
@@ -352,14 +351,14 @@ input {
 
 
   //checkbox 
-.checkbox-wrap {
+.checkbox_wrap {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
   align-items: center;
 }
 
-.custom-checkbox {
+.custom_checkbox {
   position: relative;
   display: flex;
   align-items: center;
@@ -373,7 +372,7 @@ input {
     height: 0;
   }
 
-  .checkbox-mark {
+  .checkbox_mark {
     width: 1.6rem;
     height: 1.6rem;
     border: 1px solid colors.$neutral-grey-light;
@@ -384,7 +383,7 @@ input {
     position: relative;
   }
  
-  input[type="checkbox"]:checked + .checkbox-mark::after {
+  input[type="checkbox"]:checked + .checkbox_mark::after {
     content: "";
     position: absolute;
     top: 2px;
@@ -396,12 +395,12 @@ input {
     transform: rotate(45deg);
   }
 
-  input[type="checkbox"]:checked + .checkbox-mark {
+  input[type="checkbox"]:checked + .checkbox_mark {
     border-color: colors.$brand-blue-action;
     background-color: colors.$brand-blue-action;
   }
 
-  .input-etc {
+  .input_etc {
     margin-left: 0.8rem;
     padding: 0.4rem 0.8rem;
     outline: 1px solid colors.$neutral-grey-soft;
@@ -414,11 +413,11 @@ input {
 
 
 // radio
-.radio-group {
+.radio_group {
   display: flex;
   gap: 1rem;
 }
-.custom-radio {
+.custom_radio {
   position: relative;
   display: flex;
   align-items: center;
@@ -432,7 +431,7 @@ input {
     height: 0;
   }
 
-  .radio-mark {
+  .radio_mark {
     width: 1.6rem;
     height: 1.6rem;
     border: 1px solid colors.$neutral-grey-light;
@@ -444,7 +443,7 @@ input {
   }
 
   // ✅ checked 상태일 때
-  input[type="radio"]:checked + .radio-mark {
+  input[type="radio"]:checked + .radio_mark {
     border-color: colors.$brand-blue-action;
     background-color: colors.$white;
 
@@ -467,7 +466,7 @@ input {
 //숫자입력필드
 
 
-.custom-number-wrap {
+.custom_number_wrap {
   display: flex;
   align-items: center;
   border: 1px solid colors.$neutral-grey-soft;
@@ -478,7 +477,7 @@ input {
   overflow: hidden;
   position: relative;
 
-  .custom-number-input {
+  .custom_number_input {
     width: 100%;
     height: 100%;
     border: none;
@@ -497,7 +496,7 @@ input {
     -moz-appearance: textfield;
   }
 
-  .btn-number-group {
+  .btn_number-group {
     position: absolute;
     top: 0;
     right: 0;
@@ -509,7 +508,7 @@ input {
     background: colors.$white;
     z-index: 1;
 
-    .btn-number {
+    .btn_number {
       width: 100%;
       height: 50%;
       border: none;

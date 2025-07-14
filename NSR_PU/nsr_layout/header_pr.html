@@ -5,97 +5,367 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="../js/plugin/jquery/jquery-3.5.1.min.js"></script>
     <!-- <script src="../js/header.js"></script> -->
-    <link rel="stylesheet" href="/css/style.css">
     <title>헤더</title>
 </head>
 <body>
-   <header class="header menu_over">
+   <header class="header">
+        <div class="global_bar">
             <div class="container">
-                <div class="inner">
-                    <h1 class="logo"><a href="index.html">NSR사이버안보정책데이터베이스</a></h1>
-                    <nav class="gnb" id="gnb">
-                        <div class="gnb_wrap">
-                            <ul class="depth01">
-                                <li>
-                                    <a href="#"><span>정책정보</span></a>
-                                    <ul class="depth02">
-                                        <li><a href="#n">국가,국제기구 정보</a></li>
-                                        <li><a href="#n">조직 정보</a></li>
-                                        <li><a href="#n">정책 정보</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="#"><span>정책발간현황</span></a>
-                                    <ul class="depth02">
-                                        <li><a href="#n">정책발간현황 조회</a></li>
-                                        <li>
-                                            <a href="#n">정책발간현황 분류별</a>
-                                            <ul class="depth3">
-                                                <li><a href="">전략 문건</a></li>
-                                                <li><a href="">법 문건</a></li>
-                                                <li><a href="">지침 문건</a></li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <a href="#n">정책발간현황 수집처별</a>
-                                            <ul class="depth3">
-                                                <li><a href="">전략 문건</a></li>
-                                                <li><a href="">법 문건</a></li>
-                                                <li><a href="">지침 문건</a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="#"><span>분석</span></a>
-                                    <ul class="depth02">
-                                        <li><a href="#n">국가정책 비교</a></li>
-                                        <li><a href="#n">타임라인 분석</a></li>
-                                        <li><a href="#n">네트워크 분석</a></li>
-                                        <li><a href="#n">워드 클라우드 분석</a></li>
-                                        <li><a href="#n">네트워크맵 분석</a></li>
-                                        <li><a href="#n">토픽 분석</a></li>
-                                        <li><a href="#n">보고서</a></li>
-                                        
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="#">마이페이지</a>
-                                    <ul class="depth02">
-                                        <li><a href="#n">정보수정</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                    </nav>
-                    <div class="gnb_util">
-                        <div class="group_btn">
-                            <!-- 로그인 전 -->
-                            <div class="logged-out login-area">
-                                <span class="member-link">
-                                <a href="#" class="btn_login">로그인</a>
-                                </span>
-                            </div>
-                            <!-- 로그인 후 -->
-                            <div class="logged-in login-area">
-                                <div class="user-info">
-                                    <span class="user-thumb"><img src="/img/icon/ic-user.svg" alt="프로필 이미지"  /></span>
-                                    <span class="user-name"><strong>홍길동</strong>님</span>
-                                </div>
-                                <span class="member-link">
-                                <a href="#" class="btn_logout">로그아웃</a>
-                                </span>
-                            </div>
-                        </div>
-                        <button id="btn_sch" class="btn-sch">
-                            <img src="/img/icon/ic-search.svg" alt="검색 아이콘" />
-                            <span>검색</span>
+                <div class="external_link">
+                    <a href="" onclick="f_nri('nri.iris.go.kr', 'SSO','nri'); return false;" rel="noopener noreferrer" title="새창으로 열림" class="btn_nui">국가연구자정보시스템</a>
+                    <a href="" onclick="f_nri_faq('eval.iris.go.kr'); return false;" rel="noopener noreferrer" title="새창으로 열림" class="btn_nui">전자평가시스템</a>
+                    <div class="relate_site">
+                        <button type="button" class="title btn_title" title="IRIS 관련사이트 열기">
+                            IRIS 관련사이트 <i class="xi-angle-down"></i>
                         </button>
+                        <ul>
+                            <!-- 로그인 되었을때 -->
+                            <!-- 로그인 안되었을때 -->
+                            <li>
+                                <a href="https://www.gaia.go.kr/" rel="noopener noreferrer" target="_blank" title="새창으로 열림">연구비통합관리시스템(Ezbaro)</a>
+                            </li>
+                            <li>
+                                <a href="https://www.rcms.go.kr/" rel="noopener noreferrer" target="_blank" title="새창으로 열림">연구비통합관리시스템(RCMS)</a>
+                            </li>
+                            <li>
+                                <a href="https://www.ntis.go.kr/" rel="noopener noreferrer" target="_blank" ttle="새창으로 열림">국가과학기술지식정보서비스(NTIS)</a>
+                            </li>
+                            <li>
+                                <a href="https://cre.nrf.re.kr/" rel="noopener noreferrer" target="_blank" title="새창으로 열림">연구윤리정보센터</a>
+                            </li>
+                            <!-- <li><a href="http://www.rndcall.go.kr" rel="noopener noreferrer" target="_blank" title="새창으로 열림">R&amp;D도우미센터</a></li> -->
+                        </ul>
                     </div>
+                    <!-- //relate_site -->
                 </div>
+                <!-- //external_link -->
+                <div class="gnb_util">
+                    <form name="memberForm" id="memberForm" method="post" action="#">
+                        <div class="group_btn"></div>
+                        <div class="group_btn">
+                            <span class="member_link" style="color : #476ccd; font-weight : bold;">
+                                <a href="" onclick="f_go_mainEn(); return false;" class="btn_login">English</a>
+                            </span>
+                        </div>
+                        <div class="group_btn">
+                            <span class="member_link">
+                                <a href="" onclick="f_login_form(); return false;" class="btn_login">로그인</a>
+                                <a href="" onclick="f_mbrs_reg_form(); return false;" class="btn_join">회원가입</a>
+                            </span>
+                            <!-- 로그인 되었을때 -->
+                        </div>
+                        <!-- group_btn -->
+                        <input type="hidden" name="mbrId" id="mbrId" value=""/>
+                        <div class="sch_layer">
+                            <input type="hidden" name="mid" value="a10800000000">
+                            <label for="headerQuery" class="title sr-only">통합검색</label>
+                            <input type="text" name="headerQuery" id="headerQuery" placeholder="검색어를 입력해주세요">
+                            <button id="btn_sch" class="btn_sch" onclick="f_unicSrch_view(); return false;">
+                                <span class="sr-only">검색</span>
+                            </button>
+                            <button type="button" class="btn_sch_close">
+                                <i class="xi-close-thin"></i>
+                                <span class="sr-only">검색 닫기</span>
+                            </button>
+                        </div>
+                        <!-- //sch_layer -->
+                    </form>
+                </div>
+                <!--//gnb_util-->
             </div>
-        </header>
-
-
+            <!-- //container -->
+        </div>
+        <!-- global_bar -->
+        <div class="gnb_area">
+            <div class="container">
+                <h1 class="logo">
+                    <a href="/main.do">
+                        <span class="sr-only">IRIS 범부처통합연구지원시스템 Integrated R&D Information System</span>
+                    </a>
+                </h1>
+                <button type="button" class="btn_allmenu">
+                    <span>전체메뉴</span>
+                    <i class="xi-bars"></i>
+                </button>
+                <button type="button" class="btn_sch_open">
+                    <i class="xi-search"></i>
+                    <span class="sr-only">통합검색열기</span>
+                </button>
+                <nav class="nav" id="gnb">
+                    <h2 class="pop_title">전체메뉴</h2>
+                    <ul id="head_menu" class="topmenu">
+                        <li class="depth1">
+                            <a href="/contents/retrieveProplBasInfoView.do">
+                                <span>IRIS 소개</span>
+                            </a>
+                            <div class="submenu">
+                                <ul class="depth2 sub01">
+                                    <li>
+                                        <a href="/contents/retrieveProplBasInfoView.do">사업소개</a>
+                                        <!-- 추진배경 및 근거 -->
+                                        <ul class="depth3">
+                                            <li>
+                                                <a href="/contents/retrieveProplBasInfoView.do">추진배경 및 근거</a>
+                                            </li>
+                                            <li>
+                                                <a href="/contents/retrieveProplCnInfoView.do">추진경과 및 내용</a>
+                                            </li>
+                                            <li>
+                                                <a href="/contents/retrieveBsnsExpeEfctInfoView.do">기대효과</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="/contents/retrieveSysCpstInfoView.do">시스템구성</a>
+                                    </li>
+                                    <li>
+                                        <a href="/contents/retrieveBiIntrdInfoView.do">BI소개</a>
+                                    </li>
+                                    <li>
+                                        <a href="/contents/retrieveOrgDutyInfoView.do">추진체계</a>
+                                        <!-- 조직 및 업무분장 -->
+                                        <ul class="depth3">
+                                            <li>
+                                                <a href="/contents/retrieveOrgDutyInfoView.do">조직</a>
+                                            </li>
+                                            <li>
+                                                <a href="/contents/retrievePtcpGovdOrgnInfoView.do">참여부처 및 기관</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="depth1">
+                            <a href="/contents/retrieveBsnsGuidListView.do">
+                                <span>사업정보</span>
+                            </a>
+                            <div class="submenu">
+                                <ul class="depth2 sub02">
+                                    <li class="">
+                                        <a href="/contents/retrieveBsnsGuidListView.do">사업사전안내 </a>
+                                    </li>
+                                    <li class="">
+                                        <a href="/contents/retrieveAncmPrntcListView.do">공모예고(사업일정)</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="/contents/retrieveBsnsAncmBtinSituListView.do">사업공지</a>
+                                        <!-- 사업공고 -->
+                                        <ul class="depth3">
+                                            <li>
+                                                <a href="/contents/retrieveBsnsAncmBtinSituListView.do">사업공고</a>
+                                            </li>
+                                            <li>
+                                                <a href="/contents/retrieveBsnsPrgGuidListView.do">사업진행안내</a>
+                                            </li>
+                                            <li>
+                                                <a href="/contents/retrieveBsnsDscrListView.do">사업설명회</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="">
+                                        <a href="/contents/retrieveCntnDataListView.do">사업관련 서식·자료 </a>
+                                    </li>
+                                    <!-- <li>
+                <a href="/contents/retrieveBsnsFaqListView.do">사업문의</a>
+                <ul class="depth3">
+                <li>
+                    <a href="/contents/retrieveBsnsFaqListView.do">사업FAQ</a>
+                </li>
+                <li>
+                    <a href="/contents/retrieveBsnsInqrListView.do">사업Q&amp;A</a>
+                </li>
+                </ul>
+            </li> -->
+                                    <!-- <li>
+                <a href="/contents/retrieveRelLawListView.do">사업규정</a>
+                <ul class="depth3">
+                <li>
+                    <a href="/contents/retrieveRelLawListView.do">법규·지침</a>
+                    <a href="#" onclick="window.open('https://www.ntis.go.kr/rndtrend/rndlaw/lawList.do','new','scrollbars=yes, resizable=no, width=1074, height=700');">법규·지침</a>
+                </li>
+                <li>
+                    <a href="/contents/retrieveFrmlCntnListView.do">법 매뉴얼</a>
+                </li>
+                <li>
+                    <a href="/contents/retrieveRgltFrmlListView.do">규정 및 서식</a>
+                </li>
+                <li>
+                    <a href="/contents/retrieveCntnDataListView.do">사업관련 서식·자료</a>
+                </li>
+                </ul>
+            </li> -->
+                                </ul>
+                            </div>
+                        </li>
+                        <!-- <li class="depth1">
+        <a href="#"><span>관련부처(참여기관)</span></a>
+        <div class="submenu">
+            <div class="title_area">
+            <h3 class="title">관련부처(참여기관)</h3>
+            <p>통합연구지원시스템의 관련부처(참여기관)를 확인하실 수 있습니다.</p>
+            </div>
+            <ul class="depth2 sub03">
+            <li class="sub01 subfirst"><a href="/contents/retrievePopUnicSrchOrgnInfoView.do">관련부처(참여기관)</a></li>
+            </ul>
+        </div>
+        </li> -->
+                        <li class="depth1">
+                            <a href="/contents/retrieveNoticeListView.do">
+                                <span>알림 &middot;고객</span>
+                            </a>
+                            <div class="submenu">
+                                <ul class="depth2 sub04">
+                                    <li class="sub01 subfirst">
+                                        <a href="/contents/retrieveNoticeListView.do">공지사항</a>
+                                    </li>
+                                    <li class="sub01">
+                                        <a href="/contents/retrieveCardNewsListView.do">카드뉴스</a>
+                                    </li>
+                                    <li class="sub02">
+                                        <a href="/contents/retrieveOnlHlpInfoView.do">자료실</a>
+                                        <!-- IRIS 사용 매뉴얼 -->
+                                        <ul class="depth3">
+                                            <li>
+                                                <a href="/contents/retrieveOnlHlpInfoView.do">IRIS 사용 매뉴얼</a>
+                                            </li>
+                                            <!-- 21년까지 유지 후 22년도에 오픈 -->
+                                            <!-- <li><a href="/contents/retrieveRelLawListView.do">국가R&amp;D법령·매뉴얼</a></li> 법규·지침 -->
+                                            <li>
+                                                <a href="https://www.ntis.go.kr/rndtrend/rndlaw/lawList.do" rel="noopener noreferrer" target="_blank" title="새창으로 열림" class="link">국가R &amp;D법령·매뉴얼</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="sub03">
+                                        <a href="/contents/retrieveSinmungoMain.do" rel="noopener noreferrer" target="_blank" title="새창으로 열림">R&D 신문고</a>
+                                        <!-- IRIS 사용 매뉴얼 -->
+                                    </li>
+                                    <li class="sub03">
+                                        <a href="/contents/retrieveFaqListView.do" rel="noopener noreferrer" target="_blank" title="새창으로 열림">FAQ</a>
+                                        <!-- IRIS 사용 매뉴얼 -->
+                                    </li>
+                                    <!-- <li class="sub02">
+                <a href="/contents/retrieveOnlHlpInfoView.do">IRIS 사용 매뉴얼</a>
+                <ul class="depth3">
+                <li>
+                    <a href="/contents/retrieveOnlHlpListView.do">온라인 매뉴얼</a>
+                </li>
+                <li>
+                    <a href="#" onclick="window.open('/contents/retrievePopOnlHlpTestView.do','new','scrollbars=yes, resizable=no, width=1074, height=700');">시뮬레이션 매뉴얼</a>
+                </li>
+                </ul>
+            </li> -->
+                                    <!--                                      <li class="sub03"> -->
+                                    <!--                                          <a href="/contents/retrieveRndSysInqrFaqListView.do">R&amp;D제도문의</a>R&amp;D제도문의 FAQ -->
+                                    <!--                                          <ul class="depth3"> -->
+                                    <!--                                           <li> -->
+                                    <!--                                               <a href="/contents/retrievePrvsnIntrprtRqsListView.do">조문해석요청</a> -->
+                                    <!--                                             </li> -->
+                                    <!--                                            <li> -->
+                                    <!--                                              <a href="/contents/retrieveRndSysInqrFaqListView.do">자주묻는 질문</a> -->
+                                    <!--                                            </li> -->
+                                    <!--                                          </ul> -->
+                                    <!--                                        </li> -->
+                                    <!--                     <li> -->
+                                    <!--                         <a href="/contents/retrieveSysImprvOpnListView.do">R&D제도개선 제안</a> -->
+                                    <!--                     </li>                                       -->
+                                    <!--                     <li class="sub03"> -->
+                                    <!--                       <a href="/contents/retrieveRpatAskListView.do">시스템·서비스문의</a>자주하는 질문(FAQ) -->
+                                    <!--                       <ul class="depth3"> -->
+                                    <!--                         <li> -->
+                                    <!--                           <a href="/contents/retrieveRpatAskListView.do">FAQ</a> -->
+                                    <!--                         </li> -->
+                                    <!--                         <li> -->
+                                    <!--                           <a href="/contents/retrieveAskRspdListView.do">사용문의</a>(전)질의및응답(Q&amp;A) -->
+                                    <!--                         </li> -->
+                                    <!--                         <li> -->
+                                    <!--                           <a href="/contents/retrieveUserAskListView.do">개선건의</a>(전)민원신청 -->
+                                    <!--                         </li> -->
+                                    <!--                       </ul> -->
+                                    <!--                     </li> -->
+                                    <li class="">
+                                        <a href="/contents/retrieveNriApiReq.do">국가연구자번호 조회 API 신청</a>
+                                    </li>
+                                    <!-- <li class="sub05"><a href="/contents/retrieveEtcAskListView.do">기타 일반문의</a></li> -->
+                                    <li class="sub06">
+                                        <a href="/contents/retrieveCusGuidView.do">고객센터 안내</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="depth1">
+                            <a href="/contents/retrieveRndPlcyDataView.do">
+                                <span>R &amp;D 정보서비스</span>
+                            </a>
+                            <div class="submenu">
+                                <ul class="depth2 sub05">
+                                    <li class="sub01 subfirst">
+                                        <a href="/contents/retrieveRndPlcyDataView.do">R &amp;D 통계</a>
+                                    </li>
+                                    <li class="sub03">
+                                        <a href="/contents/retrieveRndPlcyRCMSInfoView.do">연구비통합관리시스템(RCMS)</a>
+                                    </li>
+                                    <li class="sub02">
+                                        <a href="/contents/retrieveRndPlcyEzBaroInfoView.do">연구비통합관리시스템(Ezbaro)</a>
+                                    </li>
+                                    <li class="sub04">
+                                        <a href="/contents/retrieveRndPlcySiteInfoView.do">서비스바로가기</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <!--// 전체메뉴에서만 보이는 메뉴 시작 -->
+                        <li class="depth1 allmenu_only">
+                            <a href="">
+                                <span>마이페이지</span>
+                            </a>
+                            <div class="submenu">
+                                <ul class="depth2 sub05">
+                                    <li>
+                                        <a href="" onclick="f_mbrs_reg_form(); return false;" class="btn_join">회원가입</a>
+                                    </li>
+                                    <li>
+                                        <a href="" onclick="f_login_form(); return false;" class="btn_login">로그인</a>
+                                    </li>
+                                    <li></li>
+                                    <li>
+                                        <a href="" onclick="f_id_search_form(); return false;">아이디찾기</a>
+                                    </li>
+                                    <li>
+                                        <a href="" onclick="f_pswd_search_form(); return false;">비밀번호찾기</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="depth1 allmenu_only">
+                            <a href="">
+                                <span>기타</span>
+                            </a>
+                            <div class="submenu">
+                                <ul class="depth2 sub06">
+                                    <!-- <li>
+                <a href="">이용약관</a>
+            </li>
+            <li>
+                <a href="">이메일무단수집거부</a>
+            </li>-->
+                                    <li>
+                                        <a href="/contents/retrieveSub6601_20210602.do">개인정보처리방침</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <!--// 전체메뉴에서만 보이는 메뉴 끝 -->
+                    </ul>
+                    <button type="button" class="pop_close">
+                        <i class="xi-close"></i>
+                        <span class="sr-only">전체메뉴 레이어  닫기</span>
+                    </button>
+                </nav>
+            </div>
+            <!--//container  -->
+        </div>
+        <!-- //gnb_area -->
+    </header>
 </body>
 </html>

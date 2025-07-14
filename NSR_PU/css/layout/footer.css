@@ -30,7 +30,7 @@ html {
   scroll-behavior: smooth;
 }
 
-.visually-hidden {
+ {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -155,7 +155,7 @@ p {
   background-color: #000000;
   position: relative;
 }
-.footer .quick-aside {
+.footer  {
   position: absolute;
   position: fixed;
   text-align: center;
@@ -168,12 +168,12 @@ p {
   font-size: 1.5rem;
   font-weight: 600;
 }
-.footer .quick-aside .aside-btn {
+.footer   {
   border-radius: 50px;
   padding: 1rem 0;
   cursor: pointer;
 }
-.footer .quick-aside .aside-btn.chat-ai {
+.footer   {
   background-color: #2970FF;
   color: #FFFFFF;
   display: flex;
@@ -183,37 +183,37 @@ p {
   flex-wrap: nowrap;
   gap: 0.5rem;
 }
-.footer .quick-aside .aside-btn.chat-ai:hover {
+.footer  :hover {
   background-color: #165DFF;
 }
-.footer .quick-aside .aside-btn.feedback {
+.footer  .feedback {
   border: 1.5px solid #2970FF;
   margin-top: 0.8rem;
   color: #2970FF;
 }
-.footer .quick-aside .aside-btn.feedback:hover {
+.footer  .feedback:hover {
   background-color: #165DFF;
   color: #FFFFFF;
 }
-.footer .container .footer-wrapper {
+.footer .container  {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
   flex-wrap: nowrap;
 }
-.footer .container .footer-details {
+.footer .container  {
   font-size: 14px;
   color: #B3B4BE;
 }
-.footer .container .footer-organization {
+.footer .container  {
   display: flex;
   gap: 2rem;
 }
-.footer .container .footer-organization .footer-title {
+.footer .container   {
   font-weight: 500;
 }
-.footer .container .footer-copyright {
+.footer .container  {
   margin-top: 0.5rem;
   color: #7E7F86;
 }

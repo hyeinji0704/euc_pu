@@ -54,7 +54,7 @@
     background-color: colors.$brand-blue-active;
   }
 
-  &.is-animating {
+  &.is_animating {
     box-shadow: 0 0 0 4px colors.$brand-blue-light;
   }
 }
@@ -78,7 +78,7 @@
     color: colors.$brand-blue-active;
   }
 
-  &.is-animating {
+  &.is_animating {
     box-shadow: 0 0 0 4px colors.$brand-blue-light;
   }
 }
@@ -99,7 +99,7 @@
     border-color: colors.$brand-blue-hover;
     color: colors.$white;
 
-    .btn-icon.plus {
+    .btn_icon.plus {
       background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' viewBox='0 0 16 16'%3e%3cpath fill='%23fff' fill-rule='evenodd' d='M8.75 7.25h4.5a.75.75 0 1 1 0 1.5h-4.5v4.5a.75.75 0 1 1-1.5 0v-4.5h-4.5a.75.75 0 0 1 0-1.5h4.5v-4.5a.75.75 0 0 1 1.5 0v4.5Z' clip-rule='evenodd'/%3e%3c/svg%3e");
     }
   }
@@ -109,16 +109,16 @@
     border-color: colors.$brand-blue-primary;
     color: colors.$white;
 
-    .btn-icon.plus {
+    .btn_icon.plus {
       background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' viewBox='0 0 16 16'%3e%3cpath fill='%23fff' fill-rule='evenodd' d='M8.75 7.25h4.5a.75.75 0 1 1 0 1.5h-4.5v4.5a.75.75 0 1 1-1.5 0v-4.5h-4.5a.75.75 0 0 1 0-1.5h4.5v-4.5a.75.75 0 0 1 1.5 0v4.5Z' clip-rule='evenodd'/%3e%3c/svg%3e");
     }
   }
 
-  &.is-animating {
+  &.is_animating {
     box-shadow: 0 0 0 4px colors.$brand-blue-light;
   }
 
-  .btn-icon {
+  .btn_icon {
     width: 1.6rem;
     height: 1.6rem;
 
@@ -154,11 +154,11 @@
     background-color: colors.$fill-color-card-bg;
   }
 
-  &.is-animating {
+  &.is_animating {
     box-shadow: 0 0 0 4px colors.$background-color-light;
   }
 
-  .btn-icon.minus {
+  .btn_icon.minus {
     width: 1.6rem;
     height: 1.6rem;
     background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' viewBox='0 0 16 16'%3e%3cpath fill='%23212121' fill-rule='evenodd' d='M14.333 8a.667.667 0 0 1-.666.667H2.333a.667.667 0 0 1 0-1.333h11.334c.368 0 .666.298.666.666Z' clip-rule='evenodd'/%3e%3c/svg%3e");
@@ -244,25 +244,25 @@
 }
 
 // 버튼 래퍼
-.btn-wrap {
+.btn_wrap {
   @include base.flex(space-between, center);
   margin-top: 0.5rem;
   padding: 4rem 0;
 }
 
 // 액션 버튼 그룹
-.action-buttons {
+.action_buttons {
   display: flex;
   gap: 0.5rem;
   margin-top: 1rem;
 
-  &.no-mt {
+  &.no_mt {
     margin-top: 0;
   }
 }
 
 // 휴지통 아이콘 버튼
-.btn-trash {
+.btn_trash {
   width: 1.4rem;
   height: 1.4rem;
   background: url(../img/icon/ic-delete.svg) no-repeat center center;
@@ -296,7 +296,7 @@
     background: darken(colors.$text-color-primary, 10%);
   }
 
-  &.is-animating {
+  &.is_animating {
     box-shadow: 0 0 0 4px rgba(colors.$text-color-primary, 0.3);
   }
 
@@ -316,7 +316,7 @@
   align-items: center;
   gap: 0.4rem;
 
-  .btn-icon {
+  .btn_icon {
     width: 1.6rem;
     height: 1.6rem;
     background: url('../img/icon/ic-doc.svg') no-repeat center center;
@@ -331,7 +331,7 @@
     background-color: darken(#757575, 10%);
   }
 
-  &.is-animating {
+  &.is_animating {
     box-shadow: 0 0 0 4px rgba(#757575, 0.3);
   }
 }
@@ -350,7 +350,7 @@
     background-color: #FFDADA;
   }
 
-  &.is-animating {
+  &.is_animating {
     box-shadow: 0 0 0 4px rgba(#FF3B30, 0.2);
   }
 

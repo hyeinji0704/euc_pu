@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="js/plugin/jquery/jquery-3.6.0.min.js"></script>
+    <script src="js/plugin/jquery/jquery-3.5.1.min.js"></script>
     <!-- date-range -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
@@ -20,68 +20,68 @@
         </div>
         <div class="detail_search">
             <!-- 검색 영역 -->
-             <div class="detail-search-section">  
-                <div class="content-search-label">
+             <div class="detail_search_section">  
+                <div class="content_search_label">
                     <span class="label">국정제도</span>
-                    <div class="input-group">
-                        <div class="select-search">
-                            <button class="select-search__label">전체</button>
-                            <ul class="select-search__list">
-                                <li class="select-search__item">국정제도</li>
-                                <li class="select-search__item">정책 제도</li>
-                                <li class="select-search__item">법 제도</li>
-                                <li class="select-search__item">지침 제도</li>
-                                <li class="select-search__item">기타</li>
+                    <div class="input_group">
+                        <div class="select_search">
+                            <button class="select_search__label">전체</button>
+                            <ul class="select_search__list">
+                                <li class="select_search__item">국정제도</li>
+                                <li class="select_search__item">정책 제도</li>
+                                <li class="select_search__item">법 제도</li>
+                                <li class="select_search__item">지침 제도</li>
+                                <li class="select_search__item">기타</li>
                             </ul>
                         </div>
                     </div>
                 </div> 
-                <div class="content-search-label">
+                <div class="content_search_label">
                     <span class="label">정책수준</span>
-                    <div class="input-group">
-                        <div class="select-search">
-                            <button class="select-search__label">전체</button>
-                            <ul class="select-search__list">
-                                <li class="select-search__item">국정제도</li>
-                                <li class="select-search__item">정책 제도</li>
-                                <li class="select-search__item">법 제도</li>
-                                <li class="select-search__item">지침 제도</li>
-                                <li class="select-search__item">기타</li>
+                    <div class="input_group">
+                        <div class="select_search">
+                            <button class="select_search__label">전체</button>
+                            <ul class="select_search__list">
+                                <li class="select_search__item">국정제도</li>
+                                <li class="select_search__item">정책 제도</li>
+                                <li class="select_search__item">법 제도</li>
+                                <li class="select_search__item">지침 제도</li>
+                                <li class="select_search__item">기타</li>
                             </ul>
                         </div>
                     </div>
                 </div> 
-                <div class="content-search-label">
+                <div class="content_search_label">
                     <span class="label">정책구분</span>
-                    <div class="input-group">
-                        <div class="select-search">
-                            <button class="select-search__label">전체</button>
-                            <ul class="select-search__list">
-                                <li class="select-search__item">국정제도</li>
-                                <li class="select-search__item">정책 제도</li>
-                                <li class="select-search__item">법 제도</li>
-                                <li class="select-search__item">지침 제도</li>
-                                <li class="select-search__item">기타</li>
+                    <div class="input_group">
+                        <div class="select_search">
+                            <button class="select_search__label">전체</button>
+                            <ul class="select_search__list">
+                                <li class="select_search__item">국정제도</li>
+                                <li class="select_search__item">정책 제도</li>
+                                <li class="select_search__item">법 제도</li>
+                                <li class="select_search__item">지침 제도</li>
+                                <li class="select_search__item">기타</li>
                             </ul>
                         </div>
                     </div>
                 </div>   
             </div>
-            <div class="detail-search-section">
-                <div class="content-search-label">
+            <div class="detail_search_section">
+                <div class="content_search_label">
                     <span class="label">활동기간</span>
-                    <div class="date-range">
-                        <input type="text" id="reign-start" class="form-input date-picker" placeholder="YYYY-MM-DD" readonly />
-                        <span class="date-tilde">~</span>
-                        <input type="text" id="reign-end" class="form-input date-picker" placeholder="YYYY-MM-DD" readonly />
+                    <div class="date_range">
+                        <input type="text" id="reign_start" class="form_input date_picker" placeholder="YYYY-MM-DD" readonly />
+                        <span class="date_tilde">~</span>
+                        <input type="text" id="reign_end" class="form_input date_picker" placeholder="YYYY-MM-DD" readonly />
                     </div>
                 </div>      
             </div>
-            <div class="detail-search-section section-border">     
-                <div class="content-search-label">
+            <div class="detail_search_section section_border">     
+                <div class="content_search_label">
                     <span class="label">검색</span>
-                    <div class="input-group">
-                        <input type="text" class="search-input" placeholder="검색어를 입력하세요." id="searchInput">
+                    <div class="input_group">
+                        <input type="text" class="search_input" placeholder="검색어를 입력하세요." id="searchInput">
                         <button class="btn btn--search">검색</button>
                     </div>
                 </div>      
@@ -89,14 +89,14 @@
         </div>
         <div class="modal_content">
             <!-- 콘텐츠 액션 -->
-            <div class="content-actions">
-                <div class="total-count">
+            <div class="content_actions">
+                <div class="total_count">
                     총 <span class="count">52</span>건
                 </div>
             </div>
             <!-- 데이터 테이블 -->
-            <div class="table-container">
-                <table class="data-table ">
+            <div class="table_container">
+                <table class="data_table ">
                      <colgroup>
                         <col style="width: 7%" />
                         <col style="width: 7%" />
@@ -106,7 +106,7 @@
                     </colgroup>
                     <thead>
                         <tr>
-                            <th><label class="custom-checkbox"><input type="checkbox"/><span class="checkbox-mark"></span></label></th>
+                            <th><label class="custom_checkbox"><input type="checkbox"/><span class="checkbox_mark"></span></label></th>
                             <th>NO.</th>
                             <th>국가</th>
                             <th>영문</th>
@@ -115,37 +115,37 @@
                     </thead>
                     <tbody id="reportTableBody">
                         <tr>
-                            <td><label class="custom-checkbox"><input type="checkbox" /><span class="checkbox-mark"></span></label></td>
+                            <td><label class="custom_checkbox"><input type="checkbox" /><span class="checkbox_mark"></span></label></td>
                             <td>1</td>
-                            <td a href="#" class="click-title">뉴질랜드</td>
+                            <td a href="#" class="click_title">뉴질랜드</td>
                             <td>Gabon</td>
                             <td>GA</td>
                         </tr>
                         <tr>
-                            <td><label class="custom-checkbox"><input type="checkbox" /><span class="checkbox-mark"></span></label></td>
+                            <td><label class="custom_checkbox"><input type="checkbox" /><span class="checkbox_mark"></span></label></td>
                             <td>2</td>
-                            <td a href="#" class="click-title">뉴질랜드</td>
+                            <td a href="#" class="click_title">뉴질랜드</td>
                             <td>UNaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</td>
                             <td>UNaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</td>
                         </tr>
                         <tr>
-                            <td><label class="custom-checkbox"><input type="checkbox" /><span class="checkbox-mark"></span></label></td>
+                            <td><label class="custom_checkbox"><input type="checkbox" /><span class="checkbox_mark"></span></label></td>
                             <td>3</td>
-                            <td a href="#" class="click-title">뉴질랜드</td>
+                            <td a href="#" class="click_title">뉴질랜드</td>
                             <td>New Zealand</td>
                             <td>NZ</td>
                         </tr>
                         <tr>
-                            <td><label class="custom-checkbox"><input type="checkbox" /><span class="checkbox-mark"></span></label></td>
+                            <td><label class="custom_checkbox"><input type="checkbox" /><span class="checkbox_mark"></span></label></td>
                             <td>4</td>
-                            <td a href="#" class="click-title">뉴질랜드</td>
+                            <td a href="#" class="click_title">뉴질랜드</td>
                             <td>New Zealand</td>
                             <td>NZ</td>
                         </tr>
                         <tr>
-                            <td><label class="custom-checkbox"><input type="checkbox" /><span class="checkbox-mark"></span></label></td>
+                            <td><label class="custom_checkbox"><input type="checkbox" /><span class="checkbox_mark"></span></label></td>
                             <td>5</td>
-                            <td a href="#" class="click-title">뉴질랜드</td>
+                            <td a href="#" class="click_title">뉴질랜드</td>
                             <td>New Zealand</td>
                             <td>NZ</td>
                         </tr>
@@ -154,44 +154,44 @@
             </div>
             <!-- 페이지네이션 -->
             <div class="pagination">  
-                <a href="#" class="page-link page-prev disabled " onclick="return false;"><span></span></a>
-                <a href="#" class="page-link active" onclick="return false;">1</a>
-                <a href="#" class="page-link" onclick="return false;">2</a>
-                <a href="#" class="page-link" onclick="return false;">3</a>
-                <a href="#" class="page-link" onclick="return false;">4</a>
-                <a href="#" class="page-link" onclick="return false;">5</a>
-                <span class="page-dots">...</span>
-                <a href="#" class="page-link" onclick="return false;">10</a>
-                <a href="#" class="page-link page-next " onclick="return false;"><span></span></a>
+                <a href="#" class="page_link page_prev disabled " onclick="return false;"><span></span></a>
+                <a href="#" class="page_link active" onclick="return false;">1</a>
+                <a href="#" class="page_link" onclick="return false;">2</a>
+                <a href="#" class="page_link" onclick="return false;">3</a>
+                <a href="#" class="page_link" onclick="return false;">4</a>
+                <a href="#" class="page_link" onclick="return false;">5</a>
+                <span class="page_dots">...</span>
+                <a href="#" class="page_link" onclick="return false;">10</a>
+                <a href="#" class="page_link page_next " onclick="return false;"><span></span></a>
             </div>
-            <div class="modal-detail-box">
-                <h3 class="md-tit">역대국가원수 / 국제기구장</h3>
-                <table class="meta-table input-table">
+            <div class="modal_detail_box">
+                <h3 class="md_tit">역대국가원수 / 국제기구장</h3>
+                <table class="meta_table input_table">
                     <tbody>
                         <tr>
                             <th style="width: 80px;"><label for="default">정책 1</label></th>
                             <td style="width: auto" >
-                                <div class="policy-item">
-                                    <p class="policy-item-title">유럽 우주 전략</p>
-                                    <button class="btn btn--fourth sm"><span class="brn-icon trash"></span>삭제</button>
+                                <div class="policy_item">
+                                    <p class="policy_item_title">유럽 우주 전략</p>
+                                    <button class="btn btn--fourth sm"><span class="brn_icon trash"></span>삭제</button>
                                 </div>
                             </td>
                         </tr>
                         <tr>
                             <th style="width: 80px;"><label for="default">정책 2</label></th>
                             <td style="width: auto" >
-                                <div class="policy-item">
-                                    <p class="policy-item-title">(초안) 안보 및 국방 분야 AI 국가 전략 수립 지침</p>
-                                    <button class="btn btn--fourth sm"><span class="brn-icon trash"></span>삭제</button>
+                                <div class="policy_item">
+                                    <p class="policy_item_title">(초안) 안보 및 국방 분야 AI 국가 전략 수립 지침</p>
+                                    <button class="btn btn--fourth sm"><span class="brn_icon trash"></span>삭제</button>
                                 </div>
                             </td>
                         </tr>
                         <tr>
                             <th style="width: 80px;"><label for="default">정책 3</label></th>
                             <td style="width: auto" >
-                                <div class="policy-item">
-                                    <p class="policy-item-title"></p>
-                                    <button class="btn btn--fourth sm"><span class="brn-icon trash"></span>삭제</button>
+                                <div class="policy_item">
+                                    <p class="policy_item_title"></p>
+                                    <button class="btn btn--fourth sm"><span class="brn_icon trash"></span>삭제</button>
                                 </div>
                             </td>
                         </tr>
@@ -199,7 +199,7 @@
                 </table>
             </div>
         </div>
-        <div class="btn-wrap">
+        <div class="btn_wrap">
             <button class="btn btn--secondary lg">닫기</button>
             <button class="btn btn--primary lg">등록</button>
         </div>

@@ -30,7 +30,7 @@ html {
   scroll-behavior: smooth;
 }
 
-.visually-hidden {
+ {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -382,68 +382,4 @@ p {
 .header.active .topmenu .depth1.active a.active::before {
   opacity: 1;
 }
-.header .gnb_util {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-.header .gnb_util .login-area {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-.header .gnb_util .logged-out .btn_login {
-  color: #212121;
-  font-size: 16px;
-  font-weight: 600;
-}
-.header .gnb_util .logged-in {
-  display: none;
-}
-.header .gnb_util .logged-in .user-info {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-}
-.header .gnb_util .logged-in .user-info .user-thumb {
-  width: 3rem;
-  height: 3rem;
-  border-radius: 50%;
-  background-color: #C9CDD4;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0.5rem;
-}
-.header .gnb_util .logged-in .user-info .user-name {
-  color: #212121;
-  font-size: 16px;
-}
-.header .gnb_util .logged-in .user-info .user-name strong {
-  font-weight: 600;
-}
-.header .gnb_util .logged-in .btn_logout {
-  padding: 0.5rem 1.6rem;
-  color: #6D747B;
-  border: 1px solid #D9DEE7;
-  border-radius: 50px;
-  font-weight: 600;
-  font-size: 14px;
-}
-.header .gnb_util .logged-in .btn_logout:hover {
-  background: #D9DEE7;
-  transition: all 0.2s;
-}
-.header .gnb_util .btn-sch {
-  width: 6rem;
-  height: 6rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.header .gnb_util .btn-sch span {
-  font-size: 0;
-  line-height: 0;
-}
-
 /*# sourceMappingURL=header.css.map */
