@@ -186,12 +186,12 @@
     width: 100%;
     background-color: #fff;
     border-width: 0 1px 0 0 ;
-    border-color: $neutral-grey-lighter;
+    border-color: $background-color-lighter;
     border-style: solid;
     height: calc(100% - 12.1rem);
     box-shadow: 0 2rem 2rem rgba(0, 0, 0, 0.12);
     &.first {
-        border-left: 1px solid  $neutral-grey-lighter;
+        border-left: 1px solid  $background-color-lighter;
     }
     
 
@@ -207,13 +207,15 @@
           display: block;
           padding: 1.6rem 2rem;
           font-size: 1.6rem;
+          font-weight: 600;
+          color: $text-color-secondary;
         }
 
         .depth3 {
           margin: 0 0 0.6rem .3rem;
 
           > li > a {
-            color: $text-color-quaternary;
+            color: $text-color-secondary;
             display: block;
             margin: 0 .5rem 0 .2rem;
             padding: 1rem 0 .3rem 2rem;

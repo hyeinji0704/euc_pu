@@ -43,6 +43,9 @@
             background: transparent url(../img/icon/ic-select_arrow.svg) no-repeat center right / auto 22px;
             font-size: 2rem;   
             font-weight: 500;
+            appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
         }
         .searchForm_input_wr {
             position: relative;

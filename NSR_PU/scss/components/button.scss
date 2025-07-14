@@ -67,15 +67,10 @@
   border: 1px solid #767676;
   color: colors.$text-color-primary;
 
-  &:hover,
-  &:focus {
-    border-color: colors.$brand-blue-hover;
-    color: colors.$brand-blue-hover;
-  }
-
+ &:hover,
+  &:focus,
   &:active {
-    border-color: colors.$brand-blue-active;
-    color: colors.$brand-blue-active;
+    background-color: colors.$fill-color-card-bg;
   }
 
   &.is_animating {
@@ -338,20 +333,17 @@
 
 .btn--danger {
   background-color: white;
-  color: #FF3B30;
-  border: 1px solid #FF3B30;
+  color: colors.$accent-red;
+  border: 1px solid colors.$accent-red;
 
   &:hover,
-  &:focus {
-    background-color: #FFEBEB;
-  }
-
-  &:active {
-    background-color: #FFDADA;
+  &:focus, &:active  {
+    background-color: #ef4444;
+    color: #fff;
   }
 
   &.is_animating {
-    box-shadow: 0 0 0 4px rgba(#FF3B30, 0.2);
+    box-shadow: 0 0 0 4px rgba($color: colors.$accent-red, $alpha: 0.2);
   }
 
   &:disabled {
