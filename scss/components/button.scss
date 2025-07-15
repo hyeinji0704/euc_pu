@@ -284,11 +284,11 @@
 
   &:hover,
   &:focus {
-    background: darken(colors.$text-color-primary, 5%);
+    background: rgba(colors.$text-color-primary, 5%);
   }
 
   &:active {
-    background: darken(colors.$text-color-primary, 10%);
+    background: rgba(colors.$text-color-primary, 10%);
   }
 
   &.is_animating {
@@ -319,11 +319,11 @@
 
   &:hover,
   &:focus {
-    background-color: darken(#757575, 5%);
+    background-color: rgba(#757575, 5%);
   }
 
   &:active {
-    background-color: darken(#757575, 10%);
+    background-color: rgba(#757575, 10%);
   }
 
   &.is_animating {
