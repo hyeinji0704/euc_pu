@@ -2,55 +2,55 @@
 @font-face {
   font-family: "Pretendard";
   font-weight: 100;
-  src: local("Pretendard Thin"), url("/fonts/Pretendard-Thin.woff") format("woff");
+  src: local("Pretendard Thin"), url("../fonts/Pretendard-Thin.woff") format("woff");
   font-display: swap;
 }
 @font-face {
   font-family: "Pretendard";
   font-weight: 200;
-  src: local("Pretendard ExtraLight"), url("/fonts/Pretendard-ExtraLight.woff") format("woff");
+  src: local("Pretendard ExtraLight"), url("../fonts/Pretendard-ExtraLight.woff") format("woff");
   font-display: swap;
 }
 @font-face {
   font-family: "Pretendard";
   font-weight: 300;
-  src: local("Pretendard Light"), url("/fonts/Pretendard-Light.woff") format("woff");
+  src: local("Pretendard Light"), url("../fonts/Pretendard-Light.woff") format("woff");
   font-display: swap;
 }
 @font-face {
   font-family: "Pretendard";
   font-weight: 400;
-  src: local("Pretendard Regular"), url("/fonts/Pretendard-Regular.woff") format("woff");
+  src: local("Pretendard Regular"), url("../fonts/Pretendard-Regular.woff") format("woff");
   font-display: swap;
 }
 @font-face {
   font-family: "Pretendard";
   font-weight: 500;
-  src: local("Pretendard Medium"), url("/fonts/Pretendard-Medium.woff") format("woff");
+  src: local("Pretendard Medium"), url("../fonts/Pretendard-Medium.woff") format("woff");
   font-display: swap;
 }
 @font-face {
   font-family: "Pretendard";
   font-weight: 600;
-  src: local("Pretendard SemiBold"), url("/fonts/Pretendard-SemiBold.woff") format("woff");
+  src: local("Pretendard SemiBold"), url("../fonts/Pretendard-SemiBold.woff") format("woff");
   font-display: swap;
 }
 @font-face {
   font-family: "Pretendard";
   font-weight: 700;
-  src: local("Pretendard Bold"), url("/fonts/Pretendard-Bold.woff") format("woff");
+  src: local("Pretendard Bold"), url("../fonts/Pretendard-Bold.woff") format("woff");
   font-display: swap;
 }
 @font-face {
   font-family: "Pretendard";
   font-weight: 800;
-  src: local("Pretendard ExtraBold"), url("/fonts/Pretendard-ExtraBold.woff") format("woff");
+  src: local("Pretendard ExtraBold"), url("../fonts/Pretendard-ExtraBold.woff") format("woff");
   font-display: swap;
 }
 @font-face {
   font-family: "Pretendard";
   font-weight: 900;
-  src: local("Pretendard Black"), url("/fonts/Pretendard-Black.woff") format("woff");
+  src: local("Pretendard Black"), url("../fonts/Pretendard-Black.woff") format("woff");
   font-display: swap;
 }
 /* Minimal Reset */
@@ -80,7 +80,7 @@ img {
 
 /* 기타 필요한 리셋 스타일 추가 */
 body {
-  font-family: "Pretendard", "KoPub Dotum", sans-serif;
+  font-family: "Pretendard", sans-serif;
   font-weight: 400;
   font-size: 15px;
   line-height: 1.5;
@@ -88,7 +88,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Pretendard", "KoPub Dotum", sans-serif;
+  font-family: "Pretendard", sans-serif;
   line-height: 1.2;
   color: #000000;
 }
