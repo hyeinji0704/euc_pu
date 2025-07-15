@@ -1007,10 +1007,10 @@ body {
   border-radius: 0.4rem;
 }
 .btn--search:hover, .btn--search:focus {
-  background: rgba(33, 33, 33, 0.05);
+  background: rgb(20.25, 20.25, 20.25);
 }
 .btn--search:active {
-  background: rgba(33, 33, 33, 0.1);
+  background: rgb(7.5, 7.5, 7.5);
 }
 .btn--search.is_animating {
   box-shadow: 0 0 0 4px rgba(33, 33, 33, 0.3);
@@ -1035,10 +1035,10 @@ body {
   background: url("/euc_pu/img/icon/ic-doc.svg") no-repeat center center;
 }
 .btn--report:hover, .btn--report:focus {
-  background-color: rgba(117, 117, 117, 0.05);
+  background-color: rgb(104.25, 104.25, 104.25);
 }
 .btn--report:active {
-  background-color: rgba(117, 117, 117, 0.1);
+  background-color: rgb(91.5, 91.5, 91.5);
 }
 .btn--report.is_animating {
   box-shadow: 0 0 0 4px rgba(117, 117, 117, 0.3);
