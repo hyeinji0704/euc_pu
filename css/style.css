@@ -2883,7 +2883,7 @@ input.max_auto {
   justify-content: center;
   align-items: center;
 }
-.popup-container {
+.popup_container {
   position: relative;
   background: #fff;
   border-radius: 0.8rem;
@@ -2891,29 +2891,29 @@ input.max_auto {
   z-index: 1;
   padding: 2.4rem;
 }
-.popup-container.popup_small {
+.popup_container.popup_small {
   max-width: 420px;
   width: 100%;
 }
-.popup-container .popup_title {
+.popup_container .popup_title {
   font-size: 1.8rem;
 }
-.popup-container .popup_body {
+.popup_container .popup_body {
   border-radius: 0.4rem;
   border: 1px solid #767676;
 }
-.popup-container .popup_body textarea {
+.popup_container .popup_body textarea {
   width: 100%;
   height: 11rem;
   padding: 1rem 1.2rem;
 }
-.popup-container .popup_body::placeholder {
+.popup_container .popup_body::placeholder {
   color: #999999;
 }
-.popup-header, .popup-body {
+.popup_header, .popup_body {
   margin-bottom: 1.6rem;
 }
-.popup-footer {
+.popup_footer {
   display: flex;
   justify-content: flex-end;
   gap: 1rem;
