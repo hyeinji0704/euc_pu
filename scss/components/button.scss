@@ -168,7 +168,7 @@
   .trash {
     width: 1.6rem;
     height: 1.6rem;
-    background: url(../img/icon/ic-trash.svg) no-repeat center;
+    background: url(/euc_pu/img/icon/ic-trash.svg) no-repeat center;
 
   }
 }
@@ -201,7 +201,7 @@
       top: 50%;
       transform: translateY(-50%);
       right: 0.3rem;
-      background: url(../img/icon/ic-download.svg) no-repeat center center;
+      background: url(/euc_pu/img/icon/ic-download.svg) no-repeat center center;
       content: "";
     }
   }
@@ -232,7 +232,7 @@
       top: 50%;
       transform: translateY(-50%);
       right: 0.3rem;
-      background: url(../img/icon/ic-pdf.svg) no-repeat center center;
+      background: url(/euc_pu/img/icon/ic-pdf.svg) no-repeat center center;
       content: "";
     }
   }
@@ -260,7 +260,7 @@
 .btn_trash {
   width: 1.4rem;
   height: 1.4rem;
-  background: url(../img/icon/ic-delete.svg) no-repeat center center;
+  background: url(/euc_pu/img/icon/ic-delete.svg) no-repeat center center;
   display: inline-block;
   cursor: pointer;
 }
@@ -314,7 +314,7 @@
   .btn_icon {
     width: 1.6rem;
     height: 1.6rem;
-    background: url('../img/icon/ic-doc.svg') no-repeat center center;
+    background: url('/euc_pu/img/icon/ic-doc.svg') no-repeat center center;
   }
 
   &:hover,
