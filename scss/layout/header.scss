@@ -190,6 +190,7 @@
     border-style: solid;
     height: calc(100% - 12.1rem);
     box-shadow: 0 2rem 2rem rgba(0, 0, 0, 0.12);
+    font-weight: 600;
     &.first {
         border-left: 1px solid  $background-color-lighter;
     }
@@ -205,20 +206,19 @@
 
         > a {
           display: block;
-          padding: 1.6rem 2rem;
+          padding: 1rem 2rem;
           font-size: 1.6rem;
-          font-weight: 600;
-          color: $text-color-secondary;
+          color: $text-color-quaternary;
         }
 
         .depth3 {
           margin: 0 0 0.6rem .3rem;
 
           > li > a {
-            color: $text-color-secondary;
+            color: #888;
             display: block;
             margin: 0 .5rem 0 .2rem;
-            padding: 1rem 0 .3rem 2rem;
+            padding: .2rem 2rem;
             position: relative;
             font-size: 1.5rem;
 
@@ -256,7 +256,7 @@
         }
 
         .submenu {
-          background-color: rgba($color: $brand-blue-secondary, $alpha: 0.1);
+          background-color: $off-white-4;
           color: $text-color-primary;
           transition: background-color .3s;
           
@@ -264,15 +264,14 @@
           .depth2 {
             a {
               &:hover {
-                background-color: rgba($color: $brand-blue-secondary, $alpha: 0.1);
-                color: $text-color-secondary;
+                text-decoration: underline;
+                color: $text-color-primary;
               }
             }
 
             .depth3 a {
                 &:hover {
                     background-color: transparent;
-                    color: $brand-blue-action;
                 }
               
             }
@@ -284,6 +283,7 @@
         transition: padding 0.02s, opacity 0.3s, max-height 1s cubic-bezier(0.13, 0.67, 0.59, 0.98);
         min-height: inherit;
         transition-delay: .2s;
+        padding-top: 1rem;
         padding-bottom: 1rem;
       }
     }

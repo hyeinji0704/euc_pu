@@ -380,6 +380,7 @@ html {
   border-style: solid;
   height: calc(100% - 12.1rem);
   box-shadow: 0 2rem 2rem rgba(0, 0, 0, 0.12);
+  font-weight: 600;
 }
 .topmenu .submenu.first {
   border-left: 1px solid #E3E8EE;
@@ -394,19 +395,18 @@ html {
 }
 .topmenu .submenu .depth2 > li > a {
   display: block;
-  padding: 1.6rem 2rem;
+  padding: 1rem 2rem;
   font-size: 1.6rem;
-  font-weight: 600;
-  color: #333333;
+  color: #666666;
 }
 .topmenu .submenu .depth2 > li .depth3 {
   margin: 0 0 0.6rem 0.3rem;
 }
 .topmenu .submenu .depth2 > li .depth3 > li > a {
-  color: #333333;
+  color: #888;
   display: block;
   margin: 0 0.5rem 0 0.2rem;
-  padding: 1rem 0 0.3rem 2rem;
+  padding: 0.2rem 2rem;
   position: relative;
   font-size: 1.5rem;
 }
@@ -430,22 +430,22 @@ html {
   transform: scale(1);
 }
 .topmenu.fullmenu .depth1:hover .submenu, .topmenu.fullmenu .depth1.on .submenu {
-  background-color: rgba(85, 127, 219, 0.1);
+  background-color: #F8F8F8;
   color: #212121;
   transition: background-color 0.3s;
 }
 .topmenu.fullmenu .depth1:hover .submenu .depth2 a:hover, .topmenu.fullmenu .depth1.on .submenu .depth2 a:hover {
-  background-color: rgba(85, 127, 219, 0.1);
-  color: #333333;
+  text-decoration: underline;
+  color: #212121;
 }
 .topmenu.fullmenu .depth1:hover .submenu .depth2 .depth3 a:hover, .topmenu.fullmenu .depth1.on .submenu .depth2 .depth3 a:hover {
   background-color: transparent;
-  color: #165DFF;
 }
 .topmenu.fullmenu .depth1.active .submenu {
   transition: padding 0.02s, opacity 0.3s, max-height 1s cubic-bezier(0.13, 0.67, 0.59, 0.98);
   min-height: inherit;
   transition-delay: 0.2s;
+  padding-top: 1rem;
   padding-bottom: 1rem;
 }
 .topmenu.fullmenu .submenu {
