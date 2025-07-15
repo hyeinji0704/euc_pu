@@ -149,7 +149,9 @@
         padding: 8px 20px;
         text-align: center;
         border-bottom: 1px solid colors.$background-color-lighter;
-        @include ellipsis;
+        &:not(.action) {
+            @include ellipsis;
+        }
         max-width: 20rem;
         &.empty_data {
             text-align: center;
@@ -305,7 +307,18 @@
             &.delete {
                 color: colors.$accent-red;
             }
-            
+            span {
+                display: block;
+                width: 18px;
+                height: 18px;
+                &.edit_icon {
+                    background: url(../img/icon/ic-edit.svg) no-repeat  center center;
+                }
+                &.delete_icon {
+                    background: url(../img/icon/ic-trash-red.svg) no-repeat  center center;
+                }
+
+            }
         }
     }
 }

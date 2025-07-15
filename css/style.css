@@ -1342,6 +1342,10 @@ input.max_auto {
   color: #666666;
 }
 
+#ui-datepicker-div {
+  display: none;
+}
+
 .ui-widget.ui-widget-content {
   /* 전체 박스 */
   width: 23.4rem;
@@ -1791,10 +1795,12 @@ input.max_auto {
   padding: 8px 20px;
   text-align: center;
   border-bottom: 1px solid #E3E8EE;
+  max-width: 20rem;
+}
+.data_table td:not(.action) {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  max-width: 20rem;
 }
 .data_table td.empty_data {
   text-align: center;
@@ -1942,6 +1948,17 @@ input.max_auto {
 }
 .action_menu .dropdown_menu .dropdown_item.delete {
   color: #FF4D4F;
+}
+.action_menu .dropdown_menu .dropdown_item span {
+  display: block;
+  width: 18px;
+  height: 18px;
+}
+.action_menu .dropdown_menu .dropdown_item span.edit_icon {
+  background: url(../img/icon/ic-edit.svg) no-repeat center center;
+}
+.action_menu .dropdown_menu .dropdown_item span.delete_icon {
+  background: url(../img/icon/ic-trash-red.svg) no-repeat center center;
 }
 
 .pagination {
