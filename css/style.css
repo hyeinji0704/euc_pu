@@ -80,7 +80,7 @@ img {
 
 /* 기타 필요한 리셋 스타일 추가 */
 body {
-  font-family: "Pretendard", sans-serif;
+  font-family: "Pretendard", "SUITE", sans-serif;
   font-weight: 400;
   font-size: 15px;
   line-height: 1.5;
@@ -88,7 +88,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Pretendard", sans-serif;
+  font-family: "Pretendard", "SUITE", sans-serif;
   line-height: 1.2;
   color: #000000;
 }
@@ -283,7 +283,7 @@ html {
 .header .logo a {
   display: block;
   height: 100%;
-  background: url(/euc_pu/img/logo.svg) 0 0/auto 5.8rem no-repeat;
+  background: url(/euc_pc/img/logo.svg) 0 0/auto 5.8rem no-repeat;
   position: relative;
   z-index: 1;
 }
@@ -292,11 +292,11 @@ html {
 }
 .header .gnb_area .gnb_left {
   float: left;
-  width: calc(100% - 26rem);
+  width: calc(100% - 32rem);
 }
 .header .gnb_area .gnb_util {
   float: right;
-  width: 26rem;
+  width: 32rem;
 }
 .header .nav {
   float: right;
@@ -475,19 +475,32 @@ html {
   align-items: center;
   justify-content: flex-end;
   height: 12rem;
+  padding-left: 2rem;
+  gap: 1.6rem;
 }
 .gnb_util .login_area {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 1.6rem;
 }
-.gnb_util .logged_out {
-  display: none;
+.gnb_util .login_area a {
+  width: 22px;
+  height: 22px;
+  padding-left: 3rem;
+}
+.gnb_util .login_area a.btn_login {
+  background: url(/euc_pc/img/icon/ic-login.svg) no-repeat center left;
+}
+.gnb_util .login_area a.btn_logout {
+  background: url(/euc_pc/img/icon/ic-logout.svg) no-repeat center left;
 }
 .gnb_util .logged_out .btn_login {
   color: #212121;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 500;
+}
+.gnb_util .logged_in {
+  display: none;
 }
 .gnb_util .logged_in .user_info {
   display: flex;
@@ -512,16 +525,8 @@ html {
   font-weight: 600;
 }
 .gnb_util .logged_in .btn_logout {
-  padding: 0.5rem 1.6rem;
   color: #6D747B;
-  border: 1px solid #D9DEE7;
-  border-radius: 50px;
-  font-weight: 600;
-  font-size: 14px;
-}
-.gnb_util .logged_in .btn_logout:hover {
-  background: #D9DEE7;
-  transition: all 0.2s;
+  font-weight: 500;
 }
 .gnb_util .btn_sch {
   width: 6rem;

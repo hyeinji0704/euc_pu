@@ -86,7 +86,7 @@
     a {
       display: block;
       height: 100%;
-      background: url(/euc_pu/img/logo.svg) 0 0/auto 5.8rem no-repeat;
+      background: url(/euc_pc/img/logo.svg) 0 0/auto 5.8rem no-repeat;
       position: relative;
       z-index: 1;
     }
@@ -96,11 +96,11 @@
     background-color: #fff;
     .gnb_left {
         float: left;
-        width: calc(100% - 26rem);
+        width: calc(100% - 32rem);
     }
     .gnb_util {
         float: right;
-        width: 26rem;
+        width: 32rem;
     }
   }
 
@@ -325,24 +325,36 @@
         align-items: center;
         justify-content: flex-end;
         height: 12rem;
+        padding-left: 2rem;
+        gap: 1.6rem;
         .login_area {
             display: flex;
             align-items: center;
-            gap: 1rem;
+            gap: 1.6rem;
+            a {
+              width: 22px;
+              height: 22px;
+              padding-left: 3rem;
+              &.btn_login {
+                background: url(/euc_pc/img/icon/ic-login.svg) no-repeat center left;
+              }
+              &.btn_logout {
+                background: url(/euc_pc/img/icon/ic-logout.svg) no-repeat center left;
+              }
+            }
         }
         .logged_out {
-            display: none; 
+          // display: none; 
             .btn_login {
                 color: $text-color-primary;
                 font-size: $font-size-16;
-                font-weight: 600;
+                font-weight: 500;
 
             }
             
         }
         .logged_in {
-            
-            
+          display: none; 
             .user_info {
                 display: flex;
                 align-items: center;
@@ -369,16 +381,8 @@
             }
 
             .btn_logout {
-                padding: 0.5rem 1.6rem;
                 color: $neutral-grey-medium-dark;
-                border: 1px solid $border-color-light;
-                border-radius: 50px;
-                font-weight: 600;
-                font-size: $font-size-14;
-                &:hover {
-                    background: $border-color-light;
-                    transition: all .2s;
-                }
+                font-weight: 500;
             }
         }
         .btn_sch {
